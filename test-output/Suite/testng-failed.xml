@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testcases.Admin">
+        <methods>
+          <include name="initialize"/>
+          <include name="SearchUser"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testcases.Admin -->
+      <class name="testcases.Login">
+        <methods>
+          <include name="HRMLogin_ValidCredentials"/>
+          <include name="initialize"/>
+          <include name="HRMLogin_InvalidCredentials"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testcases.Login -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
