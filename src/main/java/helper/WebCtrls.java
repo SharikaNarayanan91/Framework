@@ -15,18 +15,75 @@ import Base.BaseTest;
 public class WebCtrls extends BaseTest{
 	WebElement webElement;
 
-	public void setData(By locator,String value) {
+	public void setData(WebElement locator,String value) {
 		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		driver.findElement(locator).sendKeys(value);
+		wait.until(ExpectedConditions.visibilityOf(locator));
+		locator.sendKeys(value);
+	//	driver.findElement(txtUsername).sendKeys(value);
 	}
-	public String getText(By locator) {
+	public String getText(WebElement locator) {
 		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		String text=driver.findElement(locator).getText();
+		wait.until(ExpectedConditions.visibilityOf(locator));
+		
+		String text=locator.getText();
 		return text;				
 	}
-	public boolean isDisplayed(By locator) {
+	public boolean isDisplayed(WebElement locator)  {
+		boolean status=false;
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOf(locator));
+		try {
+			webElement = locator;
+			if(webElement.isDisplayed())
+				status=true;
+			return status;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return status;
+		}				
+	}
+	public void buttonClick(WebElement locator) {
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		locator.click();
+	}
+	public  WebDriverWait getWait() {
+		WebDriverWait wait = new WebDriverWait(driver, 120);
+		wait.ignoring(NoSuchElementException.class);
+		return wait;
+
+	}
+	public void autoSuggestiveDropdown(WebElement locator,String value) {
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOf(locator));
+		setData(locator, value); 
+		locator.sendKeys(Keys.ARROW_UP);
+		locator.sendKeys(Keys.ENTER);
+
+	}
+	public void selectFromDropdown(WebElement locator,String value) {
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOf(locator));
+		List<WebElement> values=locator.findElements(By.tagName("div"));
+		for (WebElement dropdownItem : values) {
+			if (dropdownItem.getText().split("\\(")[0].equals(value)) {
+				dropdownItem.click();
+				break;
+			}
+		}
+	}
+	public void scroll() {		
+		JavascriptExecutor js = (JavascriptExecutor) BaseTest.driver;
+		js.executeScript("window.scrollBy(0,1000)");
+	}
+	
+	public void buttonClick(By locator) {
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		driver.findElement(locator).click();
+	}
+	public boolean isDisplayed(By locator)  {
 		boolean status=false;
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -40,39 +97,5 @@ public class WebCtrls extends BaseTest{
 			e.printStackTrace();
 			return status;
 		}				
-	}
-	public void buttonClick(By locator) {
-		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.elementToBeClickable(locator));
-		driver.findElement(locator).click();
-	}
-	public  WebDriverWait getWait() {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.ignoring(NoSuchElementException.class);
-		return wait;
-
-	}
-	public void autoSuggestiveDropdown(By locator,String value) {
-		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		setData(locator, value);
-		driver.findElement(locator).sendKeys(Keys.ARROW_UP);
-		driver.findElement(locator).sendKeys(Keys.ENTER);
-
-	}
-	public void selectFromDropdown(By locator,String value) {
-		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		List<WebElement> values= driver.findElements(locator);
-		for (WebElement dropdownItem : values) {
-			if (dropdownItem.getText().split("\\(")[0].equals(value)) {
-				dropdownItem.click();
-				break;
-			}
-		}
-	}
-	public void scroll() {		
-		JavascriptExecutor js = (JavascriptExecutor) BaseTest.driver;
-		js.executeScript("window.scrollBy(0,1000)");
 	}
 }

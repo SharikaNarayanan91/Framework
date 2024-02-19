@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-16T15:16:37 IST" name="Suite" finished-at="2024-02-16T15:17:07 IST" duration-ms="29950">
+  <suite started-at="2024-02-19T17:11:16 IST" name="Suite" finished-at="2024-02-19T17:11:38 IST" duration-ms="22367">
     <groups>
     </groups>
-    <test started-at="2024-02-16T15:16:37 IST" name="Test" finished-at="2024-02-16T15:17:07 IST" duration-ms="29950">
+    <test started-at="2024-02-19T17:11:16 IST" name="Test" finished-at="2024-02-19T17:11:38 IST" duration-ms="22367">
       <class name="testcases.Login">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-16T15:16:38 IST" name="initialize" finished-at="2024-02-16T15:16:39 IST" duration-ms="1742" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:16 IST" name="initialize" finished-at="2024-02-19T17:11:17 IST" duration-ms="1341" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,29 +16,29 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testcases.Login.HRMLogin_ValidCredentials() throws java.io.IOException]]>
+                <![CDATA[public void testcases.Login.Login_ValidCredentials() throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="HRMLogin_ValidCredentials()[pri:1, instance:testcases.Login@119020fb]" started-at="2024-02-16T15:16:39 IST" name="HRMLogin_ValidCredentials" finished-at="2024-02-16T15:16:47 IST" duration-ms="7627" status="PASS">
+        <test-method signature="Login_ValidCredentials()[pri:1, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:17 IST" name="Login_ValidCredentials" finished-at="2024-02-19T17:11:22 IST" duration-ms="5317" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HRMLogin_ValidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-16T15:16:47 IST" name="afterMethod" finished-at="2024-02-16T15:16:48 IST" duration-ms="553" status="PASS">
+        </test-method> <!-- Login_ValidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:23 IST" name="afterMethod" finished-at="2024-02-19T17:11:23 IST" duration-ms="339" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=HRMLogin_ValidCredentials status=SUCCESS method=Login.HRMLogin_ValidCredentials()[pri:1, instance:testcases.Login@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=Login_ValidCredentials status=SUCCESS method=Login.Login_ValidCredentials()[pri:1, instance:testcases.Login@119020fb] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-16T15:16:48 IST" name="initialize" finished-at="2024-02-16T15:16:49 IST" duration-ms="1067" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:23 IST" name="initialize" finished-at="2024-02-19T17:11:24 IST" duration-ms="759" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,22 +47,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testcases.Login.HRMLogin_InvalidCredentials() throws java.io.IOException]]>
+                <![CDATA[public void testcases.Login.Login_InvalidCredentials() throws java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="HRMLogin_InvalidCredentials()[pri:2, instance:testcases.Login@119020fb]" started-at="2024-02-16T15:16:49 IST" name="HRMLogin_InvalidCredentials" finished-at="2024-02-16T15:16:55 IST" duration-ms="5870" status="PASS">
+        <test-method signature="Login_InvalidCredentials()[pri:2, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:24 IST" name="Login_InvalidCredentials" finished-at="2024-02-19T17:11:29 IST" duration-ms="4804" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HRMLogin_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-16T15:16:55 IST" name="afterMethod" finished-at="2024-02-16T15:16:55 IST" duration-ms="568" status="PASS">
+        </test-method> <!-- Login_InvalidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:29 IST" name="afterMethod" finished-at="2024-02-19T17:11:29 IST" duration-ms="286" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=HRMLogin_InvalidCredentials status=SUCCESS method=Login.HRMLogin_InvalidCredentials()[pri:2, instance:testcases.Login@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials()[pri:2, instance:testcases.Login@119020fb] output={null}]]]>
               </value>
             </param>
           </params>
@@ -71,7 +71,7 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- testcases.Login -->
       <class name="testcases.Admin">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-16T15:16:55 IST" name="initialize" finished-at="2024-02-16T15:16:57 IST" duration-ms="1057" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-19T17:11:29 IST" name="initialize" finished-at="2024-02-19T17:11:30 IST" duration-ms="723" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,11 +87,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="SearchUser()[pri:1, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-16T15:16:57 IST" name="SearchUser" finished-at="2024-02-16T15:17:07 IST" duration-ms="10085" status="PASS">
+        <test-method signature="SearchUser()[pri:1, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-19T17:11:30 IST" name="SearchUser" finished-at="2024-02-19T17:11:38 IST" duration-ms="7895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-16T15:17:07 IST" name="afterMethod" finished-at="2024-02-16T15:17:07 IST" duration-ms="587" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-19T17:11:38 IST" name="afterMethod" finished-at="2024-02-19T17:11:38 IST" duration-ms="343" status="PASS">
           <params>
             <param index="0">
               <value>
