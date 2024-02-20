@@ -1195,3 +1195,79 @@
 [INFO ] 2024-02-19 17:11:37.356 [main] Login - Selected User role : Admin
 [INFO ] 2024-02-19 17:11:37.458 [main] Login - Clicked on Search button
 [INFO ] 2024-02-19 17:11:38.084 [main] Login - Number of records for selected user found as expected : 1
+[INFO ] 2024-02-20 13:18:42.350 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 13:18:42.582 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 13:18:44.543 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 13:18:46.037 [main] Login - Admin tab selected
+[INFO ] 2024-02-20 13:18:46.911 [main] Login - Entered Username : Admin
+[INFO ] 2024-02-20 13:18:47.291 [main] Login - Selected User role : Admin
+[INFO ] 2024-02-20 13:18:47.525 [main] Login - Clicked on Search button
+[INFO ] 2024-02-20 13:18:48.226 [main] Login - Number of records for selected user found as expected : 1
+[INFO ] 2024-02-20 14:52:11.839 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 14:52:12.062 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 14:52:15.783 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 14:52:34.636 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 14:52:34.804 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 14:52:36.804 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 15:51:15.357 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 15:51:15.565 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 15:51:17.413 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:15:05.474 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:15:05.658 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:15:08.135 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:22:27.005 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:22:27.162 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:22:29.319 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:23:59.927 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:24:00.167 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:24:02.504 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:33:14.307 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:33:15.737 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:33:16.701 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:46:24.810 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:46:25.038 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:46:27.222 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:53:57.501 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:53:59.008 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:53:59.984 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:55:52.714 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:55:52.941 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:55:55.088 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 16:58:24.194 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 16:58:24.381 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 16:58:26.297 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:21:55.807 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:21:56.238 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:21:58.473 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:25:47.209 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:25:47.652 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:25:49.723 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:25:56.050 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:25:56.397 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:25:58.204 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-02-20 17:27:50.415 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:27:50.785 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:27:53.071 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:27:59.672 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:28:00.127 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:28:01.372 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-02-20 17:31:07.553 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:31:08.002 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:31:10.171 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:31:16.746 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:31:17.207 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:31:18.881 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-02-20 17:31:44.502 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:31:44.871 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:31:47.119 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:31:53.863 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:31:54.310 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:31:55.969 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-02-20 17:32:02.302 [main] Login - Entered user credentials
+[INFO ] 2024-02-20 17:32:02.742 [main] Login - Clicked on Login button
+[INFO ] 2024-02-20 17:32:05.004 [main] Login - HRM login successfull
+[INFO ] 2024-02-20 17:32:06.735 [main] Login - Admin tab selected
+[INFO ] 2024-02-20 17:32:07.790 [main] Login - Entered Username : Admin
+[INFO ] 2024-02-20 17:32:08.405 [main] Login - Selected User role : Admin
+[INFO ] 2024-02-20 17:32:08.908 [main] Login - Clicked on Search button
+[INFO ] 2024-02-20 17:32:09.934 [main] Login - Number of records for selected user found as expected : 1

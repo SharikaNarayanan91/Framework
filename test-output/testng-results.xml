@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-19T17:11:16 IST" name="Suite" finished-at="2024-02-19T17:11:38 IST" duration-ms="22367">
+  <suite started-at="2024-02-20T17:31:37 IST" name="Suite" finished-at="2024-02-20T17:32:10 IST" duration-ms="33086">
     <groups>
     </groups>
-    <test started-at="2024-02-19T17:11:16 IST" name="Test" finished-at="2024-02-19T17:11:38 IST" duration-ms="22367">
+    <test started-at="2024-02-20T17:31:37 IST" name="Test" finished-at="2024-02-20T17:32:10 IST" duration-ms="33086">
       <class name="testcases.Login">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:16 IST" name="initialize" finished-at="2024-02-19T17:11:17 IST" duration-ms="1341" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@c055c54]" started-at="2024-02-20T17:31:37 IST" name="initialize" finished-at="2024-02-20T17:31:39 IST" duration-ms="1685" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,22 +23,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Login_ValidCredentials()[pri:1, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:17 IST" name="Login_ValidCredentials" finished-at="2024-02-19T17:11:22 IST" duration-ms="5317" status="PASS">
+        <test-method signature="Login_ValidCredentials()[pri:1, instance:testcases.Login@c055c54]" started-at="2024-02-20T17:31:39 IST" name="Login_ValidCredentials" finished-at="2024-02-20T17:31:47 IST" duration-ms="7925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_ValidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:23 IST" name="afterMethod" finished-at="2024-02-19T17:11:23 IST" duration-ms="339" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@c055c54]" started-at="2024-02-20T17:31:47 IST" name="afterMethod" finished-at="2024-02-20T17:31:48 IST" duration-ms="624" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_ValidCredentials status=SUCCESS method=Login.Login_ValidCredentials()[pri:1, instance:testcases.Login@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=Login_ValidCredentials status=SUCCESS method=Login.Login_ValidCredentials()[pri:1, instance:testcases.Login@c055c54] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:23 IST" name="initialize" finished-at="2024-02-19T17:11:24 IST" duration-ms="759" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@c055c54]" started-at="2024-02-20T17:31:48 IST" name="initialize" finished-at="2024-02-20T17:31:49 IST" duration-ms="1068" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,15 +54,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Login_InvalidCredentials()[pri:2, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:24 IST" name="Login_InvalidCredentials" finished-at="2024-02-19T17:11:29 IST" duration-ms="4804" status="PASS">
+        <test-method signature="Login_InvalidCredentials()[pri:2, instance:testcases.Login@c055c54]" started-at="2024-02-20T17:31:49 IST" name="Login_InvalidCredentials" finished-at="2024-02-20T17:31:56 IST" duration-ms="6604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@119020fb]" started-at="2024-02-19T17:11:29 IST" name="afterMethod" finished-at="2024-02-19T17:11:29 IST" duration-ms="286" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@c055c54]" started-at="2024-02-20T17:31:56 IST" name="afterMethod" finished-at="2024-02-20T17:31:56 IST" duration-ms="561" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials()[pri:2, instance:testcases.Login@119020fb] output={null}]]]>
+                <![CDATA[[TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials()[pri:2, instance:testcases.Login@c055c54] output={null}]]]>
               </value>
             </param>
           </params>
@@ -71,7 +71,7 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- testcases.Login -->
       <class name="testcases.Admin">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-19T17:11:29 IST" name="initialize" finished-at="2024-02-19T17:11:30 IST" duration-ms="723" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@18b0930f]" started-at="2024-02-20T17:31:56 IST" name="initialize" finished-at="2024-02-20T17:31:57 IST" duration-ms="996" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,15 +87,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="SearchUser()[pri:1, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-19T17:11:30 IST" name="SearchUser" finished-at="2024-02-19T17:11:38 IST" duration-ms="7895" status="PASS">
+        <test-method signature="SearchUser()[pri:1, instance:testcases.Admin@18b0930f]" started-at="2024-02-20T17:31:57 IST" name="SearchUser" finished-at="2024-02-20T17:32:10 IST" duration-ms="12226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@2b5f4d54]" started-at="2024-02-19T17:11:38 IST" name="afterMethod" finished-at="2024-02-19T17:11:38 IST" duration-ms="343" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@18b0930f]" started-at="2024-02-20T17:32:10 IST" name="afterMethod" finished-at="2024-02-20T17:32:10 IST" duration-ms="560" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SearchUser status=SUCCESS method=Admin.SearchUser()[pri:1, instance:testcases.Admin@2b5f4d54] output={null}]]]>
+                <![CDATA[[TestResult name=SearchUser status=SUCCESS method=Admin.SearchUser()[pri:1, instance:testcases.Admin@18b0930f] output={null}]]]>
               </value>
             </param>
           </params>

@@ -6,8 +6,8 @@
     <classes>
       <class name="testcases.Login">
         <methods>
+          <include name="Login_ValidCredentials"/>
           <include name="initialize"/>
-          <include name="Login_InvalidCredentials"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- testcases.Login -->

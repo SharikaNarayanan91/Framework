@@ -3,6 +3,7 @@ package testcases;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
 
 import Base.BaseTest;
+import helper.WebCtrls;
 import pages.LoginPage;
 import utils.ExcelHelper;
 import utils.ReadConfig;
@@ -21,10 +23,10 @@ public class Login extends BaseTest{
 
 	@Test(enabled = true,priority = 1)
 	public void Login_ValidCredentials() throws IOException {
+		//List<Map<String,String>> getExcelDataInMap=ExcelHelper.getExcelDataInMap(this.getClass().getSimpleName());
 		ExcelHelperMap=ExcelHelper.getExcelData(this.getClass().getSimpleName());
 		ReadConfig readConfid=new ReadConfig();
 		LoginPage loginPage=new LoginPage(driver);
-		
 		driver.get(readConfid.getApplicationURL());
 
 		loginPage.login(readConfid.getUserName(),readConfid.getPassword());

@@ -32,5 +32,9 @@ public class ScreenshotHelper extends BaseTest {
 		return screenshot;
 		
 	}
-
+	//Capture screenshot base64 image
+	public static String CaptureScreenShotBase64() {
+		String Base64src=((TakesScreenshot)BaseTest.driver).getScreenshotAs(OutputType.BASE64);
+		return Base64src;
+	}
 }

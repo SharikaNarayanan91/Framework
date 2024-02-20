@@ -9,9 +9,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.github.dockerjava.core.MediaType;
+
 import helper.WebCtrls;
 import testcases.Login;
 import utils.ListenerClass;
+import utils.ScreenshotHelper;
 
 public class LoginPage {
 	private static Logger logger = LogManager.getLogger(Login.class);
@@ -41,32 +46,34 @@ public class LoginPage {
 
 	@FindBy(xpath = "//p[contains(@class,'alert-content-text')]")
 	WebElement eleInvalidCredentialsError;
-	
+
 	public By linkMainMenuOptions(String MenuOption) {
 		return By.xpath("//span[contains(@class,'main-menu') and text()='" + MenuOption + "']");
 	}
+
 
 	public void login(String username, String password) {
 		webCtrls.setData(txtUsername, username);
 		webCtrls.setData(txtPassword, password);
 		logger.info("Entered user credentials");
-		ListenerClass.report.info("Entered user credentials");
+		webCtrls.addLog("Entered user credentials");
 
 		webCtrls.buttonClick(btnLogin);
 		logger.info("Clicked on Login button");
-		ListenerClass.report.info("Clicked on Login button");
+		webCtrls.getWait();
+		webCtrls.addLog("Clicked on Login button");
 	}
 
 	public void verifyLogin() {
 		Assert.assertTrue(webCtrls.isDisplayed(eleDashboardTitle), "HRM Login not successfull");
 		logger.info("HRM login successfull");
-		ListenerClass.report.pass("HRM login successfull");
+		webCtrls.addLog("HRM login successfull");
 	}
 
 	public void verifyErrorMessage(String expectedErrorMessage) {
 		String ActualErrorMessage = webCtrls.getText(eleInvalidCredentialsError);
 		Assert.assertEquals(ActualErrorMessage, expectedErrorMessage, "Error message displayed is not as expected");
 		logger.info("Error message displayed as expected : " + ActualErrorMessage);
-		ListenerClass.report.pass("Error message displayed as expected : " + ActualErrorMessage);
+		webCtrls.addLog("Error message displayed as expected : " + ActualErrorMessage);
 	}
 }

@@ -55,23 +55,23 @@ public class AdminPage {
 		if (userName.length() > 1) {
 			webCtrls.setData(txtUsername, userName);
 			logger.info("Entered Username : " + userName);
-			ListenerClass.report.info("Entered Username : " + userName);
+			webCtrls.addLog("Entered Username : " + userName);
 		}
 		if (userRole.length() > 1) {
 			webCtrls.buttonClick(ddlUserRole);
 			webCtrls.selectFromDropdown(ddlGeneralList, userRole);
 			logger.info("Selected User role : " + userRole);
-			ListenerClass.report.info("Selected User role : " + userRole);
+			webCtrls.addLog("Selected User role : " + userRole);
 		}
 		webCtrls.buttonClick(btnSearch);
 		logger.info("Clicked on Search button");
-		ListenerClass.report.info("Clicked on Search button");
+		webCtrls.addLog("Clicked on Search button");
 	}
 
 	public void verifyUserCount(String expectedCount) {
 		Assert.assertTrue(webCtrls.isDisplayed(eleRecordsFound(expectedCount)),
 				"Number of records for selected user is not as expected");
 		logger.info("Number of records for selected user found as expected : " + expectedCount);
-		ListenerClass.report.pass("Number of records for selected user found as expected : " + expectedCount);
+		webCtrls.addLog("Number of records for selected user found as expected : " + expectedCount);
 	}
 }

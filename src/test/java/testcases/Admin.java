@@ -41,7 +41,7 @@ public class Admin extends BaseTest{
 		//Select Admin tab
 		webCtrls.buttonClick(loginPage.linkMainMenuOptions("Admin"));
 		logger.info("Admin tab selected");
-		ListenerClass.report.info("Admin tab selected");
+		webCtrls.addLog("Admin tab selected");
 		
 		//Search for user
 		adminPage.searchUser(ExcelHelperMap.get("Username2"), ExcelHelperMap.get("UserRole"));
