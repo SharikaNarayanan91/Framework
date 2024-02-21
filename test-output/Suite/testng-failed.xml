@@ -6,8 +6,9 @@
     <classes>
       <class name="testcases.Login">
         <methods>
-          <include name="Login_ValidCredentials"/>
+          <include name="Login_ValidCredentials" invocation-numbers="0"/>
           <include name="initialize"/>
+          <include name="Login_InvalidCredentials" invocation-numbers="0 1"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- testcases.Login -->

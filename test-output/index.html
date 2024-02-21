@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +104,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="Login_InvalidCredentials">Login_InvalidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin123})">Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin123})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="Login_ValidCredentials">Login_ValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=admin1234})">Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=admin1234})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Admin" class="method navigator-link" hash-for-method="SearchUser">SearchUser</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin1234})">Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin1234})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="Login_ValidCredentials({Username=Admin, Password=admin123})">Login_ValidCredentials({Username=Admin, Password=admin123})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Admin" class="method navigator-link" hash-for-method="SearchUser({Username=Admin, NumberOfUserRecords=1, UserRole=Admin})">SearchUser({Username=Admin, NumberOfUserRecords=1, UserRole=Admin})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -137,9 +147,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SearchUser">
-                  </a> <!-- SearchUser -->
+                  <a name="SearchUser({Username=Admin, NumberOfUserRecords=1, UserRole=Admin})">
+                  </a> <!-- SearchUser({Username=Admin, NumberOfUserRecords=1, UserRole=Admin}) -->
                   <span class="method-name">SearchUser</span>
+                  <span class="parameters">({Username=Admin, NumberOfUserRecords=1, UserRole=Admin})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -152,16 +163,34 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login_InvalidCredentials">
-                  </a> <!-- Login_InvalidCredentials -->
+                  <a name="Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin123})">
+                  </a> <!-- Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin123}) -->
                   <span class="method-name">Login_InvalidCredentials</span>
+                  <span class="parameters">({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin123})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Login_ValidCredentials">
-                  </a> <!-- Login_ValidCredentials -->
+                  <a name="Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=admin1234})">
+                  </a> <!-- Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=admin1234}) -->
+                  <span class="method-name">Login_InvalidCredentials</span>
+                  <span class="parameters">({ErrorMessage=Invalid credentials, Username=Admin, Password=admin1234})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin1234})">
+                  </a> <!-- Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin1234}) -->
+                  <span class="method-name">Login_InvalidCredentials</span>
+                  <span class="parameters">({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin1234})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_ValidCredentials({Username=Admin, Password=admin123})">
+                  </a> <!-- Login_ValidCredentials({Username=Admin, Password=admin123}) -->
                   <span class="method-name">Login_ValidCredentials</span>
+                  <span class="parameters">({Username=Admin, Password=admin123})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -220,24 +249,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'SearchUser')
 data.setCell(0, 2, 'testcases.Admin')
-data.setCell(0, 3, 12226);
+data.setCell(0, 3, 11020);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Login_ValidCredentials')
 data.setCell(1, 2, 'testcases.Login')
-data.setCell(1, 3, 7925);
+data.setCell(1, 3, 6947);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Login_InvalidCredentials')
 data.setCell(2, 2, 'testcases.Login')
-data.setCell(2, 3, 6604);
+data.setCell(2, 3, 6401);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Login_InvalidCredentials')
+data.setCell(3, 2, 'testcases.Login')
+data.setCell(3, 3, 6365);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Login_InvalidCredentials')
+data.setCell(4, 2, 'testcases.Login')
+data.setCell(4, 3, 6123);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -265,43 +302,67 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Login</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">initialize(chrome, public void testcases.Login.Login_ValidCredentials() throws java.io.IOException)</span>
+                <span class="method-name">initialize(chrome, public void testcases.Login.Login_ValidCredentials(java.util.Map) throws java.io.IOException)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Login_ValidCredentials</span>
-                <span class="method-start">1687 ms</span>
+                <span class="method-name">Login_ValidCredentials({Username=Admin, Password=admin123})</span>
+                <span class="method-start">2851 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Login_ValidCredentials status=SUCCESS method=Login.Login_ValidCredentials()[pri:1, ...)</span>
-                <span class="method-start">9996 ms</span>
+                <span class="method-name">afterMethod([TestResult name=Login_ValidCredentials status=SUCCESS method=Login.Login_ValidCredentials(java.util...)</span>
+                <span class="method-start">10162 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialize(chrome, public void testcases.Login.Login_InvalidCredentials() throws java.io.IOException)</span>
-                <span class="method-start">10620 ms</span>
+                <span class="method-name">initialize(chrome, public void testcases.Login.Login_InvalidCredentials(java.util.Map) throws java.io.IOExcepti...)</span>
+                <span class="method-start">10746 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Login_InvalidCredentials</span>
-                <span class="method-start">11688 ms</span>
+                <span class="method-name">Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=admin1234})</span>
+                <span class="method-start">11765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials()[pri...)</span>
-                <span class="method-start">18490 ms</span>
+                <span class="method-name">afterMethod([TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials(java....)</span>
+                <span class="method-start">18320 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize(chrome, public void testcases.Login.Login_InvalidCredentials(java.util.Map) throws java.io.IOExcepti...)</span>
+                <span class="method-start">18794 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin123})</span>
+                <span class="method-start">19829 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials(java....)</span>
+                <span class="method-start">26154 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize(chrome, public void testcases.Login.Login_InvalidCredentials(java.util.Map) throws java.io.IOExcepti...)</span>
+                <span class="method-start">26705 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=admin1234})</span>
+                <span class="method-start">27736 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials(java....)</span>
+                <span class="method-start">34350 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Admin</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">initialize(chrome, public void testcases.Admin.SearchUser() throws java.io.IOException)</span>
-                <span class="method-start">19051 ms</span>
+                <span class="method-name">initialize(chrome, public void testcases.Admin.SearchUser(java.util.Map) throws java.io.IOException)</span>
+                <span class="method-start">34841 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">SearchUser</span>
-                <span class="method-start">20047 ms</span>
+                <span class="method-name">SearchUser({Username=Admin, NumberOfUserRecords=1, UserRole=Admin})</span>
+                <span class="method-start">36079 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=SearchUser status=SUCCESS method=Admin.SearchUser()[pri:1, instance:testcases.Admin...)</span>
-                <span class="method-start">32503 ms</span>
+                <span class="method-name">afterMethod([TestResult name=SearchUser status=SUCCESS method=Admin.SearchUser(java.util.Map)[pri:1, instance:te...)</span>
+                <span class="method-start">47351 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
