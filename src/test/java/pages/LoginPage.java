@@ -11,6 +11,7 @@ import org.testng.Assert;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.beust.jcommander.Parameter;
 import com.github.dockerjava.core.MediaType;
 
 import helper.WebCtrls;
@@ -51,7 +52,12 @@ public class LoginPage {
 		return By.xpath("//span[contains(@class,'main-menu') and text()='" + MenuOption + "']");
 	}
 
-
+	/**
+	 * Login to the site
+	 * 
+	 * @param username
+	 * @param password
+	 */
 	public void login(String username, String password) {
 		webCtrls.setData(txtUsername, username);
 		webCtrls.setData(txtPassword, password);
@@ -64,12 +70,20 @@ public class LoginPage {
 		webCtrls.addLog("Clicked on Login button");
 	}
 
+	/**
+	 * Verify login
+	 */
 	public void verifyLogin() {
 		Assert.assertTrue(webCtrls.isDisplayed(eleDashboardTitle), "HRM Login not successfull");
 		logger.info("HRM login successfull");
 		webCtrls.addLog("HRM login successfull");
 	}
 
+	/**
+	 * Verify the Error message
+	 * 
+	 * @param expectedErrorMessage
+	 */	
 	public void verifyErrorMessage(String expectedErrorMessage) {
 		String ActualErrorMessage = webCtrls.getText(eleInvalidCredentialsError);
 		Assert.assertEquals(ActualErrorMessage, expectedErrorMessage, "Error message displayed is not as expected");

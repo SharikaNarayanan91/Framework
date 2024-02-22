@@ -51,6 +51,11 @@ public class AdminPage {
 		return By.xpath("//span[text()='(" + count + ") Record Found']");
 	}
 
+	/**
+	 * Search for a user with user name and user role
+	 * @param userName
+	 * @param userRole
+	 */
 	public void searchUser(String userName, String userRole) {
 		if (userName.length() > 1) {
 			webCtrls.setData(txtUsername, userName);
@@ -68,6 +73,10 @@ public class AdminPage {
 		webCtrls.addLog("Clicked on Search button");
 	}
 
+	/**
+	 * Verify the total number of users displayed
+	 * @param expectedCount
+	 */
 	public void verifyUserCount(String expectedCount) {
 		Assert.assertTrue(webCtrls.isDisplayed(eleRecordsFound(expectedCount)),
 				"Number of records for selected user is not as expected");

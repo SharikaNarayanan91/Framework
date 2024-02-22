@@ -1,67 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="0" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T19:13:47 IST" name="Suite" finished-at="2024-02-21T19:14:35 IST" duration-ms="48615">
+  <suite started-at="2024-02-22T11:12:35 IST" name="Default suite" finished-at="2024-02-22T11:12:36 IST" duration-ms="719">
     <groups>
     </groups>
-    <test started-at="2024-02-21T19:13:47 IST" name="Test" finished-at="2024-02-21T19:14:35 IST" duration-ms="48615">
+    <test started-at="2024-02-22T11:12:35 IST" name="Default test" finished-at="2024-02-22T11:12:36 IST" duration-ms="719">
       <class name="testcases.Login">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:13:47 IST" name="initialize" finished-at="2024-02-21T19:13:50 IST" duration-ms="2849" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testcases.Login.Login_ValidCredentials(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="initialize" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1708580556117" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:13:50 IST" name="Login_ValidCredentials" data-provider="Login" finished-at="2024-02-21T19:13:57 IST" duration-ms="6947" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Username=Admin, Password=admin123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_ValidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:13:58 IST" name="afterMethod" finished-at="2024-02-21T19:13:58 IST" duration-ms="474" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Login_ValidCredentials status=SUCCESS method=Login.Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@319bc845] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:13:58 IST" name="initialize" finished-at="2024-02-21T19:13:59 IST" duration-ms="1019" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testcases.Login.Login_InvalidCredentials(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:13:59 IST" name="Login_InvalidCredentials" data-provider="Login" finished-at="2024-02-21T19:14:05 IST" duration-ms="6365" status="PASS">
+        <test-method signature="Demo(java.util.Map)[pri:2, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="Demo" data-provider="Login" finished-at="2024-02-22T11:12:36 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -69,37 +61,60 @@
               </value>
             </param>
           </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:06 IST" name="afterMethod" finished-at="2024-02-21T19:14:06 IST" duration-ms="474" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@319bc845] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- Demo -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1708580556147" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:06 IST" name="initialize" finished-at="2024-02-21T19:14:07 IST" duration-ms="1034" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testcases.Login.Login_InvalidCredentials(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="initialize" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1708580556150" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:07 IST" name="Login_InvalidCredentials" data-provider="Login" finished-at="2024-02-21T19:14:13 IST" duration-ms="6123" status="PASS">
+        <test-method signature="Demo(java.util.Map)[pri:2, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="Demo" data-provider="Login" finished-at="2024-02-22T11:12:36 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -107,37 +122,60 @@
               </value>
             </param>
           </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:14 IST" name="afterMethod" finished-at="2024-02-21T19:14:14 IST" duration-ms="551" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@319bc845] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- Demo -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1708580556157" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:14 IST" name="initialize" finished-at="2024-02-21T19:14:15 IST" duration-ms="1026" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testcases.Login.Login_InvalidCredentials(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="initialize" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1708580556158" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:15 IST" name="Login_InvalidCredentials" data-provider="Login" finished-at="2024-02-21T19:14:21 IST" duration-ms="6401" status="PASS">
+        <test-method signature="Demo(java.util.Map)[pri:2, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="Demo" data-provider="Login" finished-at="2024-02-22T11:12:36 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -145,61 +183,56 @@
               </value>
             </param>
           </params>
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method initialize but has not been marked @Optional or defined
+in C:\Users\SharikaNarayananNamb\AppData\Local\Temp\testng-eclipse-1157261919\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:270)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@319bc845]" started-at="2024-02-21T19:14:22 IST" name="afterMethod" finished-at="2024-02-21T19:14:22 IST" duration-ms="412" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Login_InvalidCredentials status=SUCCESS method=Login.Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@319bc845] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- Demo -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@58ffcbd7]" started-at="2024-02-22T11:12:36 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1708580556163" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testcases.Login -->
-      <class name="testcases.Admin">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@52de51b6]" started-at="2024-02-21T19:14:22 IST" name="initialize" finished-at="2024-02-21T19:14:23 IST" duration-ms="1238" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testcases.Admin.SearchUser(java.util.Map) throws java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="SearchUser(java.util.Map)[pri:1, instance:testcases.Admin@52de51b6]" started-at="2024-02-21T19:14:23 IST" name="SearchUser" data-provider="Admin" finished-at="2024-02-21T19:14:34 IST" duration-ms="11020" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Username=Admin, NumberOfUserRecords=1, UserRole=Admin}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@52de51b6]" started-at="2024-02-21T19:14:35 IST" name="afterMethod" finished-at="2024-02-21T19:14:35 IST" duration-ms="536" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=SearchUser status=SUCCESS method=Admin.SearchUser(java.util.Map)[pri:1, instance:testcases.Admin@52de51b6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- testcases.Admin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

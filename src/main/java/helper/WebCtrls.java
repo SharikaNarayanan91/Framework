@@ -1,5 +1,6 @@
 package helper;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -114,5 +115,18 @@ public class WebCtrls extends BaseTest {
 	public void addLog(String title) {
 		String Base64Code = ScreenshotHelper.CaptureScreenShotBase64();
 		ListenerClass.report.log(Status.INFO,MediaEntityBuilder.createScreenCaptureFromBase64String(Base64Code, title).build());
+	}
+	
+	//Encrypt a string
+	public String encryptString(String arg) {
+		byte[]encryptedArg=Base64.getEncoder().encode(arg.getBytes());
+		String encryptedValue=new String(encryptedArg);
+		return encryptedValue;
+	}
+	//Decrypt a string
+	public String decryptString(String arg) {
+		byte[] decryptedArg=Base64.getDecoder().decode(arg);
+		String decryptedValue= new String(decryptedArg);
+		return decryptedValue;
 	}
 }
