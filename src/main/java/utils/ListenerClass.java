@@ -45,7 +45,7 @@ public class ListenerClass implements ITestListener {
 			skip = true;
 		}
 		    
-		report= extent.createTest(result.getMethod().getMethodName());
+		report= extent.createTest(result.getTestClass().getName()+" : "+result.getMethod().getMethodName());
 		extentTest.set(report);		
 		logger.info("Test started sucessfully");
 		report.info("Test Started Successfully");
@@ -56,7 +56,7 @@ public class ListenerClass implements ITestListener {
 			
 		pathPass = ScreenshotHelper.TakeScreenShot();
 		
-		extentTest.get().log(Status.PASS," Test Passed :"+result.getMethod().getMethodName());	
+		extentTest.get().log(Status.PASS," Test Passed : "+result.getTestClass().getName()+" : "+result.getMethod().getMethodName());	
 		
 		// Comment this if screenshot of pass cases not required		
 		extentTest.get().addScreenCaptureFromPath(pathPass, result.getMethod().getMethodName());

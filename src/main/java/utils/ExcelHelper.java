@@ -51,53 +51,10 @@ public class ExcelHelper {
 		}
 		return MapLocal;
 	}
-
-	public static List<Map<String, String>> getExcelDataInMap(String sheetName) throws IOException {
-		List<Map<String, String>> testDataAllRows = null;
-		Map<String, String> testData = null;
-		FileInputStream fileInputStream = null;
-		try {
-			fileInputStream = new FileInputStream(
-					System.getProperty("user.dir") + File.separator + "src/test/resources/testdata/TestData2.xlsx");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		try (Workbook workbook = new XSSFWorkbook(fileInputStream)) {
-			Sheet sheet = workbook.getSheet(sheetName);
-			int lastRow = sheet.getLastRowNum();
-
-			int lastColNum = sheet.getRow(0).getLastCellNum();
-
-			List list = new ArrayList();
-			for (int i = 0; i < lastColNum; i++) {
-				Row row = sheet.getRow(0);
-				Cell cell = row.getCell(i);
-				String rowHeader = cell.getStringCellValue().trim();
-				list.add(rowHeader);
-			}
-			testDataAllRows = new ArrayList<Map<String, String>>();
-			for (int j = 1; j <= lastRow; j++) {
-				Row row = sheet.getRow(j);
-				testData = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
-				for (int k = 0; k < lastColNum; k++) {
-					Cell cell = row.getCell(k);
-					String colValue = cell.getStringCellValue().trim();
-					testData.put((String) list.get(k), colValue);
-				}
-				testDataAllRows.add(testData);
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-
-		}
-		return testDataAllRows;
-	}
-
 	
 	public static Object[][] getMapArray( String sheetName, String tableName) throws IOException{
 		FileInputStream fileInputStream = new FileInputStream(
-				System.getProperty("user.dir") + File.separator + "src/test/resources/testdata/TestData3.xlsx");
+				System.getProperty("user.dir") + File.separator + "src/test/resources/testdata/TestData.xlsx");
 		Workbook workbook = new XSSFWorkbook(fileInputStream);
 		int startRow, startCol=0, endRow, endCol = 0, ci, cj,endCols,endRows;
 		

@@ -8,7 +8,7 @@ public class ReadConfig {
 
 	Properties pro;
 	
-	public ReadConfig()
+	public  ReadConfig()
 	{
 		File src=new File(System.getProperty("user.dir")+File.separator+"Configurations/config.properties");
 		
@@ -21,21 +21,9 @@ public class ReadConfig {
 			System.out.println("Exception is "+e.getMessage());
 		}
 	}
-	
-	public String getApplicationURL(){
-	
-		String url=pro.getProperty("baseURL");
-		return url;
-	}
-	
-	public String getUserName(){
-		
-		String userName=pro.getProperty("Username");
-		return userName;
-	}
- public String getPassword(){
-		
-		String password=pro.getProperty("Password");
-		return password;
+	//Read the key-value pair from property file
+	public String readPropertyFile(String key) {
+		String value=pro.getProperty(key);
+		return value;
 	}
 }

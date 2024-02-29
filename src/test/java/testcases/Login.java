@@ -35,16 +35,16 @@ public class Login extends BaseTest{
 	@ExcelDataSourceInfo(TestName = "TC01_Login_ValidCredentials")
 	@Test(enabled = true,priority = 1,dataProvider ="Login" )
 	public void TC01_Login_ValidCredentials(Map<Object, Object> map) throws IOException {
-		ReadConfig readConfid=new ReadConfig();
+		ReadConfig readConfig=new ReadConfig();
 		LoginPage loginPage=new LoginPage(driver);
-		WebCtrls ctrls=new WebCtrls();
-		driver.get(readConfid.getApplicationURL());
+		WebCtrls webCtrls=new WebCtrls();
+		driver.get(readConfig.readPropertyFile("baseURL"));
 		
 		//Decrypt the encrypted password
-		String password=ctrls.decryptString(readConfid.getPassword());
+		String password=webCtrls.decryptString(readConfig.readPropertyFile("Password"));
 		
 		//Login with valid credentials
-		loginPage.login(readConfid.getUserName(),password);
+		loginPage.login(readConfig.readPropertyFile("Username"),password);
 		
 		//Verify the Login
 		loginPage.verifyLogin();
@@ -54,14 +54,14 @@ public class Login extends BaseTest{
 	@Test(enabled = true,priority = 2,dataProvider ="Login")
 	public void TC02_Login_InvalidCredentials(Map<Object, Object> map) throws IOException {
 		
-		ReadConfig readConfid=new ReadConfig();
+		ReadConfig readConfig=new ReadConfig();
 		LoginPage loginPage=new LoginPage(driver);
-		WebCtrls ctrls=new WebCtrls();
+		WebCtrls webCtrls=new WebCtrls();
 
-		driver.get(readConfid.getApplicationURL());
+		driver.get(readConfig.readPropertyFile("baseURL"));
 		
 		//Decrypt the Encrypted password
-		String password=ctrls.decryptString((String) map.get("Password"));
+		String password=webCtrls.decryptString((String) map.get("Password"));
 		
 		//Login with invalid credentials
 		loginPage.login( (String) map.get("Username"), password);

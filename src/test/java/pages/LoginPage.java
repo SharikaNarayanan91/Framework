@@ -29,28 +29,21 @@ public class LoginPage {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	DashboardPage dashboardPage=new DashboardPage(ldriver);
+
 
 	// input
-	@FindBy(xpath = "//input[@name='username']")
+	@FindBy(name="username")
 	WebElement txtUsername;
-
-	@FindBy(xpath = "//input[@name='password']")
+	@FindBy(name="password")
 	WebElement txtPassword;
-
 	// buttons
-	@FindBy(xpath = "//button[text()=' Login ']")
+	@FindBy(css="[type=submit]")
 	WebElement btnLogin;
-
-	// Elements
-	@FindBy(xpath = "//h6[text()='Dashboard']")
-	WebElement eleDashboardTitle;
-
 	@FindBy(xpath = "//p[contains(@class,'alert-content-text')]")
 	WebElement eleInvalidCredentialsError;
-
-	public By linkMainMenuOptions(String MenuOption) {
-		return By.xpath("//span[contains(@class,'main-menu') and text()='" + MenuOption + "']");
-	}
+	@FindBy(xpath = "//h6[text()='Dashboard']")
+	WebElement eleDashboardTitle;
 
 	/**
 	 * Login to the site
@@ -60,14 +53,8 @@ public class LoginPage {
 	 */
 	public void login(String username, String password) {
 		webCtrls.setData(txtUsername, username);
-		webCtrls.setData(txtPassword, password);
-		logger.info("Entered user credentials");
-		webCtrls.addLog("Entered user credentials");
-
+		webCtrls.setEncryptedData(txtPassword, password);
 		webCtrls.buttonClick(btnLogin);
-		logger.info("Clicked on Login button");
-		webCtrls.getWait();
-		webCtrls.addLog("Clicked on Login button");
 	}
 
 	/**
@@ -76,7 +63,7 @@ public class LoginPage {
 	public void verifyLogin() {
 		Assert.assertTrue(webCtrls.isDisplayed(eleDashboardTitle), "HRM Login not successfull");
 		logger.info("HRM login successfull");
-		webCtrls.addLog("HRM login successfull");
+		webCtrls.addLog("Pass","HRM login successfull");
 	}
 
 	/**
@@ -88,6 +75,6 @@ public class LoginPage {
 		String ActualErrorMessage = webCtrls.getText(eleInvalidCredentialsError);
 		Assert.assertEquals(ActualErrorMessage, expectedErrorMessage, "Error message displayed is not as expected");
 		logger.info("Error message displayed as expected : " + ActualErrorMessage);
-		webCtrls.addLog("Error message displayed as expected : " + ActualErrorMessage);
+		webCtrls.addLog("Pass","Error message displayed as expected : " + ActualErrorMessage);
 	}
 }

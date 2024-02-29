@@ -25,30 +25,23 @@ public class AdminPage {
 	}
 
 	// inputs
-	@FindBy(xpath = "//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input')]")
+	@FindBy(xpath="//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtUsername;
-
 	@FindBy(xpath = "//label[text()='User Role']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
 	WebElement ddlUserRole;
-
 	@FindBy(xpath = "//div[@role='listbox']//div")
 	WebElement ddlGeneralList;
-
 	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
 	WebElement ddlStatus;
-
 	// buttons
 	@FindBy(xpath = "//button[text()=' Search ']")
 	WebElement btnSearch;
 
-	// elements
-	@FindBy(xpath = "//button[text()=' //div[text()='Username']//following-sibling::div[text()='Cheeku'] ']")
-	WebElement eleUsername;
-	@FindBy(xpath = "//div[text()='User Role']//following-sibling::div[text()='Admin']")
-	WebElement eleUserRole;
-
 	public By eleRecordsFound(String count) {
 		return By.xpath("//span[text()='(" + count + ") Record Found']");
+	}
+	public By eleTableRecord(int index) {
+		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
 	}
 
 	/**
@@ -59,18 +52,12 @@ public class AdminPage {
 	public void searchUser(String userName, String userRole) {
 		if (userName.length() > 1) {
 			webCtrls.setData(txtUsername, userName);
-			logger.info("Entered Username : " + userName);
-			webCtrls.addLog("Entered Username : " + userName);
-		}
+				}
 		if (userRole.length() > 1) {
 			webCtrls.buttonClick(ddlUserRole);
 			webCtrls.selectFromDropdown(ddlGeneralList, userRole);
-			logger.info("Selected User role : " + userRole);
-			webCtrls.addLog("Selected User role : " + userRole);
-		}
+			}
 		webCtrls.buttonClick(btnSearch);
-		logger.info("Clicked on Search button");
-		webCtrls.addLog("Clicked on Search button");
 	}
 
 	/**
@@ -81,6 +68,36 @@ public class AdminPage {
 		Assert.assertTrue(webCtrls.isDisplayed(eleRecordsFound(expectedCount)),
 				"Number of records for selected user is not as expected");
 		logger.info("Number of records for selected user found as expected : " + expectedCount);
-		webCtrls.addLog("Number of records for selected user found as expected : " + expectedCount);
+		webCtrls.addLog("Pass","Number of records for selected user found as expected : " + expectedCount);
+	}
+
+	/**
+	 * Verify the records in the table
+	 * @param requiredColumnName
+	 * @param expectedRecord
+	 */
+	public void verifyTableRecord(String requiredColumnName,String expectedRecord) {
+	
+		int index = 0;
+		switch(requiredColumnName) {
+		case "UserName":
+			index=3;
+			break;
+		case "UserRole":
+			index=4;
+			break;
+		case "EmployeeName":
+			index=5;
+			break;
+		case "Status":
+			index=6;
+			break;			
+		}
+			
+		String actualRecord=webCtrls.getText(eleTableRecord(index));
+		Assert.assertEquals(actualRecord,expectedRecord,
+				"The "+requiredColumnName+" displayed of the selected user is not as expected");
+		logger.info("The "+requiredColumnName+" displayed of the selected user is as expected : " + expectedRecord);
+		webCtrls.addLog("Pass","The "+requiredColumnName+" displayed of the selected user is as expected : " + expectedRecord);
 	}
 }

@@ -8,7 +8,10 @@
 	  </class>
 	  <class name="testcases.Admin">  
 	  </class>
+	   <class name="testcases.PIM">  
+	  </class>
 	    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+	
 	
