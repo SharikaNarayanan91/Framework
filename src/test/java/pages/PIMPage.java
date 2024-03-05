@@ -1,11 +1,14 @@
 package pages;
 
 
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -118,20 +121,52 @@ public class PIMPage {
 		webCtrls.setEncryptedData(txtConfirmPassword, password);
 		String empId=txtEmpId.getAttribute("value");
 		webCtrls.javaScriptClick(submit);
-		webCtrls.wait(5);
+		webCtrls.wait(10);
 		return empId;
+	}
+	
+	public void	deleteEmployee(String employeeName) {
+		WebElement deleteIcon=webCtrls.Ctrl(By.xpath("//div[text()='"+employeeName+"']//parent::div//following-sibling::div//i[@class='oxd-icon bi-trash']"));
+		webCtrls.buttonClick(deleteIcon);
+		webCtrls.wait(2);
+		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.wait(2);
+	}
+	
+	public void	clickEditIconAgainstEmployee(String employeeName) {
+		WebElement editIcon=webCtrls.Ctrl(By.xpath("//div[text()='"+employeeName+"']//parent::div//following-sibling::div//i[@class='oxd-icon bi-pencil-fill']"));
+		webCtrls.buttonClick(editIcon);
+		webCtrls.wait(2);
+	}
+	
+	public void editEmployeeNameUnderPersonalDetails(String fieldName,String fieldValue) {	
+		WebElement editField=webCtrls.Ctrl(By.xpath("//input[@name='"+fieldName+"']"));
+		webCtrls.clearTextByDeleting(editField);
+		webCtrls.wait(5);
+		webCtrls.setData(editField, fieldValue);
+	}
+	
+	public void clickSaveOnEditDetails() {
+		webCtrls.scrollToElement(submit);
+		webCtrls.javaScriptClick(submit);
+		webCtrls.wait(3);
+	}
+	
+	public void verifyNoRecords() {
+		webCtrls.scroll();
+		Assert.assertTrue(webCtrls.isDisplayed(txtNoRecordsFound), "'No Records Found' not displayed for the selected user");
+		logger.info("'No Records Found' displayed for the selected user");
+		webCtrls.addLog("Pass","'No Records Found' displayed for the selected user");
 	}
 
 	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input")
-	WebElement txtEmployeeName;
+ 	WebElement txtEmployeeName;
 	@FindBy(css = "[type=submit]")
 	WebElement submit;
 	@FindBy(css = "[type=reset]")
 	WebElement reset;
 	@FindBy(xpath="//button[text()=' Add ']")
 	WebElement addButton;
-	@FindBy(xpath="oxd-text oxd-text--h6 orangehrm-main-title")
-	WebElement addEmployeeTitle;
 	@FindBy(name="firstName")
 	WebElement txtFirstName;
 	@FindBy(name="middleName")
@@ -148,8 +183,14 @@ public class PIMPage {
 	WebElement txtConfirmPassword;
 	@FindBy(css = "[type=checkbox]")
 	WebElement chkboxCreateLogin;
-
+	@FindBy(xpath="//i[@class='oxd-icon bi-trash']")
+	WebElement iconDelete;
+	@FindBy(xpath = "//div[contains(@class,'dialog-popup')]//button[contains(.,'Yes')]")
+	WebElement dlgBoxYesButton;
+	@FindBy(xpath = "//span[text()='No Records Found']")
+	WebElement txtNoRecordsFound;
 	public By eleTableRecord(int index) {
 		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
 	}
+	
 }

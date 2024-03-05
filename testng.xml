@@ -8,9 +8,9 @@
 			</class>
 			<class name="testcases.Admin">
 			</class>
-			<class name="testcases.PIM">
-			</class>
 			<class name="testcases.Dashboard">
+			</class>
+			<class name="testcases.PIM">
 			</class>
 		</classes>
 	</test> <!-- Test -->

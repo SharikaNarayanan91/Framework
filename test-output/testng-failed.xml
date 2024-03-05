@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.PIM">
+      <class name="testcases.Admin">
         <methods>
           <include name="initialize"/>
-          <include name="TC03_PIM_CreateEmployeeWithLoginDetails" invocation-numbers="0"/>
+          <include name="TC01_Admin_SearchUser" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- testcases.PIM -->
+      </class> <!-- testcases.Admin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

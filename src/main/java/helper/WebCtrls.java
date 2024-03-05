@@ -300,4 +300,32 @@ public class WebCtrls extends BaseTest {
 				addLog("Info","Clicked on "+locator);
 			}
 	}
+
+	/**
+	 * Find element
+	 * @param by
+	 */
+	public WebElement Ctrl(By by) {
+		return driver.findElement(by);
+	}
+	/**
+	 * Clear text field with Javascript 
+	 * @param locator
+	 */
+	 public void clearTextFieldWithJavaScript(WebElement locator) {
+	        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+	        // Execute JavaScript to clear the text field value
+	        jsExecutor.executeScript("arguments[0].value='';", locator);
+	    }
+	 
+	 /**
+		 * Clear text by selecting and deleting original text 
+		 * @param locator
+		 */
+		 public void clearTextByDeleting(WebElement locator) {
+		       locator.sendKeys(Keys.CONTROL+"a");
+		       locator.sendKeys(Keys.DELETE);
+		    }
+		
+	
 }
