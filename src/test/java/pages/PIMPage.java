@@ -24,28 +24,6 @@ public class PIMPage {
 		PageFactory.initElements(rdriver, this);
 	}
 	
-	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input")
-	WebElement txtEmployeeName;
-	@FindBy(css = "[type=submit]")
-	WebElement submit;
-	@FindBy(css = "[type=reset]")
-	WebElement reset;
-	@FindBy(xpath="//button[text()=' Add ']")
-	WebElement addButton;
-	@FindBy(xpath="oxd-text oxd-text--h6 orangehrm-main-title")
-	WebElement addEmployeeTitle;
-	@FindBy(name="firstName")
-	WebElement txtFirstName;
-	@FindBy(name="middleName")
-	WebElement txtMiddleName;	
-	@FindBy(name="lastName")
-	WebElement txtLastName;
-	@FindBy(xpath="//label[text()='Employee Id']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
-	WebElement txtEmpId;
-	public By eleTableRecord(int index) {
-		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
-	}
-	
 	/**
 	 * Search employee with Employee Name
 	 * 
@@ -118,5 +96,60 @@ public class PIMPage {
 		String empId=txtEmpId.getAttribute("value");
 		webCtrls.buttonClick(submit);
 		return empId;
+	}
+
+	/**
+	 * Create an employee with Login Details
+	 * @param firstName
+	 * @param middleName
+	 * @param lastName
+	 * @param userName
+	 * @param password
+	 */
+	public String createEmployeeWithLoginDetails(String firstName,String middleName,String lastName,String userName,String password) {
+		webCtrls.wait(5);
+		addButton.click();
+		webCtrls.setData(txtFirstName, firstName);
+		webCtrls.setData(txtMiddleName, middleName);
+		webCtrls.setData(txtLastName, lastName);
+		webCtrls.javaScriptClick(chkboxCreateLogin);
+		webCtrls.setData(txtUsername, userName);
+		webCtrls.setEncryptedData(txtPassword, password);
+		webCtrls.setEncryptedData(txtConfirmPassword, password);
+		String empId=txtEmpId.getAttribute("value");
+		webCtrls.javaScriptClick(submit);
+		webCtrls.wait(5);
+		return empId;
+	}
+
+	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input")
+	WebElement txtEmployeeName;
+	@FindBy(css = "[type=submit]")
+	WebElement submit;
+	@FindBy(css = "[type=reset]")
+	WebElement reset;
+	@FindBy(xpath="//button[text()=' Add ']")
+	WebElement addButton;
+	@FindBy(xpath="oxd-text oxd-text--h6 orangehrm-main-title")
+	WebElement addEmployeeTitle;
+	@FindBy(name="firstName")
+	WebElement txtFirstName;
+	@FindBy(name="middleName")
+	WebElement txtMiddleName;	
+	@FindBy(name="lastName")
+	WebElement txtLastName;
+	@FindBy(xpath="//label[text()='Employee Id']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtEmpId;
+	@FindBy(xpath="//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtUsername;
+	@FindBy(xpath="//label[text()='Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtPassword;
+	@FindBy(xpath="//label[text()='Confirm Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtConfirmPassword;
+	@FindBy(css = "[type=checkbox]")
+	WebElement chkboxCreateLogin;
+
+	public By eleTableRecord(int index) {
+		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
 	}
 }

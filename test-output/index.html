@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.Admin" class="method navigator-link" hash-for-method="TC01_Admin_SearchUser({NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin})">TC01_Admin_SearchUser({NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Dashboard" class="method navigator-link" hash-for-method="TC01_Dashboard_verifyDasboardMainMenus({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6...)">TC01_Dashboard_verifyDasboardMainMenus({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -135,6 +140,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.PIM" class="method navigator-link" hash-for-method="TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor})">TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.PIM" class="method navigator-link" hash-for-method="TC03_PIM_CreateEmployeeWithLoginDetails({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==})">TC03_PIM_CreateEmployeeWithLoginDetails({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -208,6 +218,22 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">testcases.Dashboard</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC01_Dashboard_verifyDasboardMainMenus({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6...)">
+                  </a> <!-- TC01_Dashboard_verifyDasboardMainMenus({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6...) -->
+                  <span class="method-name">TC01_Dashboard_verifyDasboardMainMenus</span>
+                  <span class="parameters">({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testcases.PIM</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -225,6 +251,14 @@
                   </a> <!-- TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor}) -->
                   <span class="method-name">TC02_PIM_SearchEmployeeWithEmployeeId</span>
                   <span class="parameters">({EmployeeLastName=Kapoor})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC03_PIM_CreateEmployeeWithLoginDetails({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==})">
+                  </a> <!-- TC03_PIM_CreateEmployeeWithLoginDetails({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}) -->
+                  <span class="method-name">TC03_PIM_CreateEmployeeWithLoginDetails</span>
+                  <span class="parameters">({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -245,6 +279,7 @@
       &lt;class name=&quot;testcases.Login&quot;/&gt;
       &lt;class name=&quot;testcases.Admin&quot;/&gt;
       &lt;class name=&quot;testcases.PIM&quot;/&gt;
+      &lt;class name=&quot;testcases.Dashboard&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -258,7 +293,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (3 classes)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -284,40 +319,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails')
+data.setCell(0, 1, 'TC03_PIM_CreateEmployeeWithLoginDetails')
 data.setCell(0, 2, 'testcases.PIM')
-data.setCell(0, 3, 29879);
+data.setCell(0, 3, 41992);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC02_PIM_SearchEmployeeWithEmployeeId')
 data.setCell(1, 2, 'testcases.PIM')
-data.setCell(1, 3, 29639);
+data.setCell(1, 3, 29049);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC01_Admin_SearchUser')
-data.setCell(2, 2, 'testcases.Admin')
-data.setCell(2, 3, 11925);
+data.setCell(2, 1, 'TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails')
+data.setCell(2, 2, 'testcases.PIM')
+data.setCell(2, 3, 29028);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC01_Login_ValidCredentials')
-data.setCell(3, 2, 'testcases.Login')
-data.setCell(3, 3, 6450);
+data.setCell(3, 1, 'TC01_Admin_SearchUser')
+data.setCell(3, 2, 'testcases.Admin')
+data.setCell(3, 3, 12330);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC02_Login_InvalidCredentials')
-data.setCell(4, 2, 'testcases.Login')
-data.setCell(4, 3, 6244);
+data.setCell(4, 1, 'TC01_Dashboard_verifyDasboardMainMenus')
+data.setCell(4, 2, 'testcases.Dashboard')
+data.setCell(4, 3, 8425);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC02_Login_InvalidCredentials')
+data.setCell(5, 1, 'TC01_Login_ValidCredentials')
 data.setCell(5, 2, 'testcases.Login')
-data.setCell(5, 3, 5987);
+data.setCell(5, 3, 6782);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'TC02_Login_InvalidCredentials')
 data.setCell(6, 2, 'testcases.Login')
-data.setCell(6, 3, 5717);
+data.setCell(6, 3, 6191);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC02_Login_InvalidCredentials')
+data.setCell(7, 2, 'testcases.Login')
+data.setCell(7, 3, 5643);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC02_Login_InvalidCredentials')
+data.setCell(8, 2, 'testcases.Login')
+data.setCell(8, 3, 5622);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -350,89 +393,116 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_Login_ValidCredentials({Username=Admin, Password=YWRtaW4xMjM=})</span>
-                <span class="method-start">1473 ms</span>
+                <span class="method-start">1446 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_Login_ValidCredentials status=SUCCESS method=Login.TC01_Login_ValidCredentials...)</span>
-                <span class="method-start">8174 ms</span>
+                <span class="method-start">8479 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOEx...)</span>
-                <span class="method-start">8632 ms</span>
+                <span class="method-start">8990 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})</span>
-                <span class="method-start">9533 ms</span>
+                <span class="method-start">9917 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredent...)</span>
-                <span class="method-start">15923 ms</span>
+                <span class="method-start">16255 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOEx...)</span>
-                <span class="method-start">16255 ms</span>
+                <span class="method-start">16613 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=})</span>
-                <span class="method-start">17110 ms</span>
+                <span class="method-start">17465 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredent...)</span>
-                <span class="method-start">22972 ms</span>
+                <span class="method-start">23239 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOEx...)</span>
-                <span class="method-start">23288 ms</span>
+                <span class="method-start">23502 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0})</span>
-                <span class="method-start">24169 ms</span>
+                <span class="method-start">24351 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredent...)</span>
-                <span class="method-start">30330 ms</span>
+                <span class="method-start">30110 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Admin</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Admin.TC01_Admin_SearchUser(java.util.Map) throws java.io.IOException)</span>
-                <span class="method-start">30606 ms</span>
+                <span class="method-start">30433 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_Admin_SearchUser({NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin})</span>
-                <span class="method-start">31497 ms</span>
+                <span class="method-start">31324 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_Admin_SearchUser status=SUCCESS method=Admin.TC01_Admin_SearchUser(java.util.M...)</span>
-                <span class="method-start">43573 ms</span>
+                <span class="method-start">43820 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.PIM</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map) ...)</span>
-                <span class="method-start">44045 ms</span>
+                <span class="method-start">44216 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails({EmployeeLastName=Kapoor})</span>
-                <span class="method-start">44925 ms</span>
+                <span class="method-start">45147 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails status=SUCCESS method=PIM.TC01_P...)</span>
-                <span class="method-start">74971 ms</span>
+                <span class="method-start">74348 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map) throws java.i...)</span>
-                <span class="method-start">75366 ms</span>
+                <span class="method-start">74919 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor})</span>
-                <span class="method-start">76233 ms</span>
+                <span class="method-start">75789 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_PIM_SearchEmployeeWithEmployeeId status=SUCCESS method=PIM.TC02_PIM_SearchEmpl...)</span>
-                <span class="method-start">106022 ms</span>
+                <span class="method-start">104987 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize(chrome, public void testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map) throws java...)</span>
+                <span class="method-start">105315 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC03_PIM_CreateEmployeeWithLoginDetails({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==})</span>
+                <span class="method-start">106133 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC03_PIM_CreateEmployeeWithLoginDetails status=SUCCESS method=PIM.TC03_PIM_CreateEm...)</span>
+                <span class="method-start">148309 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.Dashboard</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialize(chrome, public void testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus(java.util.Map))</span>
+                <span class="method-start">148688 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC01_Dashboard_verifyDasboardMainMenus({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6...)</span>
+                <span class="method-start">149529 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC01_Dashboard_verifyDasboardMainMenus status=SUCCESS method=Dashboard.TC01_Dashboa...)</span>
+                <span class="method-start">158126 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

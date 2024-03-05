@@ -121,4 +121,72 @@ public class PIM extends BaseTest{
 		pimPage.verifyTableRecord("Id",employeeId);
 		
 	}
+	@ExcelDataSourceInfo(TestName = "TC03_PIM_CreateEmployeeWithLoginDetails")
+	@Test(enabled = true, priority = 3, dataProvider = "PIM")
+	public void TC03_PIM_CreateEmployeeWithLoginDetails(Map<Object, Object> map) throws IOException, InterruptedException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		PIMPage pimPage = new PIMPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage =new DashboardPage(driver);		
+		
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		
+		
+		// Select PIM tab
+		dashboardPage.clickPIM();
+		
+		String employeeFirstName=webCtrls.titleCase(webCtrls.genrateRandomAlphaString(6));
+		String employeeMiddleName=webCtrls.titleCase(webCtrls.genrateRandomAlphaString(6));
+		String firstAndMiddleName=employeeFirstName+ " "+employeeMiddleName;
+		map.put("EmployeeFirstName", employeeFirstName);
+		map.put("EmployeeMiddleName", employeeMiddleName);
+		map.put("EmployeeFirst&LastName", firstAndMiddleName);
+		map.put("newUserName", firstAndMiddleName);
+		String newUserName=employeeFirstName+employeeMiddleName;
+		String newEmployeePassword=webCtrls.decryptString((String)map.get("NewEmployeePassword"));
+		
+		//Create Employee without Login details
+		String employeeId=pimPage.createEmployeeWithLoginDetails((String) map.get("EmployeeFirstName"), (String) map.get("EmployeeMiddleName"), (String) map.get("EmployeeLastName"),newUserName, newEmployeePassword);
+		map.put("EmployeeId",employeeId);
+		
+		dashboardPage.clickPIM();
+		
+		// Search for employee
+	
+		pimPage.searchEmployeeWithEmployeeName(firstAndMiddleName);
+		webCtrls.scroll();
+
+		//Verify the Empoyee name of the listed employee
+		pimPage.verifyTableRecord("FirstAndMiddleName", firstAndMiddleName);
+		
+		//Verify the Employee last name of the listed employee
+		pimPage.verifyTableRecord("LastName", (String) map.get("EmployeeLastName"));
+		map.put("EmployeeLastName", (String) map.get("EmployeeLastName"));
+	
+		//Verify the Empoyee Id of the listed employee
+		pimPage.verifyTableRecord("Id", employeeId);
+		
+		//Log out form current user
+		dashboardPage.logOut();		
+		
+		// Decrypt the Encrypted password
+		String newDisplayUserName = (String) map.get("EmployeeFirstName") + " " + (String) map.get("EmployeeLastName");
+
+		// Login with valid credentials
+		loginPage.login(newUserName, newEmployeePassword);
+		loginPage.verifyLogin();
+
+		dashboardPage.verifyUserDropdownName(newDisplayUserName);
+		 
+	}
 }

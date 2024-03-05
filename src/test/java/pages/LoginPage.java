@@ -30,21 +30,7 @@ public class LoginPage {
 		PageFactory.initElements(rdriver, this);
 	}
 	DashboardPage dashboardPage=new DashboardPage(ldriver);
-
-
-	// input
-	@FindBy(name="username")
-	WebElement txtUsername;
-	@FindBy(name="password")
-	WebElement txtPassword;
-	// buttons
-	@FindBy(css="[type=submit]")
-	WebElement btnLogin;
-	@FindBy(xpath = "//p[contains(@class,'alert-content-text')]")
-	WebElement eleInvalidCredentialsError;
-	@FindBy(xpath = "//h6[text()='Dashboard']")
-	WebElement eleDashboardTitle;
-
+	
 	/**
 	 * Login to the site
 	 * 
@@ -77,4 +63,17 @@ public class LoginPage {
 		logger.info("Error message displayed as expected : " + ActualErrorMessage);
 		webCtrls.addLog("Pass","Error message displayed as expected : " + ActualErrorMessage);
 	}
+	
+	// input
+	@FindBy(name="username")
+	WebElement txtUsername;
+	@FindBy(name="password")
+	WebElement txtPassword;
+	// buttons
+	@FindBy(css="[type=submit]")
+	WebElement btnLogin;
+	@FindBy(xpath = "//p[contains(@class,'alert-content-text')]")
+	WebElement eleInvalidCredentialsError;
+	@FindBy(xpath = "//h6[text()='Dashboard']")
+	WebElement eleDashboardTitle;
 }

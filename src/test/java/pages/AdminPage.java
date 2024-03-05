@@ -24,26 +24,6 @@ public class AdminPage {
 		PageFactory.initElements(rdriver, this);
 	}
 
-	// inputs
-	@FindBy(xpath="//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
-	WebElement txtUsername;
-	@FindBy(xpath = "//label[text()='User Role']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlUserRole;
-	@FindBy(xpath = "//div[@role='listbox']//div")
-	WebElement ddlGeneralList;
-	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlStatus;
-	// buttons
-	@FindBy(xpath = "//button[text()=' Search ']")
-	WebElement btnSearch;
-
-	public By eleRecordsFound(String count) {
-		return By.xpath("//span[text()='(" + count + ") Record Found']");
-	}
-	public By eleTableRecord(int index) {
-		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
-	}
-
 	/**
 	 * Search for a user with user name and user role
 	 * @param userName
@@ -100,4 +80,25 @@ public class AdminPage {
 		logger.info("The "+requiredColumnName+" displayed of the selected user is as expected : " + expectedRecord);
 		webCtrls.addLog("Pass","The "+requiredColumnName+" displayed of the selected user is as expected : " + expectedRecord);
 	}
+	
+	// inputs
+	@FindBy(xpath="//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtUsername;
+	@FindBy(xpath = "//label[text()='User Role']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlUserRole;
+	@FindBy(xpath = "//div[@role='listbox']//div")
+	WebElement ddlGeneralList;
+	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlStatus;
+	// buttons
+	@FindBy(xpath = "//button[text()=' Search ']")
+	WebElement btnSearch;
+
+	public By eleRecordsFound(String count) {
+		return By.xpath("//span[text()='(" + count + ") Record Found']");
+	}
+	public By eleTableRecord(int index) {
+		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
+	}
+
 }

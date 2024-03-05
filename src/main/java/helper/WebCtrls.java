@@ -35,9 +35,15 @@ public class WebCtrls extends BaseTest {
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.visibilityOf(locator));
 		locator.sendKeys(value);
-		logger.info("Entered "+locator.getAttribute("name")+" as " + value);
-		addLog("Info","Entered "+locator.getAttribute("name")+" as " + value);
-
+		String locatorName=locator.getAttribute("name");
+		if(locatorName.length()!=0) {
+		logger.info("Entered "+locatorName+" as " + value);
+		addLog("Info","Entered "+locatorName+" as " + value);
+		}
+		else {
+			logger.info("Entered "+locator+" as " + value);
+			addLog("Info","Entered "+locator+" as " + value);
+		}		
 	}
 	/**
 	 * Set data for encrypted value(e.g.Password)
@@ -48,8 +54,15 @@ public class WebCtrls extends BaseTest {
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.visibilityOf(locator));
 		locator.sendKeys(value);
-		logger.info("Entered "+locator.getAttribute("name")+" as " + encryptString(value));
-		addLog("Info","Entered "+locator.getAttribute("name")+" as " + encryptString(value));
+		String locatorName=locator.getAttribute("name");
+		if(locatorName.length()!=0) {
+			logger.info("Entered "+locatorName+" as " + encryptString(value));
+			addLog("Info","Entered "+locatorName+" as " + encryptString(value));
+			}
+			else {
+				logger.info("Entered "+locator+" as " + encryptString(value));
+				addLog("Info","Entered "+locator+" as " + encryptString(value));
+			}
 	}
 	/**
 	 * Get text 
@@ -88,8 +101,14 @@ public class WebCtrls extends BaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 		String buttonName=locator.getText();
 		locator.click();
+		if(buttonName.length()!=0) {
 		logger.info("Clicked on "+buttonName);
 		addLog("Info","Clicked on "+buttonName);
+		}else {
+			logger.info("Clicked on "+locator);
+			addLog("Info","Clicked on "+locator);
+		}
+			
 	}
 	/**
 	 * To get a wait
@@ -147,8 +166,13 @@ public class WebCtrls extends BaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 		String buttonName=driver.findElement(locator).getText();
 		driver.findElement(locator).click();
-		logger.info("Clicked on "+buttonName);
-		addLog("Info","Clicked on "+buttonName);
+		if(buttonName.length()!=0) {
+			logger.info("Clicked on "+buttonName);
+			addLog("Info","Clicked on "+buttonName);
+			}else {
+				logger.info("Clicked on "+locator);
+				addLog("Info","Clicked on "+locator);
+			}
 	}
 	/**
 	 * To check whether element is displayed
@@ -260,4 +284,20 @@ public class WebCtrls extends BaseTest {
 		 String text=Character.toTitleCase(param.charAt(0))+param.substring(1).toLowerCase();
 		 return text;
 	 }
+	/**
+	 * Javascipt click a button/link
+	 * @param WebElement locator
+	 */
+	public void javaScriptClick(WebElement locator) {
+		String buttonName = locator.getText();
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].click();", locator);
+		if(buttonName.length()!=0) {
+			logger.info("Clicked on "+buttonName);
+			addLog("Info","Clicked on "+buttonName);
+			}else {
+				logger.info("Clicked on "+locator);
+				addLog("Info","Clicked on "+locator);
+			}
+	}
 }

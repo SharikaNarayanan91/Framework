@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-29T14:08:54 IST" name="Suite" finished-at="2024-02-29T14:10:41 IST" duration-ms="106914">
+  <suite started-at="2024-03-04T17:24:10 IST" name="Suite" finished-at="2024-03-04T17:26:49 IST" duration-ms="159109">
     <groups>
     </groups>
-    <test started-at="2024-02-29T14:08:54 IST" name="Test" finished-at="2024-02-29T14:10:41 IST" duration-ms="106914">
+    <test started-at="2024-03-04T17:24:10 IST" name="Test" finished-at="2024-03-04T17:26:49 IST" duration-ms="159109">
       <class name="testcases.Login">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:08:54 IST" name="initialize" finished-at="2024-02-29T14:08:56 IST" duration-ms="1472" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:11 IST" name="initialize" finished-at="2024-03-04T17:24:12 IST" duration-ms="1444" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC01_Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:08:56 IST" name="TC01_Login_ValidCredentials" data-provider="Login" finished-at="2024-02-29T14:09:02 IST" duration-ms="6450" status="PASS">
+        <test-method signature="TC01_Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:12 IST" name="TC01_Login_ValidCredentials" data-provider="Login" finished-at="2024-03-04T17:24:19 IST" duration-ms="6782" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,18 +34,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_Login_ValidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:03 IST" name="afterMethod" finished-at="2024-02-29T14:09:03 IST" duration-ms="379" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:19 IST" name="afterMethod" finished-at="2024-03-04T17:24:19 IST" duration-ms="400" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC01_Login_ValidCredentials status=SUCCESS method=Login.TC01_Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@54e22bdd] output={null}]]]>
+                <![CDATA[[TestResult name=TC01_Login_ValidCredentials status=SUCCESS method=Login.TC01_Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@544820b7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:03 IST" name="initialize" finished-at="2024-02-29T14:09:04 IST" duration-ms="900" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:20 IST" name="initialize" finished-at="2024-03-04T17:24:20 IST" duration-ms="927" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:04 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-02-29T14:09:10 IST" duration-ms="6244" status="PASS">
+        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:20 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-03-04T17:24:27 IST" duration-ms="6191" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,18 +72,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02_Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:10 IST" name="afterMethod" finished-at="2024-02-29T14:09:11 IST" duration-ms="332" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:27 IST" name="afterMethod" finished-at="2024-03-04T17:24:27 IST" duration-ms="358" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@54e22bdd] output={null}]]]>
+                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@544820b7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:11 IST" name="initialize" finished-at="2024-02-29T14:09:12 IST" duration-ms="855" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:27 IST" name="initialize" finished-at="2024-03-04T17:24:28 IST" duration-ms="852" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,7 +99,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:12 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-02-29T14:09:17 IST" duration-ms="5717" status="PASS">
+        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:28 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-03-04T17:24:34 IST" duration-ms="5643" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -110,18 +110,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02_Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:17 IST" name="afterMethod" finished-at="2024-02-29T14:09:18 IST" duration-ms="316" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:34 IST" name="afterMethod" finished-at="2024-03-04T17:24:34 IST" duration-ms="263" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@54e22bdd] output={null}]]]>
+                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@544820b7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:18 IST" name="initialize" finished-at="2024-02-29T14:09:19 IST" duration-ms="880" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:34 IST" name="initialize" finished-at="2024-03-04T17:24:35 IST" duration-ms="849" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -137,7 +137,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:19 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-02-29T14:09:25 IST" duration-ms="5987" status="PASS">
+        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:35 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-03-04T17:24:41 IST" duration-ms="5622" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -148,11 +148,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02_Login_InvalidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@54e22bdd]" started-at="2024-02-29T14:09:25 IST" name="afterMethod" finished-at="2024-02-29T14:09:25 IST" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@544820b7]" started-at="2024-03-04T17:24:41 IST" name="afterMethod" finished-at="2024-03-04T17:24:41 IST" duration-ms="260" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@54e22bdd] output={null}]]]>
+                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@544820b7] output={null}]]]>
               </value>
             </param>
           </params>
@@ -161,7 +161,7 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- testcases.Login -->
       <class name="testcases.PIM">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@485e36bc]" started-at="2024-02-29T14:09:38 IST" name="initialize" finished-at="2024-02-29T14:09:39 IST" duration-ms="880" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:24:55 IST" name="initialize" finished-at="2024-03-04T17:24:56 IST" duration-ms="931" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -177,7 +177,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map)[pri:1, instance:testcases.PIM@485e36bc]" started-at="2024-02-29T14:09:39 IST" name="TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails" data-provider="PIM" finished-at="2024-02-29T14:10:09 IST" duration-ms="29879" status="PASS">
+        <test-method signature="TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map)[pri:1, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:24:56 IST" name="TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails" data-provider="PIM" finished-at="2024-03-04T17:25:25 IST" duration-ms="29028" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -188,18 +188,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@485e36bc]" started-at="2024-02-29T14:10:09 IST" name="afterMethod" finished-at="2024-02-29T14:10:10 IST" duration-ms="363" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:25:25 IST" name="afterMethod" finished-at="2024-03-04T17:25:25 IST" duration-ms="525" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails status=SUCCESS method=PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map)[pri:1, instance:testcases.PIM@485e36bc] output={null}]]]>
+                <![CDATA[[TestResult name=TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails status=SUCCESS method=PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map)[pri:1, instance:testcases.PIM@2a79d4b1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@485e36bc]" started-at="2024-02-29T14:10:10 IST" name="initialize" finished-at="2024-02-29T14:10:11 IST" duration-ms="866" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:25:26 IST" name="initialize" finished-at="2024-03-04T17:25:26 IST" duration-ms="870" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,7 +215,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map)[pri:2, instance:testcases.PIM@485e36bc]" started-at="2024-02-29T14:10:11 IST" name="TC02_PIM_SearchEmployeeWithEmployeeId" data-provider="PIM" finished-at="2024-02-29T14:10:40 IST" duration-ms="29639" status="PASS">
+        <test-method signature="TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map)[pri:2, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:25:26 IST" name="TC02_PIM_SearchEmployeeWithEmployeeId" data-provider="PIM" finished-at="2024-03-04T17:25:55 IST" duration-ms="29049" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -226,11 +226,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02_PIM_SearchEmployeeWithEmployeeId -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@485e36bc]" started-at="2024-02-29T14:10:40 IST" name="afterMethod" finished-at="2024-02-29T14:10:41 IST" duration-ms="332" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:25:56 IST" name="afterMethod" finished-at="2024-03-04T17:25:56 IST" duration-ms="312" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC02_PIM_SearchEmployeeWithEmployeeId status=SUCCESS method=PIM.TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map)[pri:2, instance:testcases.PIM@485e36bc] output={null}]]]>
+                <![CDATA[[TestResult name=TC02_PIM_SearchEmployeeWithEmployeeId status=SUCCESS method=PIM.TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map)[pri:2, instance:testcases.PIM@2a79d4b1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:25:56 IST" name="initialize" finished-at="2024-03-04T17:25:57 IST" duration-ms="817" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map)[pri:3, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:25:57 IST" name="TC03_PIM_CreateEmployeeWithLoginDetails" data-provider="PIM" finished-at="2024-03-04T17:26:39 IST" duration-ms="41992" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_PIM_CreateEmployeeWithLoginDetails -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@2a79d4b1]" started-at="2024-03-04T17:26:39 IST" name="afterMethod" finished-at="2024-03-04T17:26:39 IST" duration-ms="363" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC03_PIM_CreateEmployeeWithLoginDetails status=SUCCESS method=PIM.TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map)[pri:3, instance:testcases.PIM@2a79d4b1] output={null}]]]>
               </value>
             </param>
           </params>
@@ -238,8 +276,48 @@
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testcases.PIM -->
+      <class name="testcases.Dashboard">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Dashboard@2e9fda69]" started-at="2024-03-04T17:26:39 IST" name="initialize" finished-at="2024-03-04T17:26:40 IST" duration-ms="841" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus(java.util.Map)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC01_Dashboard_verifyDasboardMainMenus(java.util.Map)[pri:1, instance:testcases.Dashboard@2e9fda69]" started-at="2024-03-04T17:26:40 IST" name="TC01_Dashboard_verifyDasboardMainMenus" data-provider="Dashboard" finished-at="2024-03-04T17:26:49 IST" duration-ms="8425" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_Dashboard_verifyDasboardMainMenus -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Dashboard@2e9fda69]" started-at="2024-03-04T17:26:49 IST" name="afterMethod" finished-at="2024-03-04T17:26:49 IST" duration-ms="404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01_Dashboard_verifyDasboardMainMenus status=SUCCESS method=Dashboard.TC01_Dashboard_verifyDasboardMainMenus(java.util.Map)[pri:1, instance:testcases.Dashboard@2e9fda69] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Dashboard -->
       <class name="testcases.Admin">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@68ad99fe]" started-at="2024-02-29T14:09:25 IST" name="initialize" finished-at="2024-02-29T14:09:26 IST" duration-ms="891" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@781f10f2]" started-at="2024-03-04T17:24:41 IST" name="initialize" finished-at="2024-03-04T17:24:42 IST" duration-ms="891" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -255,7 +333,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC01_Admin_SearchUser(java.util.Map)[pri:1, instance:testcases.Admin@68ad99fe]" started-at="2024-02-29T14:09:26 IST" name="TC01_Admin_SearchUser" data-provider="Admin" finished-at="2024-02-29T14:09:38 IST" duration-ms="11925" status="PASS">
+        <test-method signature="TC01_Admin_SearchUser(java.util.Map)[pri:1, instance:testcases.Admin@781f10f2]" started-at="2024-03-04T17:24:42 IST" name="TC01_Admin_SearchUser" data-provider="Admin" finished-at="2024-03-04T17:24:54 IST" duration-ms="12330" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -266,11 +344,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_Admin_SearchUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@68ad99fe]" started-at="2024-02-29T14:09:38 IST" name="afterMethod" finished-at="2024-02-29T14:09:38 IST" duration-ms="426" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@781f10f2]" started-at="2024-03-04T17:24:54 IST" name="afterMethod" finished-at="2024-03-04T17:24:55 IST" duration-ms="333" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC01_Admin_SearchUser status=SUCCESS method=Admin.TC01_Admin_SearchUser(java.util.Map)[pri:1, instance:testcases.Admin@68ad99fe] output={null}]]]>
+                <![CDATA[[TestResult name=TC01_Admin_SearchUser status=SUCCESS method=Admin.TC01_Admin_SearchUser(java.util.Map)[pri:1, instance:testcases.Admin@781f10f2] output={null}]]]>
               </value>
             </param>
           </params>
