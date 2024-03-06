@@ -2368,3 +2368,59 @@
 [INFO ] 2024-03-05 15:52:27.370 [main] Login - HRM login successfull
 [INFO ] 2024-03-05 15:52:49.805 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Orxpgf Ueycbb
 [INFO ] 2024-03-05 15:53:14.974 [main] Login - The LastName displayed for the selected user is as expected : Sharma
+[INFO ] 2024-03-06 15:10:59.783 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 15:13:07.636 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 15:14:34.337 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 15:29:44.946 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 15:35:09.966 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 15:46:10.374 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 15:48:08.922 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:15:36.857 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:24:00.432 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:25:04.852 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:29:09.980 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:29:33.536 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-06 17:33:47.620 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:34:10.388 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-06 17:34:10.693 [main] Login - The UserName displayed of the selected user is as expected : PriyaXYGMKE
+[INFO ] 2024-03-06 17:34:11.066 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-06 17:34:11.387 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-06 17:36:16.606 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:36:28.875 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-06 17:36:42.178 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-06 17:36:53.610 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-06 17:37:05.048 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:37:09.195 [main] Login - Number of records for selected user found as expected : 1
+[INFO ] 2024-03-06 17:37:09.508 [main] Login - The EmployeeName displayed of the selected user is as expected : Peter Anderson
+[INFO ] 2024-03-06 17:37:20.527 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:37:44.792 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-06 17:37:45.141 [main] Login - The UserName displayed of the selected user is as expected : PriyaGITjyk
+[INFO ] 2024-03-06 17:37:45.513 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-06 17:37:45.856 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-06 17:37:57.645 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:37:58.671 [main] Login - Tab Admin is present
+[INFO ] 2024-03-06 17:37:59.239 [main] Login - Tab PIM is present
+[INFO ] 2024-03-06 17:37:59.726 [main] Login - Tab Leave is present
+[INFO ] 2024-03-06 17:38:00.198 [main] Login - Tab Time is present
+[INFO ] 2024-03-06 17:38:00.656 [main] Login - Tab Recruitment is present
+[INFO ] 2024-03-06 17:38:01.144 [main] Login - Tab My Info is present
+[INFO ] 2024-03-06 17:38:01.634 [main] Login - Tab Performance is present
+[INFO ] 2024-03-06 17:38:02.074 [main] Login - Tab Dashboard is present
+[INFO ] 2024-03-06 17:38:02.516 [main] Login - Tab Directory is present
+[INFO ] 2024-03-06 17:38:02.970 [main] Login - Tab Maintenance is present
+[INFO ] 2024-03-06 17:38:03.417 [main] Login - Tab Claim is present
+[INFO ] 2024-03-06 17:38:15.228 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:38:39.218 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Zcztqo Ciphiy
+[INFO ] 2024-03-06 17:38:39.728 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-06 17:38:40.210 [main] Login - The Id displayed for the selected user is as expected : 0326
+[INFO ] 2024-03-06 17:38:51.703 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:39:16.663 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Mdsmkl Qrlxdk
+[INFO ] 2024-03-06 17:39:17.240 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-06 17:39:17.785 [main] Login - The Id displayed for the selected user is as expected : 0327
+[INFO ] 2024-03-06 17:39:29.723 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:43:38.884 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:44:04.578 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Gecnjj Pckcns
+[INFO ] 2024-03-06 17:44:22.349 [main] Login - 'No Records Found' displayed for the selected user
+[INFO ] 2024-03-06 17:44:34.574 [main] Login - HRM login successfull
+[INFO ] 2024-03-06 17:44:58.288 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Pdjakm Xusiyj
+[INFO ] 2024-03-06 17:45:24.982 [main] Login - The LastName displayed for the selected user is as expected : Sharma

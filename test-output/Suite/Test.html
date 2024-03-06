@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 05 15:48:52 IST 2024</td>
+<td>Started on:</td><td>Wed Mar 06 17:36:04 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>263 seconds (263626 ms)</td>
+<tr><td>Total time:</td><td>561 seconds (561925 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,108 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails()'><b>TC03_PIM_CreateEmployeeWithLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class=&apos;oxd-table-cell oxd-padding-cell&apos; and @role=&apos;cell&apos;]//div)[4] (tried for 200 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at helper.WebCtrls.getText(WebCtrls.java:228)
+	at pages.PIMPage.verifyTableRecord(PIMPage.java:81)
+	at testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails(PIM.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;oxd-table-cell oxd-padding-cell&apos; and @role=&apos;cell&apos;]//div)[4]&quot;}
+  (Session info: chrome=122.0.6261.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;10.185.62.76&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.96, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59728}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 36d71be385002d456e3c70091b9c1b6b
+*** Element info: {Using=xpath, value=(//div[@class=&apos;oxd-table-cell oxd-padding-cell&apos; and @role=&apos;cell&apos;]//div)[4]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace13612130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace13612130'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class=&apos;oxd-table-cell oxd-padding-cell&apos; and @role=&apos;cell&apos;]//div)[4] (tried for 200 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at helper.WebCtrls.getText(WebCtrls.java:228)
+	at pages.PIMPage.verifyTableRecord(PIMPage.java:81)
+	at testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails(PIM.java:167)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;oxd-table-cell oxd-padding-cell&apos; and @role=&apos;cell&apos;]//div)[4]&quot;}
+  (Session info: chrome=122.0.6261.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;10.185.62.76&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.96, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59728}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 36d71be385002d456e3c70091b9c1b6b
+*** Element info: {Using=xpath, value=(//div[@class=&apos;oxd-table-cell oxd-padding-cell&apos; and @role=&apos;cell&apos;]//div)[4]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+</pre></div></td>
+<td>246</td>
+<td>testcases.PIM@2371aaca</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,60 +177,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId()'><b>TC02_PIM_SearchEmployeeWithEmployeeId</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
+<td title='testcases.Login.TC01_Login_ValidCredentials()'><b>TC01_Login_ValidCredentials</b><br>Test class: testcases.Login<br>Parameters: {Username=Admin, Password=YWRtaW4xMjM=}</td>
 <td></td>
-<td>28</td>
-<td>testcases.PIM@736d6a5c</td></tr>
+<td>10</td>
+<td>testcases.Login@20b12f8a</td></tr>
 <tr>
 <td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0}</td>
 <td></td>
-<td>5</td>
-<td>testcases.Login@3569fc08</td></tr>
+<td>9</td>
+<td>testcases.Login@20b12f8a</td></tr>
 <tr>
-<td title='testcases.Admin.TC01_Admin_SearchUser()'><b>TC01_Admin_SearchUser</b><br>Test class: testcases.Admin<br>Parameters: {NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin}</td>
+<td title='testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId()'><b>TC02_PIM_SearchEmployeeWithEmployeeId</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
 <td></td>
-<td>10</td>
-<td>testcases.Admin@17cdf2d0</td></tr>
-<tr>
-<td title='testcases.PIM.TC05_PIM_EditEmployeeName()'><b>TC05_PIM_EditEmployeeName</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma}</td>
-<td></td>
-<td>53</td>
-<td>testcases.PIM@736d6a5c</td></tr>
-<tr>
-<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}</td>
-<td></td>
-<td>5</td>
-<td>testcases.Login@3569fc08</td></tr>
-<tr>
-<td title='testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus()'><b>TC01_Dashboard_verifyDasboardMainMenus</b><br>Test class: testcases.Dashboard<br>Parameters: {TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim}</td>
-<td></td>
-<td>8</td>
-<td>testcases.Dashboard@1755e85b</td></tr>
+<td>35</td>
+<td>testcases.PIM@2371aaca</td></tr>
 <tr>
 <td title='testcases.PIM.TC04_PIM_DeleteEmployee()'><b>TC04_PIM_DeleteEmployee</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
 <td></td>
-<td>45</td>
-<td>testcases.PIM@736d6a5c</td></tr>
+<td>53</td>
+<td>testcases.PIM@2371aaca</td></tr>
 <tr>
 <td title='testcases.PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails()'><b>TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
 <td></td>
-<td>29</td>
-<td>testcases.PIM@736d6a5c</td></tr>
+<td>34</td>
+<td>testcases.PIM@2371aaca</td></tr>
 <tr>
-<td title='testcases.Login.TC01_Login_ValidCredentials()'><b>TC01_Login_ValidCredentials</b><br>Test class: testcases.Login<br>Parameters: {Username=Admin, Password=YWRtaW4xMjM=}</td>
+<td title='testcases.Admin.TC01_Admin_SearchUserByNameAndRole()'><b>TC01_Admin_SearchUserByNameAndRole</b><br>Test class: testcases.Admin<br>Parameters: {NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin}</td>
 <td></td>
-<td>6</td>
-<td>testcases.Login@3569fc08</td></tr>
+<td>14</td>
+<td>testcases.Admin@1755e85b</td></tr>
+<tr>
+<td title='testcases.PIM.TC05_PIM_EditEmployeeName()'><b>TC05_PIM_EditEmployeeName</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma}</td>
+<td></td>
+<td>60</td>
+<td>testcases.PIM@2371aaca</td></tr>
+<tr>
+<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}</td>
+<td></td>
+<td>11</td>
+<td>testcases.Login@20b12f8a</td></tr>
+<tr>
+<td title='testcases.Admin.TC02_Admin_CreateSystemUser()'><b>TC02_Admin_CreateSystemUser</b><br>Test class: testcases.Admin<br>Parameters: {EmployeeLastName=Sharma, Status=Enabled, EmployeeFirstName=Priya, UserPassword=R29vZHdpbGwxMjM0NQ==, EmployeeMiddleName=Raj, UserRole=Admin}</td>
+<td></td>
+<td>34</td>
+<td>testcases.Admin@1755e85b</td></tr>
+<tr>
+<td title='testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus()'><b>TC01_Dashboard_verifyDasboardMainMenus</b><br>Test class: testcases.Dashboard<br>Parameters: {TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim}</td>
+<td></td>
+<td>15</td>
+<td>testcases.Dashboard@736d6a5c</td></tr>
 <tr>
 <td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0}</td>
 <td></td>
-<td>5</td>
-<td>testcases.Login@3569fc08</td></tr>
-<tr>
-<td title='testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails()'><b>TC03_PIM_CreateEmployeeWithLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}</td>
-<td></td>
-<td>46</td>
-<td>testcases.PIM@736d6a5c</td></tr>
+<td>10</td>
+<td>testcases.Login@20b12f8a</td></tr>
 </table><p>
 </body>
 </html>

@@ -124,7 +124,10 @@ public class PIMPage {
 		webCtrls.wait(10);
 		return empId;
 	}
-	
+	/**
+	 * Delete an employee
+	 * @param employeeName
+	 */
 	public void	deleteEmployee(String employeeName) {
 		WebElement deleteIcon=webCtrls.Ctrl(By.xpath("//div[text()='"+employeeName+"']//parent::div//following-sibling::div//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteIcon);
@@ -132,13 +135,20 @@ public class PIMPage {
 		webCtrls.buttonClick(dlgBoxYesButton);
 		webCtrls.wait(2);
 	}
-	
+	/**
+	 * Click edit icon against an employee
+	 * @param employeeName
+	 */
 	public void	clickEditIconAgainstEmployee(String employeeName) {
 		WebElement editIcon=webCtrls.Ctrl(By.xpath("//div[text()='"+employeeName+"']//parent::div//following-sibling::div//i[@class='oxd-icon bi-pencil-fill']"));
 		webCtrls.buttonClick(editIcon);
 		webCtrls.wait(2);
 	}
-	
+	/**
+	 * Edit employee name under Personal details 
+	 * @param fieldName
+	 * @param fieldValue
+	 */
 	public void editEmployeeNameUnderPersonalDetails(String fieldName,String fieldValue) {	
 		WebElement editField=webCtrls.Ctrl(By.xpath("//input[@name='"+fieldName+"']"));
 		webCtrls.clearTextByDeleting(editField);
@@ -146,12 +156,17 @@ public class PIMPage {
 		webCtrls.setData(editField, fieldValue);
 	}
 	
+	/**
+	 * Click Save button on edit details section
+	 * */
 	public void clickSaveOnEditDetails() {
 		webCtrls.scrollToElement(submit);
 		webCtrls.javaScriptClick(submit);
 		webCtrls.wait(3);
 	}
-	
+	/**
+	 * Verify 'No Records Found' is displayed when search results are not found
+	 * */
 	public void verifyNoRecords() {
 		webCtrls.scroll();
 		Assert.assertTrue(webCtrls.isDisplayed(txtNoRecordsFound), "'No Records Found' not displayed for the selected user");

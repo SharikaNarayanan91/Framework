@@ -120,18 +120,7 @@ public class WebCtrls extends BaseTest {
 		return wait;
 
 	}
-	/**
-	 * To select element from autosuggestive dropdwon
-	 * @param WebElement locator
-	 * @param value
-	 */
-	public void autoSuggestiveDropdown(WebElement locator, String value) {
-		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOf(locator));
-		setData(locator, value);
-		locator.sendKeys(Keys.ARROW_UP);
-		locator.sendKeys(Keys.ENTER);
-	}
+
 	/**
 	 * To select element from dropdwon
 	 * @param WebElement locator
@@ -140,13 +129,14 @@ public class WebCtrls extends BaseTest {
 	public void selectFromDropdown(WebElement locator, String value) {
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.visibilityOf(locator));
-		List<WebElement> values = locator.findElements(By.tagName("div"));
-		for (WebElement dropdownItem : values) {
-			if (dropdownItem.getText().split("\\(")[0].equals(value)) {
-				dropdownItem.click();
-				break;
-			}
-		}
+        locator.click();
+        List<WebElement> dropdownOptions = driver.findElements(By.xpath("//div[@role='option']"));
+        for (WebElement option : dropdownOptions) {
+            if (option.getText().equalsIgnoreCase(value)) {
+                option.click();
+                return;
+            }
+        }
 		logger.info("Selected "+value+" from dropdown");
 		addLog("Info","Selected "+value+" from dropdown");
 	}
@@ -308,24 +298,38 @@ public class WebCtrls extends BaseTest {
 	public WebElement Ctrl(By by) {
 		return driver.findElement(by);
 	}
+
 	/**
-	 * Clear text field with Javascript 
+	 * Clear text by selecting and deleting original text
+	 * 
 	 * @param locator
 	 */
-	 public void clearTextFieldWithJavaScript(WebElement locator) {
-	        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-	        // Execute JavaScript to clear the text field value
-	        jsExecutor.executeScript("arguments[0].value='';", locator);
-	    }
-	 
-	 /**
-		 * Clear text by selecting and deleting original text 
-		 * @param locator
-		 */
-		 public void clearTextByDeleting(WebElement locator) {
-		       locator.sendKeys(Keys.CONTROL+"a");
-		       locator.sendKeys(Keys.DELETE);
-		    }
-		
-	
+	public void clearTextByDeleting(WebElement locator) {
+		locator.sendKeys(Keys.CONTROL + "a");
+		locator.sendKeys(Keys.DELETE);
+	}
+
+	/**
+	 * To select element from autosuggestive dropdown
+	 * 
+	 * @param WebElement inputLocator
+	 * @param value
+	 */
+	public void selectFromAutosuggestiveDropdown(WebElement inputLocator, String value) {
+		inputLocator.sendKeys(value);
+		wait(2);
+		String suggestionElement = "//div[@role='option']";
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(suggestionElement)));
+		List<WebElement> dropdownOptions = driver.findElements(By.xpath(suggestionElement));
+		for (WebElement option : dropdownOptions) {
+			if (option.getText().equalsIgnoreCase(value)) {
+
+				option.click();
+				return;
+			}
+		}
+		logger.info("Selected " + value + " from dropdown");
+		addLog("Info", "Selected " + value + " from dropdown");
+	}
 }

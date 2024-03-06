@@ -34,8 +34,7 @@ public class AdminPage {
 			webCtrls.setData(txtUsername, userName);
 				}
 		if (userRole.length() > 1) {
-			webCtrls.buttonClick(ddlUserRole);
-			webCtrls.selectFromDropdown(ddlGeneralList, userRole);
+			webCtrls.selectFromDropdown(ddlUserRole, userRole);
 			}
 		webCtrls.buttonClick(btnSearch);
 	}
@@ -81,19 +80,47 @@ public class AdminPage {
 		webCtrls.addLog("Pass","The "+requiredColumnName+" displayed of the selected user is as expected : " + expectedRecord);
 	}
 	
+	/**
+	 * Create a system user
+	 * @param userRole
+	 * @param employeeName
+	 * @param status
+	 * @param username
+	 * @param password
+	 */
+	public void createSystemUser(String userRole,String employeeName,String status,String username,String password) {
+		webCtrls.buttonClick(btnAdd);
+		webCtrls.selectFromDropdown(ddlUserRole, userRole);
+		webCtrls.selectFromAutosuggestiveDropdown(txtEmployeeName, employeeName);
+		webCtrls.selectFromDropdown(ddlStatus, status);
+		webCtrls.setData(txtUsername, username);
+		webCtrls.setEncryptedData(txtPassword, password);
+		webCtrls.setEncryptedData(txtConfirmPassword, password);
+		webCtrls.buttonClick(btnSave);
+	}
 	// inputs
 	@FindBy(xpath="//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtUsername;
 	@FindBy(xpath = "//label[text()='User Role']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
 	WebElement ddlUserRole;
-	@FindBy(xpath = "//div[@role='listbox']//div")
+	@FindBy(xpath = "//div[@role='listbox']//span")
 	WebElement ddlGeneralList;
 	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
 	WebElement ddlStatus;
+	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
+	WebElement txtEmployeeName;
+	@FindBy(xpath="//label[text()='Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtPassword;
+	@FindBy(xpath="//label[text()='Confirm Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtConfirmPassword;
 	// buttons
 	@FindBy(xpath = "//button[text()=' Search ']")
 	WebElement btnSearch;
-
+	@FindBy(xpath="//button[text()=' Add ']")
+	WebElement btnAdd;
+	@FindBy(xpath="//button[text()=' Save ']")
+	WebElement btnSave;
+	
 	public By eleRecordsFound(String count) {
 		return By.xpath("//span[text()='(" + count + ") Record Found']");
 	}

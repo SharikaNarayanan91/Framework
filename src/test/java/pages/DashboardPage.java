@@ -74,7 +74,7 @@ public class DashboardPage {
 	}
 	
 	/**
-	 * Verify the main tabs in the Dashboard page
+	 * Verify the User Dropdwon name in the Dashboard page
 	 * @param userName
 	 */
 	public void verifyUserDropdownName(String userName) {
