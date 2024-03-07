@@ -2424,3 +2424,125 @@
 [INFO ] 2024-03-06 17:44:34.574 [main] Login - HRM login successfull
 [INFO ] 2024-03-06 17:44:58.288 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Pdjakm Xusiyj
 [INFO ] 2024-03-06 17:45:24.982 [main] Login - The LastName displayed for the selected user is as expected : Sharma
+[INFO ] 2024-03-07 11:46:01.506 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 11:46:23.116 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 11:46:23.394 [main] Login - The UserName displayed of the selected user is as expected : PriyaRUuVzO
+[INFO ] 2024-03-07 11:46:23.659 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 11:46:23.944 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 11:51:03.534 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 11:51:24.757 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 11:51:25.011 [main] Login - The UserName displayed of the selected user is as expected : Priyabjsszd
+[INFO ] 2024-03-07 11:51:25.289 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 11:51:25.537 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 11:52:21.791 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 11:53:31.408 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 11:53:31.678 [main] Login - The UserName displayed of the selected user is as expected : PriyaXjdTiA
+[INFO ] 2024-03-07 11:53:31.974 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 11:53:32.284 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 11:53:39.967 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 11:54:33.071 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 11:54:55.962 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 11:54:56.282 [main] Login - The UserName displayed of the selected user is as expected : PriyaTUGLQW
+[INFO ] 2024-03-07 11:54:56.551 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 11:54:56.849 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 11:56:15.989 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:03:13.222 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:05:55.522 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:06:17.153 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 12:06:17.437 [main] Login - The UserName displayed of the selected user is as expected : PriyaTLKvzU
+[INFO ] 2024-03-07 12:06:17.720 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 12:06:18.004 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 12:06:37.895 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:13:34.677 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:13:57.089 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 12:13:57.367 [main] Login - The UserName displayed of the selected user is as expected : PriyaXBcZhH
+[INFO ] 2024-03-07 12:13:57.651 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 12:13:57.934 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 12:14:31.159 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:19:52.413 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:20:14.419 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 12:20:14.729 [main] Login - The UserName displayed of the selected user is as expected : PriyascGcsC
+[INFO ] 2024-03-07 12:20:15.000 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 12:20:15.298 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 12:20:40.745 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:22:43.816 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:32:39.588 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:41:08.137 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:43:00.837 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:43:25.138 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 12:43:25.470 [main] Login - User with UserName : Nidhi Sharma is created
+[INFO ] 2024-03-07 17:19:12.074 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:21:55.912 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:22:44.559 [main] Login - Job title 'AssociateQA' is added
+[INFO ] 2024-03-07 17:23:04.695 [main] Login - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-03-07 17:23:35.784 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:24:42.683 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:24:54.677 [main] Login - Job title 'AssociateQA' is added
+[INFO ] 2024-03-07 17:24:54.967 [main] Login - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-03-07 17:53:51.881 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:54:04.381 [main] Login - Job title 'AssociateQA' is added
+[INFO ] 2024-03-07 17:54:04.628 [main] Login - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-03-07 17:56:56.700 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:57:01.105 [main] Login - Number of records for selected user found as expected : 1
+[INFO ] 2024-03-07 17:57:01.448 [main] Login - The EmployeeName displayed of the selected user is as expected : Peter Anderson
+[INFO ] 2024-03-07 17:57:10.948 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:57:34.161 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 17:57:34.536 [main] Login - The UserName displayed of the selected user is as expected : PriyamNkteb
+[INFO ] 2024-03-07 17:57:34.846 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 17:57:35.226 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 17:57:44.126 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:58:10.283 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:58:10.687 [main] Login - User with UserName : Nidhi Sharma is created
+[INFO ] 2024-03-07 17:58:20.005 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:58:32.091 [main] Login - Job title 'AssociateQA' is added
+[INFO ] 2024-03-07 17:58:32.335 [main] Login - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-03-07 17:59:50.937 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 17:59:59.784 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-07 18:00:07.538 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-07 18:00:16.097 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-07 18:00:24.698 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:00:29.253 [main] Login - Number of records for selected user found as expected : 1
+[INFO ] 2024-03-07 18:00:29.609 [main] Login - The EmployeeName displayed of the selected user is as expected : Peter Anderson
+[INFO ] 2024-03-07 18:00:38.800 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:01:01.790 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-07 18:01:02.143 [main] Login - The UserName displayed of the selected user is as expected : PriyaFaaGKG
+[INFO ] 2024-03-07 18:01:02.479 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-07 18:01:02.811 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-07 18:01:11.742 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:01:37.956 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:01:38.285 [main] Login - User with UserName : Nidhi Sharma is created
+[INFO ] 2024-03-07 18:01:47.419 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:01:59.748 [main] Login - Job title 'AssociateQA' is added
+[INFO ] 2024-03-07 18:02:00.079 [main] Login - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-03-07 18:02:11.707 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:02:12.013 [main] Login - Tab Admin is present
+[INFO ] 2024-03-07 18:02:12.323 [main] Login - Tab PIM is present
+[INFO ] 2024-03-07 18:02:12.591 [main] Login - Tab Leave is present
+[INFO ] 2024-03-07 18:02:12.891 [main] Login - Tab Time is present
+[INFO ] 2024-03-07 18:02:13.211 [main] Login - Tab Recruitment is present
+[INFO ] 2024-03-07 18:02:13.492 [main] Login - Tab My Info is present
+[INFO ] 2024-03-07 18:02:13.758 [main] Login - Tab Performance is present
+[INFO ] 2024-03-07 18:02:14.018 [main] Login - Tab Dashboard is present
+[INFO ] 2024-03-07 18:02:14.263 [main] Login - Tab Directory is present
+[INFO ] 2024-03-07 18:02:14.487 [main] Login - Tab Maintenance is present
+[INFO ] 2024-03-07 18:02:14.703 [main] Login - Tab Claim is present
+[INFO ] 2024-03-07 18:02:22.933 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:02:45.741 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Flvhiv Hdbvbj
+[INFO ] 2024-03-07 18:02:46.106 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-07 18:02:46.461 [main] Login - The Id displayed for the selected user is as expected : 0345
+[INFO ] 2024-03-07 18:02:55.216 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:03:17.427 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Juloot Qnevdv
+[INFO ] 2024-03-07 18:03:17.715 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-07 18:03:18.018 [main] Login - The Id displayed for the selected user is as expected : 0346
+[INFO ] 2024-03-07 18:03:26.628 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:04:00.592 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Epqpih Snnmxf
+[INFO ] 2024-03-07 18:04:00.852 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-07 18:04:01.092 [main] Login - The Id displayed for the selected user is as expected : 0348
+[INFO ] 2024-03-07 18:04:06.430 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:04:06.810 [main] Login - User with UserName : Epqpih Kapoor is created
+[INFO ] 2024-03-07 18:04:15.518 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:04:37.909 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Ybxshy Pmlppl
+[INFO ] 2024-03-07 18:04:54.718 [main] Login - 'No Records Found' displayed for the selected user
+[INFO ] 2024-03-07 18:05:03.749 [main] Login - HRM login successfull
+[INFO ] 2024-03-07 18:05:26.545 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Gswhqp Dryeqa
+[INFO ] 2024-03-07 18:05:51.793 [main] Login - The LastName displayed for the selected user is as expected : Sharma

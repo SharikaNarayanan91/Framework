@@ -332,4 +332,23 @@ public class WebCtrls extends BaseTest {
 		logger.info("Selected " + value + " from dropdown");
 		addLog("Info", "Selected " + value + " from dropdown");
 	}
+	/**
+	 * To select value from chevron dropdwon
+	 * @param WebElement locator
+	 * @param value
+	 */
+	public void selectFromChevronDropdown(WebElement locator, String value) {
+		WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOf(locator));
+        locator.click();
+        List<WebElement> dropdownOptions = driver.findElements(By.xpath("//a[@role='menuitem']"));
+        for (WebElement option : dropdownOptions) {
+            if (option.getText().equalsIgnoreCase(value)) {
+                option.click();
+                return;
+            }
+        }
+		logger.info("Selected "+value+" from chevron dropdown");
+		addLog("Info","Selected "+value+" from chevron dropdown");
+	}
 }

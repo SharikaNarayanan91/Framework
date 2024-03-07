@@ -48,6 +48,13 @@ public class DashboardPage {
 	public void clickDashboard() {
 		webCtrls.buttonClick(tabDashboard);
 	}
+	/**
+	 * Click on the Time tab
+	 */
+	public void clickTime() {
+		webCtrls.buttonClick(tabTime);
+	}
+	
 	
 	/**
 	 * Logout from the user
