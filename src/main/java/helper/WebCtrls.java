@@ -34,6 +34,7 @@ public class WebCtrls extends BaseTest {
 	public void setData(WebElement locator, String value) {
 		WebDriverWait wait = getWait();
 		wait.until(ExpectedConditions.visibilityOf(locator));
+		clearTextByDeleting(locator);
 		locator.sendKeys(value);
 		String locatorName=locator.getAttribute("name");
 		if(locatorName.length()!=0) {

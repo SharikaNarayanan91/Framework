@@ -170,9 +170,9 @@ public class Admin extends BaseTest {
 		dashboardPage.verifyUserDropdownName(employeeFirstAndLastName);
 
 	}
-
 	@ExcelDataSourceInfo(TestName = "TC04_Admin_CreateJobTitle")
 	@Test(enabled = true, priority = 4, dataProvider = "Admin")
+
 	public void TC04_Admin_CreateJobTitle(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -206,5 +206,139 @@ public class Admin extends BaseTest {
 
 		// Delete the job title
 		adminPage.deleteJobTitle((String) map.get("JobTitle"));
+	}
+	@ExcelDataSourceInfo(TestName = "TC05_Admin_CreateEmploymentStatus")
+	@Test(enabled = true, priority = 5, dataProvider = "Admin")
+	public void TC05_Admin_CreateEmploymentStatus(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Admin tab
+		dashboardPage.clickAdmin();
+
+		// Navigate to Employment Status screen
+		adminPage.selectOptionFromJobMenu("Employment Status");
+
+		// Create a Employment Status
+		adminPage.createEmploymentStatus((String) map.get("EmploymentStatus"));
+
+		// verify the Employment Status
+		adminPage.verifyEmploymentStatus((String) map.get("EmploymentStatus"));
+
+		// Delete the Employment Status
+		adminPage.deleteEmploymentStatus((String) map.get("EmploymentStatus"));
+	}
+	@ExcelDataSourceInfo(TestName = "TC06_Admin_CreateJobCategory")
+	@Test(enabled = true, priority = 6, dataProvider = "Admin")
+	public void TC06_Admin_CreateJobCategory(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Admin tab
+		dashboardPage.clickAdmin();
+
+		// Navigate to Job Categories screen
+		adminPage.selectOptionFromJobMenu("Job Categories");
+
+		// Create a Job Category
+		adminPage.createJobCategory((String) map.get("JobCategory"));
+
+		// verify the Job Category
+		adminPage.verifyJobCategory((String) map.get("JobCategory"));
+
+		// Delete the Job Category
+		adminPage.deleteJobCategory((String) map.get("JobCategory"));
+	}
+	
+	@ExcelDataSourceInfo(TestName = "TC07_Admin_CreateWorkShift")
+	@Test(enabled = true, priority = 7, dataProvider = "Admin")
+	public void TC07_Admin_CreateWorkShift(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Admin tab
+		dashboardPage.clickAdmin();
+
+		// Navigate to Work shifts screen
+		adminPage.selectOptionFromJobMenu("Work Shifts");
+
+		// Create a Work shift
+		String workDuration=adminPage.createWorkShift((String) map.get("WorkShiftName"),(String) map.get("FromTime"),(String) map.get("ToTime"));
+
+		// verify the work shift
+		adminPage.verifyWorkShift((String) map.get("WorkShiftName"),(String) map.get("FromTime"),(String) map.get("ToTime"), workDuration);;
+
+		// Delete the work shift
+		adminPage.deleteWorkShift((String) map.get("WorkShiftName"));
+	}
+	@ExcelDataSourceInfo(TestName = "TC08_Admin_CreatePayGrade")
+	@Test(enabled = true, priority = 8, dataProvider = "Admin")
+	public void TC08_Admin_CreatePayGrade(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Admin tab
+		dashboardPage.clickAdmin();
+	
+		// Navigate to Pay Grades screen
+		adminPage.selectOptionFromJobMenu("Pay Grades");
+
+		// Create a Pay grade
+		adminPage.createPayGrade((String) map.get("PayGrade"),(String) map.get("Currency"),(String) map.get("MinSalary"),(String) map.get("MaxSalary"));
+
+		// Verify the pay grade
+		String expectedCurrency=(((String) map.get("Currency")).split("-"))[1].trim();
+		adminPage.verifyPayGrade((String) map.get("PayGrade"),expectedCurrency);;
+
+		// Delete the pay grade
+		adminPage.deleteWorkShift((String) map.get("PayGrade"));
 	}
 }
