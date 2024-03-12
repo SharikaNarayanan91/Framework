@@ -324,14 +324,13 @@ public class WebCtrls extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(suggestionElement)));
 		List<WebElement> dropdownOptions = driver.findElements(By.xpath(suggestionElement));
 		for (WebElement option : dropdownOptions) {
-			if (option.getText().equalsIgnoreCase(value)) {
-
+			if (option.getText().contains(value)) {
 				option.click();
+				logger.info("Selected " + value + " from dropdown");
+				addLog("Info", "Selected " + value + " from dropdown");
 				return;
 			}
 		}
-		logger.info("Selected " + value + " from dropdown");
-		addLog("Info", "Selected " + value + " from dropdown");
 	}
 	/**
 	 * To select value from chevron dropdwon

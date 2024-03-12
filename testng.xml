@@ -11,9 +11,9 @@
 			<class name="testcases.Dashboard">
 			</class>
 			<class name="testcases.PIM">
+			</class> 
+			<class name="testcases.Time">
 			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
-	
-	

@@ -12,6 +12,7 @@ import org.testng.Assert;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.beust.jcommander.Parameter;
+import com.github.dockerjava.api.model.Driver;
 import com.github.dockerjava.core.MediaType;
 
 import helper.WebCtrls;
@@ -64,7 +65,6 @@ public class LoginPage {
 		webCtrls.addLog("Pass","Error message displayed as expected : " + ActualErrorMessage);
 	}
 	
-	// input
 	@FindBy(name="username")
 	WebElement txtUsername;
 	@FindBy(name="password")

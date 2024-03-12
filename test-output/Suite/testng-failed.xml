@@ -7,7 +7,7 @@
       <class name="testcases.Admin">
         <methods>
           <include name="initialize"/>
-          <include name="TC08_Admin_CreatePayGrade" invocation-numbers="0"/>
+          <include name="TC01_Admin_SearchUserByNameAndRole" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- testcases.Admin -->
