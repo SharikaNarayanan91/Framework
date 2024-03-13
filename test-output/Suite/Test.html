@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>18/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 12 17:57:31 IST 2024</td>
+<td>Started on:</td><td>Wed Mar 13 15:56:54 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>732 seconds (732089 ms)</td>
+<tr><td>Total time:</td><td>244 seconds (244483 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,23 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Admin.TC01_Admin_SearchUserByNameAndRole()'><b>TC01_Admin_SearchUserByNameAndRole</b><br>Test class: testcases.Admin<br>Parameters: {NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin}</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()=&apos;(1) Record Found&apos;] (tried for 200 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at helper.WebCtrls.isDisplayed(WebCtrls.java:175)
-	at pages.AdminPage.verifyUserCount(AdminPage.java:49)
-	at testcases.Admin.TC01_Admin_SearchUserByNameAndRole(Admin.java:63)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;(1) Record Found&apos;]&quot;}
+<td title='testcases.Admin.TC06_Admin_CreateJobCategory()'><b>TC06_Admin_CreateJobCategory</b><br>Test class: testcases.Admin<br>Parameters: {JobCategory=Search And Online Marketing}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&apos;cell&apos;]//div[text()=&apos;Search And Online Marketing&apos;]&quot;}
   (Session info: chrome=122.0.6261.112)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ST242GUR&apos;, ip: &apos;192.168.29.53&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;10.185.56.212&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61868}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: aa282b30842fc3873208dd889c6756e6
-*** Element info: {Using=xpath, value=//span[text()=&apos;(1) Record Found&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52796}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b89d3493084653e2cf2c958547adf05
+*** Element info: {Using=xpath, value=//div[@role=&apos;cell&apos;]//div[text()=&apos;Search And Online Marketing&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -102,17 +95,36 @@ Session ID: aa282b30842fc3873208dd889c6756e6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1147715818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1147715818'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()=&apos;(1) Record Found&apos;] (tried for 200 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at helper.WebCtrls.isDisplayed(WebCtrls.java:175)
-	at pages.AdminPage.verifyUserCount(AdminPage.java:49)
-	at testcases.Admin.TC01_Admin_SearchUserByNameAndRole(Admin.java:63)
+	at helper.WebCtrls.Ctrl(WebCtrls.java:300)
+	at pages.AdminPage.verifyJobCategory(AdminPage.java:213)
+	at testcases.Admin.TC06_Admin_CreateJobCategory(Admin.java:271)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1256017407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1256017407'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&apos;cell&apos;]//div[text()=&apos;Search And Online Marketing&apos;]&quot;}
+  (Session info: chrome=122.0.6261.112)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;10.185.56.212&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52796}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b89d3493084653e2cf2c958547adf05
+*** Element info: {Using=xpath, value=//div[@role=&apos;cell&apos;]//div[text()=&apos;Search And Online Marketing&apos;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at helper.WebCtrls.Ctrl(WebCtrls.java:300)
+	at pages.AdminPage.verifyJobCategory(AdminPage.java:213)
+	at testcases.Admin.TC06_Admin_CreateJobCategory(Admin.java:271)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -139,15 +151,44 @@ Session ID: aa282b30842fc3873208dd889c6756e6
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;(1) Record Found&apos;]&quot;}
+</pre></div></td>
+<td>25</td>
+<td>testcases.Admin@3bd418e4</td></tr>
+<tr>
+<td title='testcases.Admin.TC07_Admin_CreateWorkShift()'><b>TC07_Admin_CreateWorkShift</b><br>Test class: testcases.Admin<br>Parameters: {FromTime=08:00 AM, WorkShiftName=Morning Shift, ToTime=05:00 PM}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&apos;cell&apos;]//div[text()=&apos;Morning Shift&apos;]&quot;}
   (Session info: chrome=122.0.6261.112)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ST242GUR&apos;, ip: &apos;192.168.29.53&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;10.185.56.212&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61868}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: aa282b30842fc3873208dd889c6756e6
-*** Element info: {Using=xpath, value=//span[text()=&apos;(1) Record Found&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 843bbba7107163c7a4cb9d509755d115
+*** Element info: {Using=xpath, value=//div[@role=&apos;cell&apos;]//div[text()=&apos;Morning Shift&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at helper.WebCtrls.Ctrl(WebCtrls.java:300)
+	at pages.AdminPage.verifyWorkShift(AdminPage.java:257)
+	at testcases.Admin.TC07_Admin_CreateWorkShift(Admin.java:305)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1932740085", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1932740085'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&apos;cell&apos;]//div[text()=&apos;Morning Shift&apos;]&quot;}
+  (Session info: chrome=122.0.6261.112)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;10.185.56.212&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 843bbba7107163c7a4cb9d509755d115
+*** Element info: {Using=xpath, value=//div[@role=&apos;cell&apos;]//div[text()=&apos;Morning Shift&apos;]}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -161,13 +202,38 @@ Session ID: aa282b30842fc3873208dd889c6756e6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
+	at helper.WebCtrls.Ctrl(WebCtrls.java:300)
+	at pages.AdminPage.verifyWorkShift(AdminPage.java:257)
+	at testcases.Admin.TC07_Admin_CreateWorkShift(Admin.java:305)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>211</td>
-<td>testcases.Admin@14dda234</td></tr>
+<td>27</td>
+<td>testcases.Admin@3bd418e4</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -177,95 +243,35 @@ Session ID: aa282b30842fc3873208dd889c6756e6
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Admin.TC02_Admin_CreateSystemUser()'><b>TC02_Admin_CreateSystemUser</b><br>Test class: testcases.Admin<br>Parameters: {EmployeeLastName=Sharma, Status=Enabled, EmployeeFirstName=Priya, UserPassword=R29vZHdpbGwxMjM0NQ==, EmployeeMiddleName=Raj, UserRole=Admin}</td>
+<td title='testcases.Admin.TC01_Admin_SearchUserByNameAndRole()'><b>TC01_Admin_SearchUserByNameAndRole</b><br>Test class: testcases.Admin<br>Parameters: {NumberOfUserRecords=1, Username=Peter.Anderson, EmployeeName=Peter Anderson, UserRole=Admin}</td>
 <td></td>
-<td>32</td>
-<td>testcases.Admin@14dda234</td></tr>
-<tr>
-<td title='testcases.Admin.TC06_Admin_CreateJobCategory()'><b>TC06_Admin_CreateJobCategory</b><br>Test class: testcases.Admin<br>Parameters: {JobCategory=Search And Online Marketing}</td>
-<td></td>
-<td>21</td>
-<td>testcases.Admin@14dda234</td></tr>
-<tr>
-<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}</td>
-<td></td>
-<td>6</td>
-<td>testcases.Login@5e01a982</td></tr>
-<tr>
-<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0}</td>
-<td></td>
-<td>6</td>
-<td>testcases.Login@5e01a982</td></tr>
-<tr>
-<td title='testcases.Admin.TC04_Admin_CreateJobTitle()'><b>TC04_Admin_CreateJobTitle</b><br>Test class: testcases.Admin<br>Parameters: {JobTitle=AssociateQA, JobDescription=Software Testing}</td>
-<td></td>
-<td>24</td>
-<td>testcases.Admin@14dda234</td></tr>
-<tr>
-<td title='testcases.Admin.TC07_Admin_CreateWorkShift()'><b>TC07_Admin_CreateWorkShift</b><br>Test class: testcases.Admin<br>Parameters: {FromTime=08:00 AM, WorkShiftName=Morning Shift, ToTime=05:00 PM}</td>
-<td></td>
-<td>23</td>
-<td>testcases.Admin@14dda234</td></tr>
-<tr>
-<td title='testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId()'><b>TC02_PIM_SearchEmployeeWithEmployeeId</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
-<td></td>
-<td>29</td>
-<td>testcases.PIM@74a6a609</td></tr>
-<tr>
-<td title='testcases.Login.TC01_Login_ValidCredentials()'><b>TC01_Login_ValidCredentials</b><br>Test class: testcases.Login<br>Parameters: {Username=Admin, Password=YWRtaW4xMjM=}</td>
-<td></td>
-<td>8</td>
-<td>testcases.Login@5e01a982</td></tr>
-<tr>
-<td title='testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails()'><b>TC03_PIM_CreateEmployeeWithLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}</td>
-<td></td>
-<td>48</td>
-<td>testcases.PIM@74a6a609</td></tr>
-<tr>
-<td title='testcases.Time.TC01_Time_CreateTimesheet()'><b>TC01_Time_CreateTimesheet</b><br>Test class: testcases.Time<br>Parameters: {EmployeeLastName=Kapoor, TimesheetStatus=Not Submitted, EmployeeFirstName=Priya, Project=Apache Software Foundation, WedHours=8:00, FriHours=8:00, EmployeeMiddleName=Krish, ThrsHours=8:00, Activity=Bug Fixes, TueHours=8:00, MonHours=8:00}</td>
-<td></td>
-<td>44</td>
-<td>testcases.Time@5a411614</td></tr>
-<tr>
-<td title='testcases.Admin.TC08_Admin_CreatePayGrade()'><b>TC08_Admin_CreatePayGrade</b><br>Test class: testcases.Admin<br>Parameters: {MaxSalary=1000, MinSalary=10, PayGrade=Grade 10, Currency=EUR - Euro}</td>
-<td></td>
-<td>25</td>
-<td>testcases.Admin@14dda234</td></tr>
-<tr>
-<td title='testcases.PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails()'><b>TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
-<td></td>
-<td>31</td>
-<td>testcases.PIM@74a6a609</td></tr>
+<td>17</td>
+<td>testcases.Admin@3bd418e4</td></tr>
 <tr>
 <td title='testcases.Admin.TC05_Admin_CreateEmploymentStatus()'><b>TC05_Admin_CreateEmploymentStatus</b><br>Test class: testcases.Admin<br>Parameters: {EmploymentStatus=Full-Time Internship}</td>
 <td></td>
-<td>20</td>
-<td>testcases.Admin@14dda234</td></tr>
-<tr>
-<td title='testcases.PIM.TC05_PIM_EditEmployeeName()'><b>TC05_PIM_EditEmployeeName</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma}</td>
-<td></td>
-<td>56</td>
-<td>testcases.PIM@74a6a609</td></tr>
-<tr>
-<td title='testcases.PIM.TC04_PIM_DeleteEmployee()'><b>TC04_PIM_DeleteEmployee</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
-<td></td>
-<td>48</td>
-<td>testcases.PIM@74a6a609</td></tr>
-<tr>
-<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0}</td>
-<td></td>
-<td>7</td>
-<td>testcases.Login@5e01a982</td></tr>
+<td>23</td>
+<td>testcases.Admin@3bd418e4</td></tr>
 <tr>
 <td title='testcases.Admin.TC03_Admin_LoginWithNewSystemUser()'><b>TC03_Admin_LoginWithNewSystemUser</b><br>Test class: testcases.Admin<br>Parameters: {EmployeeLastName=Sharma, Status=Enabled, EmployeeFirstName=Nidhi, UserPassword=R29vZHdpbGwxMjM0NQ==, EmployeeMiddleName=Raj, UserRole=Admin}</td>
 <td></td>
-<td>33</td>
-<td>testcases.Admin@14dda234</td></tr>
+<td>37</td>
+<td>testcases.Admin@3bd418e4</td></tr>
 <tr>
-<td title='testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus()'><b>TC01_Dashboard_verifyDasboardMainMenus</b><br>Test class: testcases.Dashboard<br>Parameters: {TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim}</td>
+<td title='testcases.Admin.TC04_Admin_CreateJobTitle()'><b>TC04_Admin_CreateJobTitle</b><br>Test class: testcases.Admin<br>Parameters: {JobTitle=AssociateQA, JobDescription=Software Testing}</td>
 <td></td>
-<td>9</td>
-<td>testcases.Dashboard@3f390d63</td></tr>
+<td>26</td>
+<td>testcases.Admin@3bd418e4</td></tr>
+<tr>
+<td title='testcases.Admin.TC02_Admin_CreateSystemUser()'><b>TC02_Admin_CreateSystemUser</b><br>Test class: testcases.Admin<br>Parameters: {EmployeeLastName=Sharma, Status=Enabled, EmployeeFirstName=Priya, UserPassword=R29vZHdpbGwxMjM0NQ==, EmployeeMiddleName=Raj, UserRole=Admin}</td>
+<td></td>
+<td>34</td>
+<td>testcases.Admin@3bd418e4</td></tr>
+<tr>
+<td title='testcases.Admin.TC08_Admin_CreatePayGrade()'><b>TC08_Admin_CreatePayGrade</b><br>Test class: testcases.Admin<br>Parameters: {MaxSalary=1000, MinSalary=10, PayGrade=Grade 10, Currency=EUR - Euro}</td>
+<td></td>
+<td>34</td>
+<td>testcases.Admin@3bd418e4</td></tr>
 </table><p>
 </body>
 </html>

@@ -7,7 +7,8 @@
       <class name="testcases.Admin">
         <methods>
           <include name="initialize"/>
-          <include name="TC01_Admin_SearchUserByNameAndRole" invocation-numbers="0"/>
+          <include name="TC06_Admin_CreateJobCategory" invocation-numbers="0"/>
+          <include name="TC07_Admin_CreateWorkShift" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- testcases.Admin -->
