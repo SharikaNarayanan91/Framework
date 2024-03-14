@@ -14,6 +14,8 @@
 			</class> 
 			<class name="testcases.Time">
 			</class>
+			<class name="testcases.Recruitment">
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

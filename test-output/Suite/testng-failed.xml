@@ -4,14 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.Admin">
+      <class name="testcases.Recruitment">
         <methods>
+          <include name="TC01_Recruitment_AddVacancy" invocation-numbers="0"/>
           <include name="initialize"/>
-          <include name="TC06_Admin_CreateJobCategory" invocation-numbers="0"/>
-          <include name="TC07_Admin_CreateWorkShift" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- testcases.Admin -->
+      </class> <!-- testcases.Recruitment -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

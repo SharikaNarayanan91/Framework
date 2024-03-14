@@ -54,7 +54,12 @@ public class DashboardPage {
 	public void clickTime() {
 		webCtrls.buttonClick(tabTime);
 	}
-	
+	/**
+	 * Click on the Recruitment tab
+	 */
+	public void clickRecruitment() {
+		webCtrls.buttonClick(tabRecruitment);
+	}
 	
 	/**
 	 * Logout from the user
