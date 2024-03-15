@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="24" passed="18" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-14T16:31:03 IST" name="Suite" finished-at="2024-03-14T16:32:00 IST" duration-ms="57054">
+  <suite started-at="2024-03-15T17:02:19 IST" name="Suite" finished-at="2024-03-15T17:27:52 IST" duration-ms="1533170">
     <groups>
     </groups>
-    <test started-at="2024-03-14T16:31:03 IST" name="Test" finished-at="2024-03-14T16:32:00 IST" duration-ms="57054">
+    <test started-at="2024-03-15T17:02:19 IST" name="Test" finished-at="2024-03-15T17:27:52 IST" duration-ms="1533170">
       <class name="testcases.Recruitment">
-        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Recruitment@3ecd267f]" started-at="2024-03-14T16:31:04 IST" name="initialize" finished-at="2024-03-14T16:31:05 IST" duration-ms="1661" status="PASS">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:18:57 IST" name="initialize" finished-at="2024-03-15T17:18:58 IST" duration-ms="1044" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TC01_Recruitment_AddVacancy(java.util.Map)[pri:1, instance:testcases.Recruitment@3ecd267f]" started-at="2024-03-14T16:31:05 IST" name="TC01_Recruitment_AddVacancy" data-provider="Recruitment" finished-at="2024-03-14T16:31:59 IST" duration-ms="53782" status="PASS">
+        <test-method signature="TC01_Recruitment_AddVacancy(java.util.Map)[pri:1, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:18:58 IST" name="TC01_Recruitment_AddVacancy" data-provider="Recruitment" finished-at="2024-03-15T17:19:58 IST" duration-ms="60192" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -31,14 +31,232 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The Vacancy displayed of the selected user is not as expected expected [QA Automation] but found [Associate IT Manager]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The Vacancy displayed of the selected user is not as expected expected [QA Automation] but found [Associate IT Manager]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at pages.RecruitmentPage.verifyVacancyTableRecord(RecruitmentPage.java:118)
+at testcases.Recruitment.TC01_Recruitment_AddVacancy(Recruitment.java:91)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_Recruitment_AddVacancy -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Recruitment@3ecd267f]" started-at="2024-03-14T16:31:59 IST" name="afterMethod" finished-at="2024-03-14T16:32:00 IST" duration-ms="656" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:19:59 IST" name="afterMethod" finished-at="2024-03-15T17:19:59 IST" duration-ms="640" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC01_Recruitment_AddVacancy status=SUCCESS method=Recruitment.TC01_Recruitment_AddVacancy(java.util.Map)[pri:1, instance:testcases.Recruitment@3ecd267f] output={null}]]]>
+                <![CDATA[[TestResult name=TC01_Recruitment_AddVacancy status=FAILURE method=Recruitment.TC01_Recruitment_AddVacancy(java.util.Map)[pri:1, instance:testcases.Recruitment@38f116f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:19:59 IST" name="initialize" finished-at="2024-03-15T17:20:00 IST" duration-ms="957" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Recruitment.TC02_Recruitment_AddCandidate(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_Recruitment_AddCandidate(java.util.Map)[pri:2, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:20:00 IST" name="TC02_Recruitment_AddCandidate" data-provider="Recruitment" finished-at="2024-03-15T17:24:04 IST" duration-ms="243384" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateStatus=Application Initiated, VacancyName=QA Automation, Notes=Skilled QA Engineer}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[3] (tried for 200 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ST242GUR', ip: '10.185.61.125', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56690}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7e1293d6605a0847296dc9b770f2629]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[3] (tried for 200 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ST242GUR', ip: '10.185.61.125', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56690}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7e1293d6605a0847296dc9b770f2629
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at helper.WebCtrls.getText(WebCtrls.java:229)
+at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:207)
+at testcases.Recruitment.TC02_Recruitment_AddCandidate(Recruitment.java:141)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Recruitment_AddCandidate -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:24:04 IST" name="afterMethod" finished-at="2024-03-15T17:24:04 IST" duration-ms="459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_Recruitment_AddCandidate status=FAILURE method=Recruitment.TC02_Recruitment_AddCandidate(java.util.Map)[pri:2, instance:testcases.Recruitment@38f116f6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:24:04 IST" name="initialize" finished-at="2024-03-15T17:24:05 IST" duration-ms="973" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Recruitment.TC03_Recruitment_ShortlistCandidate(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC03_Recruitment_ShortlistCandidate(java.util.Map)[pri:3, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:24:05 IST" name="TC03_Recruitment_ShortlistCandidate" data-provider="Recruitment" finished-at="2024-03-15T17:27:51 IST" duration-ms="225876" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateCurrentStatus=Shortlisted, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Application Initiated}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[7] (tried for 200 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ST242GUR', ip: '10.185.61.125', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56736}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e14c1ec33431a50adb55ce2440ead6a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[7] (tried for 200 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ST242GUR', ip: '10.185.61.125', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56736}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e14c1ec33431a50adb55ce2440ead6a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at helper.WebCtrls.getText(WebCtrls.java:229)
+at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:207)
+at testcases.Recruitment.TC03_Recruitment_ShortlistCandidate(Recruitment.java:187)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_Recruitment_ShortlistCandidate -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Recruitment@38f116f6]" started-at="2024-03-15T17:27:52 IST" name="afterMethod" finished-at="2024-03-15T17:27:52 IST" duration-ms="613" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC03_Recruitment_ShortlistCandidate status=FAILURE method=Recruitment.TC03_Recruitment_ShortlistCandidate(java.util.Map)[pri:3, instance:testcases.Recruitment@38f116f6] output={null}]]]>
               </value>
             </param>
           </params>
@@ -46,6 +264,1002 @@
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testcases.Recruitment -->
+      <class name="testcases.Login">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:20 IST" name="initialize" finished-at="2024-03-15T17:02:21 IST" duration-ms="1603" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Login.TC01_Login_ValidCredentials(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC01_Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:21 IST" name="TC01_Login_ValidCredentials" data-provider="Login" finished-at="2024-03-15T17:02:29 IST" duration-ms="7541" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=Admin, Password=YWRtaW4xMjM=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_Login_ValidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:29 IST" name="afterMethod" finished-at="2024-03-15T17:02:30 IST" duration-ms="579" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01_Login_ValidCredentials status=SUCCESS method=Login.TC01_Login_ValidCredentials(java.util.Map)[pri:1, instance:testcases.Login@13e547a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:30 IST" name="initialize" finished-at="2024-03-15T17:02:31 IST" duration-ms="942" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:31 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-03-15T17:02:38 IST" duration-ms="7330" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Login_InvalidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:39 IST" name="afterMethod" finished-at="2024-03-15T17:02:39 IST" duration-ms="537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@13e547a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:39 IST" name="initialize" finished-at="2024-03-15T17:02:40 IST" duration-ms="1050" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:40 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-03-15T17:02:47 IST" duration-ms="6497" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Login_InvalidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:47 IST" name="afterMethod" finished-at="2024-03-15T17:02:47 IST" duration-ms="583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@13e547a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:47 IST" name="initialize" finished-at="2024-03-15T17:02:48 IST" duration-ms="955" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:48 IST" name="TC02_Login_InvalidCredentials" data-provider="Login" finished-at="2024-03-15T17:02:55 IST" duration-ms="6629" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Login_InvalidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Login@13e547a9]" started-at="2024-03-15T17:02:55 IST" name="afterMethod" finished-at="2024-03-15T17:02:56 IST" duration-ms="554" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredentials(java.util.Map)[pri:2, instance:testcases.Login@13e547a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Login -->
+      <class name="testcases.PIM">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:06:37 IST" name="initialize" finished-at="2024-03-15T17:06:38 IST" duration-ms="1036" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map)[pri:1, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:06:38 IST" name="TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails" data-provider="PIM" finished-at="2024-03-15T17:07:08 IST" duration-ms="30051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:07:08 IST" name="afterMethod" finished-at="2024-03-15T17:07:08 IST" duration-ms="511" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails status=SUCCESS method=PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map)[pri:1, instance:testcases.PIM@424fd310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:07:08 IST" name="initialize" finished-at="2024-03-15T17:07:09 IST" duration-ms="934" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map)[pri:2, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:07:09 IST" name="TC02_PIM_SearchEmployeeWithEmployeeId" data-provider="PIM" finished-at="2024-03-15T17:07:40 IST" duration-ms="30347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_PIM_SearchEmployeeWithEmployeeId -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:07:40 IST" name="afterMethod" finished-at="2024-03-15T17:07:40 IST" duration-ms="582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_PIM_SearchEmployeeWithEmployeeId status=SUCCESS method=PIM.TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map)[pri:2, instance:testcases.PIM@424fd310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:07:40 IST" name="initialize" finished-at="2024-03-15T17:07:41 IST" duration-ms="925" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map)[pri:3, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:07:41 IST" name="TC03_PIM_CreateEmployeeWithLoginDetails" data-provider="PIM" finished-at="2024-03-15T17:08:30 IST" duration-ms="48286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_PIM_CreateEmployeeWithLoginDetails -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:08:30 IST" name="afterMethod" finished-at="2024-03-15T17:08:30 IST" duration-ms="449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC03_PIM_CreateEmployeeWithLoginDetails status=SUCCESS method=PIM.TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map)[pri:3, instance:testcases.PIM@424fd310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:08:30 IST" name="initialize" finished-at="2024-03-15T17:08:32 IST" duration-ms="1168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.PIM.TC04_PIM_DeleteEmployee(java.util.Map) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC04_PIM_DeleteEmployee(java.util.Map)[pri:4, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:08:32 IST" name="TC04_PIM_DeleteEmployee" data-provider="PIM" finished-at="2024-03-15T17:09:19 IST" duration-ms="47332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC04_PIM_DeleteEmployee -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:09:19 IST" name="afterMethod" finished-at="2024-03-15T17:09:20 IST" duration-ms="615" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC04_PIM_DeleteEmployee status=SUCCESS method=PIM.TC04_PIM_DeleteEmployee(java.util.Map)[pri:4, instance:testcases.PIM@424fd310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:09:20 IST" name="initialize" finished-at="2024-03-15T17:09:21 IST" duration-ms="996" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.PIM.TC05_PIM_EditEmployeeName(java.util.Map) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC05_PIM_EditEmployeeName(java.util.Map)[pri:5, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:09:21 IST" name="TC05_PIM_EditEmployeeName" data-provider="PIM" finished-at="2024-03-15T17:10:18 IST" duration-ms="56830" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_PIM_EditEmployeeName -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.PIM@424fd310]" started-at="2024-03-15T17:10:18 IST" name="afterMethod" finished-at="2024-03-15T17:10:18 IST" duration-ms="606" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC05_PIM_EditEmployeeName status=SUCCESS method=PIM.TC05_PIM_EditEmployeeName(java.util.Map)[pri:5, instance:testcases.PIM@424fd310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.PIM -->
+      <class name="testcases.Time">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:10:19 IST" name="initialize" finished-at="2024-03-15T17:10:20 IST" duration-ms="998" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Time.TC01_Time_CreateTimesheet(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC01_Time_CreateTimesheet(java.util.Map)[pri:1, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:10:20 IST" name="TC01_Time_CreateTimesheet" data-provider="Time" finished-at="2024-03-15T17:14:05 IST" duration-ms="225214" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Kapoor, TimesheetStatus=Not Submitted, EmployeeFirstName=Priya, Project=Apache Software Foundation, WedHours=8:00, FriHours=8:00, EmployeeMiddleName=Krish, ThrsHours=8:00, Activity=Bug Fixes, NumOfRows=1, TueHours=8:00, MonHours=8:00}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' Create Timesheet ']' (tried for 200 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' Create Timesheet ']' (tried for 200 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at helper.WebCtrls.buttonClick(WebCtrls.java:102)
+at pages.TimePage.createTimesheet(TimePage.java:108)
+at testcases.Time.TC01_Time_CreateTimesheet(Time.java:85)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()=' Create Timesheet ']"}
+  (Session info: chrome=122.0.6261.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ST242GUR', ip: '10.185.61.125', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56554}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62fbc6434d064c1fb8e5d65497ae633d
+*** Element info: {Using=xpath, value=//button[text()=' Create Timesheet ']}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_Time_CreateTimesheet -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:14:05 IST" name="afterMethod" finished-at="2024-03-15T17:14:06 IST" duration-ms="496" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01_Time_CreateTimesheet status=FAILURE method=Time.TC01_Time_CreateTimesheet(java.util.Map)[pri:1, instance:testcases.Time@1a45193b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:14:06 IST" name="initialize" finished-at="2024-03-15T17:14:07 IST" duration-ms="892" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Time.TC02_Time_CreateTimesheetWithMultipleProjects(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_Time_CreateTimesheetWithMultipleProjects(java.util.Map)[pri:2, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:14:07 IST" name="TC02_Time_CreateTimesheetWithMultipleProjects" data-provider="Time" finished-at="2024-03-15T17:17:53 IST" duration-ms="226469" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TimesheetStatus=Not Submitted, EmployeeFirstName=Diya, FriHours=8:00, Activity1=Bug Fixes, Activity2=Bug Fixes, ThrsHours=8:00, Project2=The Coca-Cola Company, NumOfRows=2, Project1=Apache Software Foundation, TueHours=8:00, MonHours=8:00, EmployeeLastName=Kapoor, WedHours=8:00, EmployeeMiddleName=Krish}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' Create Timesheet ']' (tried for 200 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' Create Timesheet ']' (tried for 200 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at helper.WebCtrls.buttonClick(WebCtrls.java:102)
+at pages.TimePage.createTimesheet(TimePage.java:108)
+at testcases.Time.TC02_Time_CreateTimesheetWithMultipleProjects(Time.java:135)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()=' Create Timesheet ']"}
+  (Session info: chrome=122.0.6261.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ST242GUR', ip: '10.185.61.125', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56590}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5378c3de58327f874fad006f48a8a44
+*** Element info: {Using=xpath, value=//button[text()=' Create Timesheet ']}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Time_CreateTimesheetWithMultipleProjects -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:17:53 IST" name="afterMethod" finished-at="2024-03-15T17:17:54 IST" duration-ms="758" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_Time_CreateTimesheetWithMultipleProjects status=FAILURE method=Time.TC02_Time_CreateTimesheetWithMultipleProjects(java.util.Map)[pri:2, instance:testcases.Time@1a45193b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:17:54 IST" name="initialize" finished-at="2024-03-15T17:17:55 IST" duration-ms="1093" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Time.TC03_Time_SubmitAndApproveTimesheet(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC03_Time_SubmitAndApproveTimesheet(java.util.Map)[pri:3, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:17:55 IST" name="TC03_Time_SubmitAndApproveTimesheet" data-provider="Time" finished-at="2024-03-15T17:18:56 IST" duration-ms="60918" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeFirstName=Riya, FriHours=8:00, ThrsHours=8:00, ApprovalComment=Good.Approved , Activity=Bug Fixes, NumOfRows=1, TueHours=8:00, MonHours=8:00, EmployeeLastName=Kapoor, Project=Apache Software Foundation, WedHours=8:00, EmployeeMiddleName=Krish, TimesheetStatus1=Not Submitted, TimesheetStatus2=Submitted, TimesheetStatus3=Approved}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_Time_SubmitAndApproveTimesheet -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Time@1a45193b]" started-at="2024-03-15T17:18:56 IST" name="afterMethod" finished-at="2024-03-15T17:18:57 IST" duration-ms="751" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC03_Time_SubmitAndApproveTimesheet status=SUCCESS method=Time.TC03_Time_SubmitAndApproveTimesheet(java.util.Map)[pri:3, instance:testcases.Time@1a45193b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Time -->
+      <class name="testcases.Dashboard">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Dashboard@47a5b70d]" started-at="2024-03-15T17:06:25 IST" name="initialize" finished-at="2024-03-15T17:06:26 IST" duration-ms="986" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus(java.util.Map)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC01_Dashboard_verifyDasboardMainMenus(java.util.Map)[pri:1, instance:testcases.Dashboard@47a5b70d]" started-at="2024-03-15T17:06:26 IST" name="TC01_Dashboard_verifyDasboardMainMenus" data-provider="Dashboard" finished-at="2024-03-15T17:06:36 IST" duration-ms="9678" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_Dashboard_verifyDasboardMainMenus -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Dashboard@47a5b70d]" started-at="2024-03-15T17:06:36 IST" name="afterMethod" finished-at="2024-03-15T17:06:36 IST" duration-ms="484" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01_Dashboard_verifyDasboardMainMenus status=SUCCESS method=Dashboard.TC01_Dashboard_verifyDasboardMainMenus(java.util.Map)[pri:1, instance:testcases.Dashboard@47a5b70d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Dashboard -->
+      <class name="testcases.Admin">
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:02:56 IST" name="initialize" finished-at="2024-03-15T17:02:57 IST" duration-ms="1090" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC01_Admin_SearchUserByNameAndRole(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC01_Admin_SearchUserByNameAndRole(java.util.Map)[pri:1, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:02:57 IST" name="TC01_Admin_SearchUserByNameAndRole" data-provider="Admin" finished-at="2024-03-15T17:03:09 IST" duration-ms="12389" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{NumberOfUserRecords=1, Username=Admin, EmployeeName=Nikhil webTester, UserRole=Admin}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The EmployeeName displayed of the selected user is not as expected expected [Nikhil webTester] but found [Admin]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The EmployeeName displayed of the selected user is not as expected expected [Nikhil webTester] but found [Admin]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at pages.AdminPage.verifyTableRecord(AdminPage.java:79)
+at testcases.Admin.TC01_Admin_SearchUserByNameAndRole(Admin.java:66)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_Admin_SearchUserByNameAndRole -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:03:10 IST" name="afterMethod" finished-at="2024-03-15T17:03:10 IST" duration-ms="608" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01_Admin_SearchUserByNameAndRole status=FAILURE method=Admin.TC01_Admin_SearchUserByNameAndRole(java.util.Map)[pri:1, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:03:10 IST" name="initialize" finished-at="2024-03-15T17:03:12 IST" duration-ms="1070" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC02_Admin_CreateSystemUser(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC02_Admin_CreateSystemUser(java.util.Map)[pri:2, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:03:12 IST" name="TC02_Admin_CreateSystemUser" data-provider="Admin" finished-at="2024-03-15T17:03:44 IST" duration-ms="32733" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Sharma, Status=Enabled, EmployeeFirstName=Priya, UserPassword=R29vZHdpbGwxMjM0NQ==, EmployeeMiddleName=Raj, UserRole=Admin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Admin_CreateSystemUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:03:44 IST" name="afterMethod" finished-at="2024-03-15T17:03:45 IST" duration-ms="614" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02_Admin_CreateSystemUser status=SUCCESS method=Admin.TC02_Admin_CreateSystemUser(java.util.Map)[pri:2, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:03:45 IST" name="initialize" finished-at="2024-03-15T17:03:46 IST" duration-ms="1039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC03_Admin_LoginWithNewSystemUser(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC03_Admin_LoginWithNewSystemUser(java.util.Map)[pri:3, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:03:46 IST" name="TC03_Admin_LoginWithNewSystemUser" data-provider="Admin" finished-at="2024-03-15T17:04:21 IST" duration-ms="34801" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmployeeLastName=Sharma, Status=Enabled, EmployeeFirstName=Nidhi, UserPassword=R29vZHdpbGwxMjM0NQ==, EmployeeMiddleName=Raj, UserRole=Admin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_Admin_LoginWithNewSystemUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:04:21 IST" name="afterMethod" finished-at="2024-03-15T17:04:22 IST" duration-ms="638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC03_Admin_LoginWithNewSystemUser status=SUCCESS method=Admin.TC03_Admin_LoginWithNewSystemUser(java.util.Map)[pri:3, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:04:22 IST" name="initialize" finished-at="2024-03-15T17:04:23 IST" duration-ms="1098" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC04_Admin_CreateJobTitle(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC04_Admin_CreateJobTitle(java.util.Map)[pri:4, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:04:23 IST" name="TC04_Admin_CreateJobTitle" data-provider="Admin" finished-at="2024-03-15T17:04:45 IST" duration-ms="22188" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{JobTitle=AssociateQA, JobDescription=Software Testing}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC04_Admin_CreateJobTitle -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:04:46 IST" name="afterMethod" finished-at="2024-03-15T17:04:46 IST" duration-ms="555" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC04_Admin_CreateJobTitle status=SUCCESS method=Admin.TC04_Admin_CreateJobTitle(java.util.Map)[pri:4, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:04:46 IST" name="initialize" finished-at="2024-03-15T17:04:47 IST" duration-ms="945" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC05_Admin_CreateEmploymentStatus(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC05_Admin_CreateEmploymentStatus(java.util.Map)[pri:5, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:04:47 IST" name="TC05_Admin_CreateEmploymentStatus" data-provider="Admin" finished-at="2024-03-15T17:05:09 IST" duration-ms="21576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{EmploymentStatus=Full-Time Internship}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_Admin_CreateEmploymentStatus -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:09 IST" name="afterMethod" finished-at="2024-03-15T17:05:09 IST" duration-ms="341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC05_Admin_CreateEmploymentStatus status=SUCCESS method=Admin.TC05_Admin_CreateEmploymentStatus(java.util.Map)[pri:5, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:09 IST" name="initialize" finished-at="2024-03-15T17:05:10 IST" duration-ms="950" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC06_Admin_CreateJobCategory(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC06_Admin_CreateJobCategory(java.util.Map)[pri:6, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:10 IST" name="TC06_Admin_CreateJobCategory" data-provider="Admin" finished-at="2024-03-15T17:05:32 IST" duration-ms="21381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{JobCategory=Search And Online Marketing}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_Admin_CreateJobCategory -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:32 IST" name="afterMethod" finished-at="2024-03-15T17:05:32 IST" duration-ms="437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC06_Admin_CreateJobCategory status=SUCCESS method=Admin.TC06_Admin_CreateJobCategory(java.util.Map)[pri:6, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:32 IST" name="initialize" finished-at="2024-03-15T17:05:33 IST" duration-ms="959" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC07_Admin_CreateWorkShift(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC07_Admin_CreateWorkShift(java.util.Map)[pri:7, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:33 IST" name="TC07_Admin_CreateWorkShift" data-provider="Admin" finished-at="2024-03-15T17:05:56 IST" duration-ms="23076" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{FromTime=08:00 AM, WorkShiftName=Morning Shift, ToTime=05:00 PM}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC07_Admin_CreateWorkShift -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:57 IST" name="afterMethod" finished-at="2024-03-15T17:05:57 IST" duration-ms="519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC07_Admin_CreateWorkShift status=SUCCESS method=Admin.TC07_Admin_CreateWorkShift(java.util.Map)[pri:7, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="initialize(java.lang.String,java.lang.reflect.Method)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:57 IST" name="initialize" finished-at="2024-03-15T17:05:58 IST" duration-ms="993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Admin.TC08_Admin_CreatePayGrade(java.util.Map) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="TC08_Admin_CreatePayGrade(java.util.Map)[pri:8, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:05:58 IST" name="TC08_Admin_CreatePayGrade" data-provider="Admin" finished-at="2024-03-15T17:06:24 IST" duration-ms="26308" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{MaxSalary=1000, MinSalary=10, PayGrade=Grade 10, Currency=EUR - Euro}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC08_Admin_CreatePayGrade -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.Admin@1506f20f]" started-at="2024-03-15T17:06:25 IST" name="afterMethod" finished-at="2024-03-15T17:06:25 IST" duration-ms="462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC08_Admin_CreatePayGrade status=SUCCESS method=Admin.TC08_Admin_CreatePayGrade(java.util.Map)[pri:8, instance:testcases.Admin@1506f20f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Admin -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

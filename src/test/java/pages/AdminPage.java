@@ -389,6 +389,7 @@ public class AdminPage {
 	@FindBy(xpath="//h6[text()='Add Currency']//parent::div//button[text()=' Save ']")
 	WebElement btnSaveCurrency;
 	
+	
 	public By eleRecordsFound(String count) {
 		return By.xpath("//span[text()='(" + count + ") Record Found']");
 	}

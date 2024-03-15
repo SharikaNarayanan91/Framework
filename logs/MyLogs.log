@@ -2839,3 +2839,102 @@
 [INFO ] 2024-03-14 16:24:05.851 [main] Login - HRM login successfull
 [INFO ] 2024-03-14 16:26:26.462 [main] Login - HRM login successfull
 [INFO ] 2024-03-14 16:31:13.179 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:11:14.107 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:12:00.219 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:18:51.960 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:19:39.510 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:22:13.311 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:22:57.602 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:28:55.407 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:29:39.073 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:36:59.371 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:37:44.059 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:41:20.852 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:42:05.886 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:45:03.218 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 11:45:49.170 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:09:32.262 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:19:09.565 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:19:50.319 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:20:53.166 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:21:39.953 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:24:44.123 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:25:49.478 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:26:33.138 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:29:00.956 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:30:09.702 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:30:52.830 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:35:58.579 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:36:55.595 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:37:34.497 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:40:24.124 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:41:20.739 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 12:41:58.233 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 16:38:41.072 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 16:38:51.007 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-15 16:38:59.117 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-15 16:39:07.667 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-15 16:39:16.018 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:02:29.193 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:02:38.772 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-15 17:02:47.052 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-15 17:02:55.359 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-03-15 17:03:04.635 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:03:09.628 [main] Login - Number of records for selected user found as expected : 1
+[INFO ] 2024-03-15 17:03:18.822 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:03:43.476 [main] Login - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-03-15 17:03:43.815 [main] Login - The UserName displayed of the selected user is as expected : PriyacJQAtT
+[INFO ] 2024-03-15 17:03:44.167 [main] Login - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-03-15 17:03:44.527 [main] Login - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-03-15 17:03:53.965 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:04:20.896 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:04:21.298 [main] Login - User with UserName : Nidhi Sharma is created
+[INFO ] 2024-03-15 17:04:30.791 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:04:42.635 [main] Login - Job title 'AssociateQA' is added
+[INFO ] 2024-03-15 17:04:42.926 [main] Login - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-03-15 17:04:54.318 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:05:06.212 [main] Login - Employment status 'Full-Time Internship' is added
+[INFO ] 2024-03-15 17:05:17.688 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:05:29.188 [main] Login - Job Category 'Search And Online Marketing' is added
+[INFO ] 2024-03-15 17:05:40.778 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:05:53.853 [main] Login - Work sift 'Morning Shift' is added with From Time : '08:00 AM', To time : '05:00 PM' and Duration : '9.00'
+[INFO ] 2024-03-15 17:06:05.537 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:06:21.896 [main] Login - Currency added against the pay grade 'Grade 10' is as expected : Euro
+[INFO ] 2024-03-15 17:06:33.383 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:06:33.725 [main] Login - Tab Admin is present
+[INFO ] 2024-03-15 17:06:34.056 [main] Login - Tab PIM is present
+[INFO ] 2024-03-15 17:06:34.357 [main] Login - Tab Leave is present
+[INFO ] 2024-03-15 17:06:34.633 [main] Login - Tab Time is present
+[INFO ] 2024-03-15 17:06:34.880 [main] Login - Tab Recruitment is present
+[INFO ] 2024-03-15 17:06:35.095 [main] Login - Tab My Info is present
+[INFO ] 2024-03-15 17:06:35.344 [main] Login - Tab Performance is present
+[INFO ] 2024-03-15 17:06:35.594 [main] Login - Tab Dashboard is present
+[INFO ] 2024-03-15 17:06:35.798 [main] Login - Tab Directory is present
+[INFO ] 2024-03-15 17:06:36.003 [main] Login - Tab Maintenance is present
+[INFO ] 2024-03-15 17:06:36.182 [main] Login - Tab Claim is present
+[INFO ] 2024-03-15 17:06:44.625 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:07:07.329 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Tzsipa Zhluzg
+[INFO ] 2024-03-15 17:07:07.666 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-15 17:07:07.920 [main] Login - The Id displayed for the selected user is as expected : 0586
+[INFO ] 2024-03-15 17:07:16.551 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:07:39.426 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Apufaj Tefiiq
+[INFO ] 2024-03-15 17:07:39.675 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-15 17:07:39.923 [main] Login - The Id displayed for the selected user is as expected : 0588
+[INFO ] 2024-03-15 17:07:48.569 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:08:23.606 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Pfinwj Frozif
+[INFO ] 2024-03-15 17:08:23.911 [main] Login - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-03-15 17:08:24.129 [main] Login - The Id displayed for the selected user is as expected : 0590
+[INFO ] 2024-03-15 17:08:29.531 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:08:29.904 [main] Login - User with UserName : Pfinwj Kapoor is created
+[INFO ] 2024-03-15 17:08:38.468 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:09:02.128 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Isegty Vcpast
+[INFO ] 2024-03-15 17:09:19.151 [main] Login - 'No Records Found' displayed for the selected user
+[INFO ] 2024-03-15 17:09:28.377 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:09:52.222 [main] Login - The FirstAndMiddleName displayed for the selected user is as expected : Gzlrui Nxrrlu
+[INFO ] 2024-03-15 17:10:17.899 [main] Login - The LastName displayed for the selected user is as expected : Sharma
+[INFO ] 2024-03-15 17:10:26.851 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:14:14.385 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:18:12.475 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:19:13.279 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:20:13.704 [main] Login - HRM login successfull
+[INFO ] 2024-03-15 17:24:18.411 [main] Login - HRM login successfull
