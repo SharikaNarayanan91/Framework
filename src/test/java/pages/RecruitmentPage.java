@@ -206,10 +206,10 @@ public class RecruitmentPage {
 
 		String actualRecord = webCtrls.getText(eleTableRecord(index));
 		Assert.assertEquals(actualRecord, expectedRecord,
-				"The " + requiredColumnName + " displayed of the selected user is not as expected");
-		logger.info("The " + requiredColumnName + " displayed of the selected user is as expected : " + expectedRecord);
+				"The " + requiredColumnName + " displayed of the selected candidate is not as expected");
+		logger.info("The " + requiredColumnName + " displayed of the selected candidate is as expected : " + expectedRecord);
 		webCtrls.addLog("Pass",
-				"The " + requiredColumnName + " displayed of the selected user is as expected : " + expectedRecord);
+				"The " + requiredColumnName + " displayed of the selected candidate is as expected : " + expectedRecord);
 	}
 
 	/**
@@ -237,7 +237,6 @@ public class RecruitmentPage {
 	}
 	/**
 	 * Shortlist a candidate
-	 * @param candidateName
 	 */
 	public void shortlistCandidate() {
 		webCtrls.wait(1);
@@ -258,6 +257,105 @@ public class RecruitmentPage {
 		Assert.assertEquals(actualStatus, expStatus,"Status of Candidate displayed is not as expected");
 		logger.info("Status of Candidate displayed is as expected : "+expStatus);
 		webCtrls.addLog("Pass","Status of Candidate displayed is as expected : "+expStatus);
+	}
+
+	/**
+	 * Schedule an Interview for candidate
+	 * 
+	 * @param interviewTitle
+	 * @param interviewer
+	 * @param dateOfInterview
+	 * @param timeOfInterview
+	 * @param notes
+	 */
+	public void scheduleInterview(String interviewTitle,String interviewer,String dateOfInterview,String timeOfInterview,String notes) {
+		webCtrls.wait(1);
+		webCtrls.buttonClick(btnScheduleInterview);
+		webCtrls.wait(1);
+		webCtrls.setData(txtInterviewTitle, interviewTitle);
+		webCtrls.selectFromAutosuggestiveDropdown(txtInterviewer, interviewer);
+		webCtrls.setData(txtDateOfInterview, dateOfInterview);
+		webCtrls.setData(txtTimeOfInterview, timeOfInterview);
+		if (notes.length()!=0) {
+		webCtrls.scrollToElement(txtNotes);
+		webCtrls.setData(txtNotes, notes);
+		}
+		webCtrls.buttonClick(btnSave);
+	}
+	
+	/**
+	 * Get the record from the Candidates table
+	 * 
+	 * @param requiredColumnName
+	 */
+	public String getRecordCandidatesTable(String requiredColumnName) {
+
+		int index = 0;
+		switch (requiredColumnName) {
+		case "Vacancy":
+			index = 3;
+			break;
+		case "Candidate":
+			index = 4;
+			break;
+		case "HiringManager":
+			index = 5;
+			break;
+		case "DateOfApplication":
+			index = 6;
+			break;
+		case "Status":
+			index = 7;
+			break;
+		}
+
+		String requiredRecord = webCtrls.getText(eleTableRecord(index));
+		logger.info("The " + requiredColumnName + " of the selected candidate is : " + requiredRecord);
+		webCtrls.addLog("INFO",
+				"The " + requiredColumnName + " of the selected candidate is : " + requiredRecord);
+		return requiredRecord;
+	}
+	/**
+	 * Mark the interview passed
+	 * @param notes
+	 */
+	public void markInterviewPassed(String notes) {
+		webCtrls.wait(1);
+		webCtrls.buttonClick(btnMarkInterviewPassed);
+		webCtrls.wait(1);
+		if (notes.length()!=0) {
+		webCtrls.scrollToElement(txtNotes);
+		webCtrls.setData(txtNotes, notes);
+		}
+		webCtrls.buttonClick(btnSave);
+	}
+	/**
+	 * Offer the job
+	 * @param notes
+	 */
+	public void offerJob(String notes) {
+		webCtrls.wait(1);
+		webCtrls.buttonClick(btnOfferJob);
+		webCtrls.wait(1);
+		if (notes.length()!=0) {
+		webCtrls.scrollToElement(txtNotes);
+		webCtrls.setData(txtNotes, notes);
+		}
+		webCtrls.buttonClick(btnSave);
+	}
+	/**
+	 * Hire the candidated
+	 * @param notes
+	 */
+	public void hireCandidate(String notes) {
+		webCtrls.wait(1);
+		webCtrls.buttonClick(btnHire);
+		webCtrls.wait(1);
+		if (notes.length()!=0) {
+		webCtrls.scrollToElement(txtNotes);
+		webCtrls.setData(txtNotes, notes);
+		}
+		webCtrls.buttonClick(btnSave);
 	}
 	// inputs
 	@FindBy(xpath = "//label[text()='Vacancy Name']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
@@ -296,7 +394,15 @@ public class RecruitmentPage {
 	WebElement txtDateOfApplication;
 	@FindBy(xpath = "//p[contains(@class,'oxd-text oxd-text--p oxd-text--subtitle')]")
 	WebElement eleStatus;
-
+	@FindBy(xpath = "//label[text()='Interview Title']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtInterviewTitle;
+	@FindBy(xpath = "//label[text()='Interviewer']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
+	WebElement txtInterviewer;
+	@FindBy(xpath = "//label[text()='Date']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtDateOfInterview;
+	@FindBy(xpath = "//label[text()='Time']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
+	WebElement txtTimeOfInterview;
+	
 	// buttons
 	@FindBy(xpath = "//button[text()=' Search ']")
 	WebElement btnSearch;
@@ -312,6 +418,14 @@ public class RecruitmentPage {
 	WebElement dlgBoxYesButton;
 	@FindBy(xpath = "//button[text()=' Shortlist ']")
 	WebElement btnShortlist;
+	@FindBy(xpath = "//button[text()=' Schedule Interview ']")
+	WebElement btnScheduleInterview;
+	@FindBy(xpath = "//button[text()=' Mark Interview Passed ']")
+	WebElement btnMarkInterviewPassed;
+	@FindBy(xpath = "//button[text()=' Offer Job ']")
+	WebElement btnOfferJob;
+	@FindBy(xpath = "//button[text()=' Hire ']")
+	WebElement btnHire;
 
 	public By eleTableRecord(int index) {
 		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[" + index + "]");

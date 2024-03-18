@@ -62,6 +62,9 @@ public class Recruitment extends BaseTest {
 
 		// Select Admin tab
 		dashboardPage.clickAdmin();
+		
+		String dateOfInterview=webCtrls.getCurrentDate("yyyy-dd-MM");
+
 
 		// Create a user
 		String employeeName = (String) map.get("EmployeeFirstName") + " " + (String) map.get("EmployeeMiddleName") + " "
@@ -146,13 +149,6 @@ public class Recruitment extends BaseTest {
 		// Verify the Status of the selected candidate
 		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateStatus"));
 
-		/*
-		 * // Delete the candidate recruitmentPage.deleteCandidate(candidateName);
-		 * 
-		 * // Delete the vacancy recruitmentPage.clickVacanciesTab();
-		 * recruitmentPage.searchVacancyByVacancyName((String) map.get("VacancyName"));
-		 * recruitmentPage.deleteVacancy((String) map.get("VacancyName"));
-		 */
 	}
 	@ExcelDataSourceInfo(TestName = "TC03_Recruitment_ShortlistCandidate")
 	@Test(enabled = true, priority = 3, dataProvider = "Recruitment")
@@ -194,15 +190,148 @@ public class Recruitment extends BaseTest {
 		recruitmentPage.clickCandidatesTab();
 		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
 		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateCurrentStatus"));
-		
-
-		// Delete the candidate
-		recruitmentPage.deleteCandidate(candidateName);
-
-		// Delete the vacancy 
-		recruitmentPage.clickVacanciesTab();
-		recruitmentPage.searchVacancyByVacancyName((String) map.get("VacancyName"));
-		recruitmentPage.deleteVacancy((String) map.get("VacancyName"));
 		 
+	}
+	@ExcelDataSourceInfo(TestName = "TC04_Recruitment_ScheduleInterviewForCandidate")
+	@Test(enabled = true, priority = 4, dataProvider = "Recruitment")
+	public void TC04_Recruitment_ScheduleInterviewForCandidate(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
+		PIMPage pimPage = new PIMPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Recruitment tab
+		dashboardPage.clickRecruitment();
+
+		recruitmentPage.clickCandidatesTab();
+
+		String candidateName=(String) map.get("EmployeeFirstName")+" "+(String) map.get("EmployeeMiddleName")+" "+
+				(String) map.get("EmployeeLastName");
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+
+		// Verify the Status of the selected candidate
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateInitialStatus"));
+		
+		//Get the Hiring manager of the vacancy
+		String hiringManager=recruitmentPage.getRecordCandidatesTable("HiringManager");
+		
+		//Schedule an interview
+		String dateOfInterview=webCtrls.getCurrentDate("yyyy-dd-MM");
+		recruitmentPage.viewCandidate(candidateName);
+		recruitmentPage.scheduleInterview((String) map.get("InterviewTitle"),hiringManager, dateOfInterview,(String) map.get("TimeOfInterview"),"");
+		recruitmentPage.verifyCandidateStatus((String) map.get("CandidateCurrentStatus"));
+		
+		//Verify the current status:Interview scheduled
+		recruitmentPage.clickCandidatesTab();
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateCurrentStatus"));
+		 
+	}
+	@ExcelDataSourceInfo(TestName = "TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate")
+	@Test(enabled = true, priority = 5, dataProvider = "Recruitment")
+	public void TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
+		PIMPage pimPage = new PIMPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Recruitment tab
+		dashboardPage.clickRecruitment();
+
+		recruitmentPage.clickCandidatesTab();
+
+		String candidateName=(String) map.get("EmployeeFirstName")+" "+(String) map.get("EmployeeMiddleName")+" "+
+				(String) map.get("EmployeeLastName");
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+
+		// Verify the Status of the selected candidate
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateInitialStatus"));
+		
+		//Mark the interview as passed
+		recruitmentPage.viewCandidate(candidateName);
+		recruitmentPage.markInterviewPassed("");
+		recruitmentPage.verifyCandidateStatus((String) map.get("CandidateStatus2"));
+		
+		//Verify the status:Interview Passed
+		recruitmentPage.clickCandidatesTab();
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateStatus2"));
+		
+		//Offer the job
+		recruitmentPage.viewCandidate(candidateName);
+		recruitmentPage.offerJob("");
+		recruitmentPage.verifyCandidateStatus((String) map.get("CandidateCurrentStatus"));
+		
+		//Verify the status:Interview Passed
+		recruitmentPage.clickCandidatesTab();
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateCurrentStatus"));
+	}
+	
+	@ExcelDataSourceInfo(TestName = "TC06_Recruitment_HireCandidate")
+	@Test(enabled = true, priority = 6, dataProvider = "Recruitment")
+	public void TC06_Recruitment_HireCandidate(Map<Object, Object> map) throws IOException {
+
+		ReadConfig readConfig = new ReadConfig();
+		LoginPage loginPage = new LoginPage(driver);
+		AdminPage adminPage = new AdminPage(driver);
+		WebCtrls webCtrls = new WebCtrls();
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
+		PIMPage pimPage = new PIMPage(driver);
+		driver.get(readConfig.readPropertyFile("baseURL"));
+
+		// Decrypt the Encrypted password
+		String password = webCtrls.decryptString(readConfig.readPropertyFile("Password"));
+
+		// Login with valid credentials
+		loginPage.login(readConfig.readPropertyFile("Username"), password);
+		loginPage.verifyLogin();
+
+		// Select Recruitment tab
+		dashboardPage.clickRecruitment();
+
+		recruitmentPage.clickCandidatesTab();
+
+		String candidateName=(String) map.get("EmployeeFirstName")+" "+(String) map.get("EmployeeMiddleName")+" "+
+				(String) map.get("EmployeeLastName");
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+
+		// Verify the Status of the selected candidate
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateInitialStatus"));
+		
+		//Hire the candidate
+		recruitmentPage.viewCandidate(candidateName);
+		recruitmentPage.hireCandidate(candidateName);
+		recruitmentPage.verifyCandidateStatus((String) map.get("CandidateCurrentStatus"));
+		
+		//Verify the status:Hired
+		recruitmentPage.clickCandidatesTab();
+		recruitmentPage.searchCandidateByNameAndVacancy((String) map.get("EmployeeFirstName"), (String) map.get("VacancyName"));
+		recruitmentPage.verifyCandidatesTableRecord("Status", (String) map.get("CandidateCurrentStatus"));			 
 	}
 }

@@ -4,27 +4,10 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.Admin">
-        <methods>
-          <include name="initialize"/>
-          <include name="TC01_Admin_SearchUserByNameAndRole" invocation-numbers="0"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testcases.Admin -->
-      <class name="testcases.Time">
-        <methods>
-          <include name="initialize"/>
-          <include name="TC01_Time_CreateTimesheet" invocation-numbers="0"/>
-          <include name="TC02_Time_CreateTimesheetWithMultipleProjects" invocation-numbers="0"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testcases.Time -->
       <class name="testcases.Recruitment">
         <methods>
-          <include name="TC01_Recruitment_AddVacancy" invocation-numbers="0"/>
           <include name="initialize"/>
-          <include name="TC02_Recruitment_AddCandidate" invocation-numbers="0"/>
-          <include name="TC03_Recruitment_ShortlistCandidate" invocation-numbers="0"/>
+          <include name="TC06_Recruitment_HireCandidate" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- testcases.Recruitment -->

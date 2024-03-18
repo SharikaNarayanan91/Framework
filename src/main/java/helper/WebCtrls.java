@@ -1,6 +1,8 @@
 package helper;
 
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -350,5 +352,19 @@ public class WebCtrls extends BaseTest {
         }
 		logger.info("Selected "+value+" from chevron dropdown");
 		addLog("Info","Selected "+value+" from chevron dropdown");
+	}
+	
+	/**
+	 * Get currnt date in specific format
+	 * @param dateFormat
+	 * @return
+	 */
+	public String getCurrentDate(String dateFormat) {		
+        Date currentDate = new Date();        
+        SimpleDateFormat reqDateformat = new SimpleDateFormat(dateFormat);      
+        String formattedDate = reqDateformat.format(currentDate);      
+        logger.info("Current date obtained : "+formattedDate);
+		addLog("Info","Current date obtained : "+formattedDate);
+        return formattedDate;
 	}
 }
