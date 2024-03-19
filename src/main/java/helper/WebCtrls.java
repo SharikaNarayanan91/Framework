@@ -1,5 +1,6 @@
 package helper;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
@@ -366,5 +367,14 @@ public class WebCtrls extends BaseTest {
         logger.info("Current date obtained : "+formattedDate);
 		addLog("Info","Current date obtained : "+formattedDate);
         return formattedDate;
+	}
+	/**
+	 * Upload a file giving the file name
+	 * @param locator
+	 * @param fileName
+	 */
+	public void uploadFile(WebElement locator,String fileName) {
+		String filePath=System.getProperty("user.dir") + File.separator +"src\\test\\resources\\fileUploads"+File.separator+fileName;
+		locator.sendKeys(filePath);
 	}
 }

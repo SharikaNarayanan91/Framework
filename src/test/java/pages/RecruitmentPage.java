@@ -149,7 +149,7 @@ public class RecruitmentPage {
 	 * @param notes
 	 */
 	public void addCandidate(String firstName, String middleName, String lastName, String vacancy, String email,
-			String contactNumber, String keywords, String notes) {
+			String contactNumber,String resume, String keywords, String notes) {
 		webCtrls.buttonClick(btnAdd);
 		webCtrls.wait(2);
 		webCtrls.setData(txtFirstName, firstName);
@@ -158,6 +158,9 @@ public class RecruitmentPage {
 		webCtrls.selectFromDropdown(ddlVacancy, vacancy);
 		webCtrls.setData(txtEmail, email);
 		webCtrls.setData(txtContactNumber, contactNumber);
+		if(resume.length()!=0) {
+			webCtrls.uploadFile(txtResume, resume);
+		}
 		webCtrls.setData(txtKeywords, keywords);
 		webCtrls.setData(txtNotes, notes);
 		webCtrls.scrollToElement(btnSave);
@@ -315,17 +318,23 @@ public class RecruitmentPage {
 				"The " + requiredColumnName + " of the selected candidate is : " + requiredRecord);
 		return requiredRecord;
 	}
+
 	/**
-	 * Mark the interview passed
+	 * Mark the interview Status
+	 * 
+	 * @param status :Pass/Fail
 	 * @param notes
 	 */
-	public void markInterviewPassed(String notes) {
+	public void markInterviewStatus(String status, String notes) {
 		webCtrls.wait(1);
-		webCtrls.buttonClick(btnMarkInterviewPassed);
-		webCtrls.wait(1);
-		if (notes.length()!=0) {
-		webCtrls.scrollToElement(txtNotes);
-		webCtrls.setData(txtNotes, notes);
+		if (status.contains("Pass")) {
+			webCtrls.buttonClick(btnMarkInterviewPassed);
+		} else {
+			webCtrls.buttonClick(btnMarkInterviewFailed);
+		}
+		if (notes.length() != 0) {
+			webCtrls.scrollToElement(txtNotes);
+			webCtrls.setData(txtNotes, notes);
 		}
 		webCtrls.buttonClick(btnSave);
 	}
@@ -357,6 +366,21 @@ public class RecruitmentPage {
 		}
 		webCtrls.buttonClick(btnSave);
 	}
+	/**
+	 * Reject a Candidate
+	 * @param notes
+	 */
+	public void rejectCandidate(String notes) {
+		webCtrls.wait(1);
+		webCtrls.buttonClick(btnReject);
+		webCtrls.wait(1);
+		if (notes.length()!=0) {
+		webCtrls.scrollToElement(txtNotes);
+		webCtrls.setData(txtNotes, notes);
+		}
+		webCtrls.buttonClick(btnSave);
+	}
+	
 	// inputs
 	@FindBy(xpath = "//label[text()='Vacancy Name']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtVacancyName;
@@ -402,7 +426,8 @@ public class RecruitmentPage {
 	WebElement txtDateOfInterview;
 	@FindBy(xpath = "//label[text()='Time']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtTimeOfInterview;
-	
+	@FindBy(xpath="//input[@type='file']")
+	WebElement txtResume;
 	// buttons
 	@FindBy(xpath = "//button[text()=' Search ']")
 	WebElement btnSearch;
@@ -426,6 +451,10 @@ public class RecruitmentPage {
 	WebElement btnOfferJob;
 	@FindBy(xpath = "//button[text()=' Hire ']")
 	WebElement btnHire;
+	@FindBy(xpath = "//button[text()=' Mark Interview Failed ']")
+	WebElement btnMarkInterviewFailed;
+	@FindBy(xpath = "//button[text()=' Reject ']")
+	WebElement btnReject;
 
 	public By eleTableRecord(int index) {
 		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[" + index + "]");
