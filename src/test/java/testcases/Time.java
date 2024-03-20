@@ -2,20 +2,14 @@ package testcases;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.bouncycastle.jcajce.provider.asymmetric.ec.GMSignatureSpi.sha256WithSM2;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
 import Base.BaseTest;
 import helper.WebCtrls;
-import pages.AdminPage;
 import pages.DashboardPage;
 import pages.LoginPage;
 import pages.PIMPage;
@@ -26,7 +20,6 @@ import utils.ReadConfig;
 
 @Listeners(utils.ListenerClass.class)
 public class Time extends BaseTest {
-	private static Logger logger = LogManager.getLogger(Time.class);
 
 	@DataProvider(name = "Time")
 	public Object[][] createData(Method method) throws IOException {
@@ -43,7 +36,6 @@ public class Time extends BaseTest {
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
-		AdminPage adminPage = new AdminPage(driver);
 		PIMPage pimPage = new PIMPage(driver);
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		TimePage timePage = new TimePage(driver);
@@ -93,7 +85,6 @@ public class Time extends BaseTest {
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
-		AdminPage adminPage = new AdminPage(driver);
 		PIMPage pimPage = new PIMPage(driver);
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		TimePage timePage = new TimePage(driver);
@@ -143,7 +134,6 @@ public class Time extends BaseTest {
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
-		AdminPage adminPage = new AdminPage(driver);
 		PIMPage pimPage = new PIMPage(driver);
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		TimePage timePage = new TimePage(driver);

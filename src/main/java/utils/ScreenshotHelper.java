@@ -10,6 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import Base.BaseTest;
 
 public class ScreenshotHelper extends BaseTest {
+	//Take screenshot
 	public static String TakeScreenShot() {
 		String screenshot =System.getProperty("user.dir")+File.separator+"test-output/screenshots/"+GenerateRandomHelper.GenerateRandomStringWithDateTime()+".jpg";
 		File src=((TakesScreenshot)BaseTest.driver).getScreenshotAs(OutputType.FILE);
@@ -20,6 +21,7 @@ public class ScreenshotHelper extends BaseTest {
 		}
 		return screenshot;
 	}
+	//Take screenshot with specific name
 	public static String TakeScreenShot(String fileName) {
 		String screenshot =System.getProperty("user.dir")+File.separator+"test-output/screenshots"+"/"+fileName+".jpg";
 		File src=((TakesScreenshot)BaseTest.driver).getScreenshotAs(OutputType.FILE);

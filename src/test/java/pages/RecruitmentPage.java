@@ -9,14 +9,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.github.dockerjava.api.model.Driver;
-
 import helper.WebCtrls;
-import testcases.Login;
-import utils.ListenerClass;
+import testcases.Recruitment;
 
 public class RecruitmentPage {
-	private static Logger logger = LogManager.getLogger(RecruitmentPage.class);
+	private static Logger logger = LogManager.getLogger(Recruitment.class);
 	WebCtrls webCtrls = new WebCtrls();
 
 	WebDriver ldriver;

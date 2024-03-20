@@ -2,11 +2,9 @@ package testcases;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -20,12 +18,10 @@ import pages.PIMPage;
 import pages.RecruitmentPage;
 import utils.ExcelDataSourceInfo;
 import utils.ExcelHelper;
-import utils.ListenerClass;
 import utils.ReadConfig;
 
 @Listeners(utils.ListenerClass.class)
 public class Recruitment extends BaseTest {
-	private static Logger logger = LogManager.getLogger(Login.class);
 
 	@DataProvider(name = "Recruitment")
 	public Object[][] createData(Method method) throws IOException {
@@ -98,7 +94,6 @@ public class Recruitment extends BaseTest {
 
 		// Verify the HiringManager of the selected vacancy
 		recruitmentPage.verifyVacancyTableRecord("Status", (String) map.get("VacancyStatus"));
-
 	}
 
 	@ExcelDataSourceInfo(TestName = "TC02_Recruitment_AddCandidate")
@@ -107,11 +102,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password
@@ -153,11 +146,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password
@@ -195,11 +186,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password
@@ -242,11 +231,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password
@@ -295,11 +282,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password
@@ -337,11 +322,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password
@@ -405,11 +388,9 @@ public class Recruitment extends BaseTest {
 
 		ReadConfig readConfig = new ReadConfig();
 		LoginPage loginPage = new LoginPage(driver);
-		AdminPage adminPage = new AdminPage(driver);
 		WebCtrls webCtrls = new WebCtrls();
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		RecruitmentPage recruitmentPage = new RecruitmentPage(driver);
-		PIMPage pimPage = new PIMPage(driver);
 		driver.get(readConfig.readPropertyFile("baseURL"));
 
 		// Decrypt the Encrypted password

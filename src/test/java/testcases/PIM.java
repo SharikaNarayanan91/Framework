@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -21,7 +19,6 @@ import utils.ReadConfig;
 
 @Listeners(utils.ListenerClass.class)
 public class PIM extends BaseTest{
-	private static Logger logger = LogManager.getLogger(Login.class);
 
 	@DataProvider(name = "PIM")
 	public Object[][] createData(Method method) throws IOException {

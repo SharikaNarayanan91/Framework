@@ -5,25 +5,23 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class GenerateRandomHelper {
-	//Generate random string(Alpha and numbers)
+	
+	//Generate random Alpha Numeric string
 	public static String GenerateRandomString(int length) {
-		// chose a Character random from this String
+		
 		String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz";
-
-		// create StringBuffer size of AlphaNumericString
 		StringBuilder sb = new StringBuilder(length);
 
 		for (int i = 0; i < length; i++) {
-
 			// generate a random number between
 			// 0 to AlphaNumericString variable length
 			int index = (int) (AlphaNumericString.length() * Math.random());
 
-			// add Character one by one in end of sb
 			sb.append(AlphaNumericString.charAt(index));
 		}
 		return sb.toString();
 	}
+	
 	//Generate random string with date and time
 	public static String GenerateRandomStringWithDateTime()
 	{
@@ -31,6 +29,7 @@ public class GenerateRandomHelper {
 		LocalDateTime now = LocalDateTime.now();
 		return dtf.format(now).replaceAll("/", "").replaceAll(":", "").replaceAll(" ", "");
 	}
+
 	//Generate random numbers
 	public static int GenerateRandomNumber(int length) {
 		int desiredLength = length; 
@@ -51,7 +50,8 @@ public class GenerateRandomHelper {
 
         return randomWithSpecificLength;
 	}
-	//Generate random alpha string
+
+	//Generate random only alpha string
 	public static String GenerateRandomAlphaString(int length) {
 		// chose a Character random from this String
 		String AlphaString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvxyz";

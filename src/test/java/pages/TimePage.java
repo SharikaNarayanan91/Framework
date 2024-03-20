@@ -9,19 +9,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.Status;
-import com.beust.jcommander.Parameter;
-import com.github.dockerjava.api.model.Driver;
-import com.github.dockerjava.core.MediaType;
-
 import helper.WebCtrls;
-import testcases.Login;
-import utils.ListenerClass;
-import utils.ScreenshotHelper;
+import testcases.Time;
 
 public class TimePage {
-	private static Logger logger = LogManager.getLogger(TimePage.class);
+	private static Logger logger = LogManager.getLogger(Time.class);
 	WebCtrls webCtrls = new WebCtrls();
 
 	WebDriver ldriver;

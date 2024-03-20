@@ -23,25 +23,35 @@ public class BaseTest {
 	static ExtentReports extent;
 	public ExtentTest logger;
 
+	//Initialze the driver
 	@BeforeMethod
 	@Parameters("browser")
-	public void initialize(String browser,Method testMethod ) {
-		extent=new ExtentReports();
-		logger=extent.createTest(testMethod.getName());
-
-		if(browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			System.out.println("Chrome driver is launched");
+	public void initialize(String browser, Method testMethod) {
+		extent = new ExtentReports();
+		logger = extent.createTest(testMethod.getName());
+		try {
+			if (browser.equalsIgnoreCase("chrome")) {
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				System.out.println("Chrome driver is launched");
+			} else if (browser.equalsIgnoreCase("edge")) {
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+				System.out.println("Edge driver is launched");
+			} else {
+				throw new IllegalArgumentException("Unsupported browser: " + browser);
+			}
+			driver.manage().window().maximize();
+		} catch (IllegalArgumentException e) {
+			System.out.println("IllegalArgumentException occurred: " + e.getMessage());
+			throw e;
+		} catch (Exception e) {
+			logger.log(Status.FAIL, "Failed to initialize driver: " + e.getMessage());
+			throw new RuntimeException("Failed to initialize driver", e);
 		}
-		else if(browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new EdgeDriver();
-			System.out.println("Edge driver is launched");
-		}
-		driver.manage().window().maximize();
-	}  
+	}
 
+	//Implementation of extent reports
 	@AfterMethod
 	public void afterMethod(ITestResult result){
 
@@ -51,7 +61,7 @@ public class BaseTest {
 		}else if (result.getStatus()==ITestResult.SKIP) {
 			logger.log(Status.SKIP, MarkupHelper.createLabel(result.getThrowable()+" - Test Case Skipped" , ExtentColor.ORANGE));
 		}else if (result.getStatus()==ITestResult.SUCCESS) {
-			logger.log(Status.PASS, MarkupHelper.createLabel(result.getThrowable()+" - Test Case Passed" , ExtentColor.GREEN));
+			logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" - Test Case Passed" , ExtentColor.GREEN));
 		}
 		driver.quit();
 		extent.flush();

@@ -31,8 +31,8 @@ public class WebCtrls extends BaseTest {
 	WebElement webElement;
 	/**
 	 * Set data
-	 * @param locator
-	 * @param value
+	 * @param WeElement locator
+	 * @param String value
 	 */
 	public void setData(WebElement locator, String value) {
 		WebDriverWait wait = getWait();
@@ -49,8 +49,8 @@ public class WebCtrls extends BaseTest {
 			addLog("Info","Entered "+locator+" as " + value);
 		}		
 	}
-	/**
-	 * Set data for encrypted value(e.g.Password)
+	
+	/** * Set data for encrypted value(e.g.Password)
 	 * @param locator
 	 * @param value
 	 */
@@ -68,6 +68,7 @@ public class WebCtrls extends BaseTest {
 				addLog("Info","Entered "+locator+" as " + encryptString(value));
 			}
 	}
+
 	/**
 	 * Get text 
 	 * @param WebElement locator
@@ -78,6 +79,7 @@ public class WebCtrls extends BaseTest {
 		String text = locator.getText();
 		return text;
 	}
+	
 	/**
 	 * To check whether element is displayed
 	 * @param WebElement locator
@@ -96,6 +98,7 @@ public class WebCtrls extends BaseTest {
 			return status;
 		}
 	}
+	
 	/**
 	 * To click a button/link
 	 * @param WebElement locator
@@ -114,6 +117,7 @@ public class WebCtrls extends BaseTest {
 		}
 			
 	}
+	
 	/**
 	 * To get a wait
 	 * @param WebElement locator
@@ -144,6 +148,7 @@ public class WebCtrls extends BaseTest {
 		logger.info("Selected "+value+" from dropdown");
 		addLog("Info","Selected "+value+" from dropdown");
 	}
+	
 	/**
 	 * To scroll to the bottom of the page
 	 */
@@ -151,6 +156,7 @@ public class WebCtrls extends BaseTest {
 		JavascriptExecutor js = (JavascriptExecutor) BaseTest.driver;
 		js.executeScript("window.scrollBy(0,1000)");
 	}
+	
 	/**
 	 * To click a button/link
 	 * @param By locator
@@ -168,14 +174,15 @@ public class WebCtrls extends BaseTest {
 				addLog("Info","Clicked on "+locator);
 			}
 	}
+	
 	/**
 	 * To check whether element is displayed
 	 * @param By locator
 	 */
 	public boolean isDisplayed(By locator) {
 		boolean status = false;
-		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		/*WebDriverWait wait = getWait();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));*/
 		try {
 			webElement = driver.findElement(locator);
 			if (webElement.isDisplayed())
@@ -186,6 +193,7 @@ public class WebCtrls extends BaseTest {
 			return status;
 		}
 	}
+	
 	/**
 	 * Log info and screenshot to report
 	 * @param String status :(Pass 'Info'-log status INFO and 'Pass'-log status PASS)
@@ -205,6 +213,7 @@ public class WebCtrls extends BaseTest {
 			break;
 		}
 	}
+	
 	/**
 	 * Encrypt a string
 	 * @param arg : Value to be encrypted
@@ -214,6 +223,7 @@ public class WebCtrls extends BaseTest {
 		String encryptedValue=new String(encryptedArg);
 		return encryptedValue;
 	}
+	
 	/**
 	 * Decrypt a string
 	 * @param arg : Value to be decrypted
@@ -223,6 +233,7 @@ public class WebCtrls extends BaseTest {
 		String decryptedValue = new String(decryptedArg);
 		return decryptedValue;
 	}
+	
 	/**
 	 * Get text 
 	 * @param By locator
@@ -233,6 +244,7 @@ public class WebCtrls extends BaseTest {
 		String text =driver.findElement(locator).getText();
 		return text;		
 	}
+	
 	/**
 	 * To wait for a duration
 	 * @param duration
@@ -245,6 +257,7 @@ public class WebCtrls extends BaseTest {
 			e.printStackTrace();
 		}
 	}
+	
 	/**
 	 * To scroll to an element
 	 * @param WebElement element
@@ -254,6 +267,7 @@ public class WebCtrls extends BaseTest {
 		// Execute JavaScript to scroll to the element
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
+	
 	/**
 	 * To generate random number
 	 * @param length
@@ -262,6 +276,7 @@ public class WebCtrls extends BaseTest {
 		int randomNum = genRandomHlper.GenerateRandomNumber(length);
 		return randomNum;
 	}
+	
 	/**
 	 * To generate random alpha string
 	 * @param length
@@ -270,6 +285,7 @@ public class WebCtrls extends BaseTest {
 		String randomString = genRandomHlper.GenerateRandomAlphaString(length);
 		return randomString;
 	}
+	
 	/**
 	 * To change the string to Title case format
 	 * @param String param
@@ -278,6 +294,7 @@ public class WebCtrls extends BaseTest {
 		 String text=Character.toTitleCase(param.charAt(0))+param.substring(1).toLowerCase();
 		 return text;
 	 }
+	
 	/**
 	 * Javascipt click a button/link
 	 * @param WebElement locator
@@ -335,6 +352,7 @@ public class WebCtrls extends BaseTest {
 			}
 		}
 	}
+	
 	/**
 	 * To select value from chevron dropdwon
 	 * @param WebElement locator
@@ -368,6 +386,7 @@ public class WebCtrls extends BaseTest {
 		addLog("Info","Current date obtained : "+formattedDate);
         return formattedDate;
 	}
+
 	/**
 	 * Upload a file giving the file name
 	 * @param locator

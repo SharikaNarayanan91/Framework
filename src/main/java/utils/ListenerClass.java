@@ -13,7 +13,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class ListenerClass implements ITestListener {
+public class ListenerClass implements ITestListener  {
 
 	private String pathFail;
 	private String pathPass;
@@ -23,14 +23,11 @@ public class ListenerClass implements ITestListener {
 	ExtentReports extent=ResultHelper.getReportObject();
 	private static Logger logger= LogManager.getLogger();
 
-
 	ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();
-
 	String testOutputLocation=System.getProperty("user.dir")+File.separator+"test-output/reports";
 
 	@Override
 	public void onTestStart(ITestResult result) {
-			
 		if(checkIfFolderExists(testOutputLocation))
 		{
 			if(!skip) {
@@ -44,7 +41,6 @@ public class ListenerClass implements ITestListener {
 		{
 			skip = true;
 		}
-		    
 		report= extent.createTest(result.getTestClass().getName()+" : "+result.getMethod().getMethodName());
 		extentTest.set(report);		
 		logger.info("Test started sucessfully");
@@ -76,7 +72,6 @@ public class ListenerClass implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-
 		pathFail = ScreenshotHelper.TakeScreenShot();
 
 		extentTest.get().log(Status.FAIL, "Test Failed");
@@ -101,6 +96,7 @@ public class ListenerClass implements ITestListener {
 		extent.flush();
 	}
 
+	//To if a folder exists
 	public static boolean checkIfFolderExists(String folderName) {
 		boolean found = false;
 

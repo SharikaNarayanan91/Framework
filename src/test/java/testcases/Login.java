@@ -2,30 +2,21 @@ package testcases;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.bouncycastle.jcajce.provider.asymmetric.ec.GMSignatureSpi.sha256WithSM2;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
 import Base.BaseTest;
 import helper.WebCtrls;
-import pages.AdminPage;
-import pages.DashboardPage;
 import pages.LoginPage;
-import pages.PIMPage;
 import utils.ExcelDataSourceInfo;
 import utils.ExcelHelper;
 import utils.ReadConfig;
 
 @Listeners(utils.ListenerClass.class)
 public class Login extends BaseTest {
-	private static Logger logger = LogManager.getLogger(Login.class);
 
 	@DataProvider(name = "Login")
 	public Object[][] createData(Method method) throws IOException {
