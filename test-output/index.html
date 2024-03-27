@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,51 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">21 methods,   21 passed</span>
+                    <span class="method-stats">21 methods, 7 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)">TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)">TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)">TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)">TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)">TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,12 +163,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)">TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testcases.Time" class="method navigator-link" hash-for-method="TC01_Time_CreateTimesheet({EmployeeLastName=Sharma, TimesheetStatus=Not Submitted, EmployeeFirstName=Sikha, Project=Apache Sof...)">TC01_Time_CreateTimesheet({EmployeeLastName=Sharma, TimesheetStatus=Not Submitted, EmployeeFirstName=Sikha, Project=Apache Sof...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Time" class="method navigator-link" hash-for-method="TC01_Time_CreateTimesheet({EmployeeLastName=Sharma, TimesheetStatus=Not Submitted, EmployeeFirstName=Sikha, Project=Apache Sof...)">TC01_Time_CreateTimesheet({EmployeeLastName=Sharma, TimesheetStatus=Not Submitted, EmployeeFirstName=Sikha, Project=Apache Sof...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,17 +183,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Login" class="method navigator-link" hash-for-method="TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.PIM" class="method navigator-link" hash-for-method="TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor})">TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -164,11 +198,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.Time" class="method navigator-link" hash-for-method="TC03_Time_SubmitAndApproveTimesheet({EmployeeFirstName=Sitara, FriHours=8:00, ThrsHours=8:00, ApprovalComment=Good.Approved , Activity=B...)">TC03_Time_SubmitAndApproveTimesheet({EmployeeFirstName=Sitara, FriHours=8:00, ThrsHours=8:00, ApprovalComment=Good.Approved , Activity=B...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -179,32 +208,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)">TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.PIM" class="method navigator-link" hash-for-method="TC05_PIM_EditEmployeeName({EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma})">TC05_PIM_EditEmployeeName({EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)">TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.Admin" class="method navigator-link" hash-for-method="TC07_Admin_CreateWorkShift({FromTime=08:00 AM, WorkShiftName=Fun Shift, ToTime=05:00 PM})">TC07_Admin_CreateWorkShift({FromTime=08:00 AM, WorkShiftName=Fun Shift, ToTime=05:00 PM})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)">TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Recruitment" class="method navigator-link" hash-for-method="TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)">TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -219,6 +228,145 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.Recruitment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)">
+                  </a> <!-- TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...) -->
+                  <span class="method-name">TC01_Recruitment_AddVacancy</span>
+                  <span class="parameters">({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=Collaborate closely with developers, product managers, and other members of the QA team to design and implement robust automation frameworks and test suites., VacancyStatus=Active, UserRole=Admin, UserPassword=R29vZHdpbGwxMjM0NQ==, VacancyName=QA Automation, NumOfPositions=5, JobTitle=QA Engineer})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The HiringManager displayed of the selected user is not as expected expected [Siya Shah] but found [(Deleted)]
+	at pages.RecruitmentPage.verifyVacancyTableRecord(RecruitmentPage.java:115)
+	at testcases.Recruitment.TC01_Recruitment_AddVacancy(Recruitment.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">
+                  </a> <!-- TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...) -->
+                  <span class="method-name">TC02_Recruitment_AddCandidate</span>
+                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateStatus=Application Initiated, VacancyName=QA Automation, Notes=Skilled QA Engineer})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC02_Recruitment_AddCandidate(Recruitment.java:140)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">
+                  </a> <!-- TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...) -->
+                  <span class="method-name">TC03_Recruitment_ShortlistCandidate</span>
+                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateCurrentStatus=Shortlisted, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Application Initiated})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC03_Recruitment_ShortlistCandidate(Recruitment.java:171)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)">
+                  </a> <!-- TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...) -->
+                  <span class="method-name">TC04_Recruitment_ScheduleInterviewForCandidate</span>
+                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName=M, CandidateCurrentStatus=Interview Scheduled, TimeOfInterview=02:00 PM, DateOfInterview=2024-18-03, VacancyName=QA Automation, CandidateInitialStatus=Shortlisted})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Shortlisted] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC04_Recruitment_ScheduleInterviewForCandidate(Recruitment.java:211)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)">
+                  </a> <!-- TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...) -->
+                  <span class="method-name">TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate</span>
+                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleName=M, CandidateCurrentStatus=Job Offered, CandidateInterviewStatus=Pass, VacancyName=QA Automation, CandidateInitialStatus=Interview Scheduled})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Interview Scheduled] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate(Recruitment.java:256)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)">
+                  </a> <!-- TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...) -->
+                  <span class="method-name">TC07_Recruitment_MarkInterviewFailedAndRejectCandidate</span>
+                  <span class="parameters">({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeOfInterview=02:00 PM, EmployeeLastName=Agarwal, CandidateStatus2=Interview Failed, EmployeeMiddleName=M, CandidateCurrentStatus=Rejected, CandidateStatus=Application Initiated, DateOfInterview=2024-18-03, CandidateInterviewStatus=Fail, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Interview Scheduled})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[text()=&apos; Shortlist &apos;]&apos; (tried for 200 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at helper.WebCtrls.buttonClick(WebCtrls.java:119)
+	at pages.RecruitmentPage.shortlistCandidate(RecruitmentPage.java:243)
+	at testcases.Recruitment.TC07_Recruitment_MarkInterviewFailedAndRejectCandidate(Recruitment.java:354)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos; Shortlist &apos;]&quot;}
+  (Session info: chrome=123.0.6312.59)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;192.168.0.100&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.59, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61975}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7273ac354323a5f803c90d245434c40
+*** Element info: {Using=xpath, value=//button[text()=&apos; Shortlist &apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)">
+                  </a> <!-- TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...) -->
+                  <span class="method-name">TC08_Recruitment_RejectCandidateWithoutShortlist</span>
+                  <span class="parameters">({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse, CandidateCurrentStatus=Rejected, VacancyName=QA Automation, Notes=QA Engineer, CandidateInitialStatus=Application Initiated, RejectionNote=Qualifications and experience not enough to meet the requirements.})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Rejected]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC08_Recruitment_RejectCandidateWithoutShortlist(Recruitment.java:416)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -251,6 +399,14 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})">
+                  </a> <!-- TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0}) -->
+                  <span class="method-name">TC02_Login_InvalidCredentials</span>
+                  <span class="parameters">({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=})">
                   </a> <!-- TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}) -->
                   <span class="method-name">TC02_Login_InvalidCredentials</span>
@@ -263,14 +419,6 @@
                   </a> <!-- TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0}) -->
                   <span class="method-name">TC02_Login_InvalidCredentials</span>
                   <span class="parameters">({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})">
-                  </a> <!-- TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0}) -->
-                  <span class="method-name">TC02_Login_InvalidCredentials</span>
-                  <span class="parameters">({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -371,70 +519,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.Recruitment</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)">
-                  </a> <!-- TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...) -->
-                  <span class="method-name">TC01_Recruitment_AddVacancy</span>
-                  <span class="parameters">({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=Collaborate closely with developers, product managers, and other members of the QA team to design and implement robust automation frameworks and test suites., VacancyStatus=Active, UserRole=Admin, UserPassword=R29vZHdpbGwxMjM0NQ==, VacancyName=QA Automation, NumOfPositions=5, JobTitle=QA Engineer})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">
-                  </a> <!-- TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...) -->
-                  <span class="method-name">TC02_Recruitment_AddCandidate</span>
-                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateStatus=Application Initiated, VacancyName=QA Automation, Notes=Skilled QA Engineer})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)">
-                  </a> <!-- TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...) -->
-                  <span class="method-name">TC03_Recruitment_ShortlistCandidate</span>
-                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateCurrentStatus=Shortlisted, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Application Initiated})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)">
-                  </a> <!-- TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...) -->
-                  <span class="method-name">TC04_Recruitment_ScheduleInterviewForCandidate</span>
-                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName=M, CandidateCurrentStatus=Interview Scheduled, TimeOfInterview=02:00 PM, DateOfInterview=2024-18-03, VacancyName=QA Automation, CandidateInitialStatus=Shortlisted})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)">
-                  </a> <!-- TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...) -->
-                  <span class="method-name">TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate</span>
-                  <span class="parameters">({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleName=M, CandidateCurrentStatus=Job Offered, CandidateInterviewStatus=Pass, VacancyName=QA Automation, CandidateInitialStatus=Interview Scheduled})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)">
-                  </a> <!-- TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...) -->
-                  <span class="method-name">TC07_Recruitment_MarkInterviewFailedAndRejectCandidate</span>
-                  <span class="parameters">({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeOfInterview=02:00 PM, EmployeeLastName=Agarwal, CandidateStatus2=Interview Failed, EmployeeMiddleName=M, CandidateCurrentStatus=Rejected, CandidateStatus=Application Initiated, DateOfInterview=2024-18-03, CandidateInterviewStatus=Fail, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Interview Scheduled})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)">
-                  </a> <!-- TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...) -->
-                  <span class="method-name">TC08_Recruitment_RejectCandidateWithoutShortlist</span>
-                  <span class="parameters">({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse, CandidateCurrentStatus=Rejected, VacancyName=QA Automation, Notes=QA Engineer, CandidateInitialStatus=Application Initiated, RejectionNote=Qualifications and experience not enough to meet the requirements.})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -495,94 +579,94 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(21);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC08_Recruitment_RejectCandidateWithoutShortlist')
+data.setCell(0, 1, 'TC07_Recruitment_MarkInterviewFailedAndRejectCandidate')
 data.setCell(0, 2, 'testcases.Recruitment')
-data.setCell(0, 3, 130285);
+data.setCell(0, 3, 249637);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC07_Recruitment_MarkInterviewFailedAndRejectCandidate')
-data.setCell(1, 2, 'testcases.Recruitment')
-data.setCell(1, 3, 97178);
+data.setCell(1, 1, 'TC03_PIM_CreateEmployeeWithLoginDetails')
+data.setCell(1, 2, 'testcases.PIM')
+data.setCell(1, 3, 62689);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate')
-data.setCell(2, 2, 'testcases.Recruitment')
-data.setCell(2, 3, 61353);
+data.setCell(2, 1, 'TC05_PIM_EditEmployeeName')
+data.setCell(2, 2, 'testcases.PIM')
+data.setCell(2, 3, 61417);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC05_PIM_EditEmployeeName')
-data.setCell(3, 2, 'testcases.PIM')
-data.setCell(3, 3, 51742);
+data.setCell(3, 1, 'TC02_Time_CreateTimesheetWithMultipleProjects')
+data.setCell(3, 2, 'testcases.Time')
+data.setCell(3, 3, 59964);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC02_Time_CreateTimesheetWithMultipleProjects')
+data.setCell(4, 1, 'TC03_Time_SubmitAndApproveTimesheet')
 data.setCell(4, 2, 'testcases.Time')
-data.setCell(4, 3, 44504);
+data.setCell(4, 3, 58225);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC03_Time_SubmitAndApproveTimesheet')
-data.setCell(5, 2, 'testcases.Time')
-data.setCell(5, 3, 44476);
+data.setCell(5, 1, 'TC01_Recruitment_AddVacancy')
+data.setCell(5, 2, 'testcases.Recruitment')
+data.setCell(5, 3, 51227);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC03_PIM_CreateEmployeeWithLoginDetails')
+data.setCell(6, 1, 'TC04_PIM_DeleteEmployee')
 data.setCell(6, 2, 'testcases.PIM')
-data.setCell(6, 3, 44078);
+data.setCell(6, 3, 50893);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC04_Recruitment_ScheduleInterviewForCandidate')
-data.setCell(7, 2, 'testcases.Recruitment')
-data.setCell(7, 3, 43573);
+data.setCell(7, 1, 'TC01_Time_CreateTimesheet')
+data.setCell(7, 2, 'testcases.Time')
+data.setCell(7, 3, 46996);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC04_PIM_DeleteEmployee')
-data.setCell(8, 2, 'testcases.PIM')
-data.setCell(8, 3, 43561);
+data.setCell(8, 1, 'TC08_Recruitment_RejectCandidateWithoutShortlist')
+data.setCell(8, 2, 'testcases.Recruitment')
+data.setCell(8, 3, 46091);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TC01_Recruitment_AddVacancy')
+data.setCell(9, 1, 'TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate')
 data.setCell(9, 2, 'testcases.Recruitment')
-data.setCell(9, 3, 41345);
+data.setCell(9, 3, 44929);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TC03_Recruitment_ShortlistCandidate')
-data.setCell(10, 2, 'testcases.Recruitment')
-data.setCell(10, 3, 39091);
+data.setCell(10, 1, 'TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails')
+data.setCell(10, 2, 'testcases.PIM')
+data.setCell(10, 3, 41166);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TC01_Time_CreateTimesheet')
-data.setCell(11, 2, 'testcases.Time')
-data.setCell(11, 3, 38459);
+data.setCell(11, 1, 'TC02_Recruitment_AddCandidate')
+data.setCell(11, 2, 'testcases.Recruitment')
+data.setCell(11, 3, 39417);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TC02_Recruitment_AddCandidate')
-data.setCell(12, 2, 'testcases.Recruitment')
-data.setCell(12, 3, 28877);
+data.setCell(12, 1, 'TC02_PIM_SearchEmployeeWithEmployeeId')
+data.setCell(12, 2, 'testcases.PIM')
+data.setCell(12, 3, 35100);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails')
-data.setCell(13, 2, 'testcases.PIM')
-data.setCell(13, 3, 27824);
+data.setCell(13, 1, 'TC07_Admin_CreateWorkShift')
+data.setCell(13, 2, 'testcases.Admin')
+data.setCell(13, 3, 34877);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'TC02_PIM_SearchEmployeeWithEmployeeId')
-data.setCell(14, 2, 'testcases.PIM')
-data.setCell(14, 3, 27314);
+data.setCell(14, 1, 'TC03_Recruitment_ShortlistCandidate')
+data.setCell(14, 2, 'testcases.Recruitment')
+data.setCell(14, 3, 27312);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'TC07_Admin_CreateWorkShift')
-data.setCell(15, 2, 'testcases.Admin')
-data.setCell(15, 3, 19845);
+data.setCell(15, 1, 'TC04_Recruitment_ScheduleInterviewForCandidate')
+data.setCell(15, 2, 'testcases.Recruitment')
+data.setCell(15, 3, 27162);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'TC01_Dashboard_verifyDasboardMainMenus')
-data.setCell(16, 2, 'testcases.Dashboard')
-data.setCell(16, 3, 7979);
+data.setCell(16, 1, 'TC02_Login_InvalidCredentials')
+data.setCell(16, 2, 'testcases.Login')
+data.setCell(16, 3, 26045);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'TC01_Login_ValidCredentials')
-data.setCell(17, 2, 'testcases.Login')
-data.setCell(17, 3, 5527);
+data.setCell(17, 1, 'TC01_Dashboard_verifyDasboardMainMenus')
+data.setCell(17, 2, 'testcases.Dashboard')
+data.setCell(17, 3, 20579);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'TC02_Login_InvalidCredentials')
 data.setCell(18, 2, 'testcases.Login')
-data.setCell(18, 3, 5434);
+data.setCell(18, 3, 19312);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'TC02_Login_InvalidCredentials')
+data.setCell(19, 1, 'TC01_Login_ValidCredentials')
 data.setCell(19, 2, 'testcases.Login')
-data.setCell(19, 3, 5181);
+data.setCell(19, 3, 19202);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'TC02_Login_InvalidCredentials')
 data.setCell(20, 2, 'testcases.Login')
-data.setCell(20, 3, 5140);
+data.setCell(20, 3, 14185);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 minutes</span>
+              <span class="suite-total-time">Total running time: 17 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -641,266 +725,280 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_Login_ValidCredentials({Username=Admin, Password=YWRtaW4xMjM=})</span>
-                <span class="method-start">1276 ms</span>
+                <span class="method-start">2863 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_Login_ValidCredentials status=SUCCESS method=Login.TC01_Login_ValidCredentials...)</span>
-                <span class="method-start">7014 ms</span>
+                <span class="method-start">22371 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOEx...)</span>
-                <span class="method-start">7440 ms</span>
+                <span class="method-start">23194 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0})</span>
-                <span class="method-start">8260 ms</span>
+                <span class="method-start">24282 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredent...)</span>
-                <span class="method-start">13854 ms</span>
+                <span class="method-start">50484 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOEx...)</span>
-                <span class="method-start">14085 ms</span>
+                <span class="method-start">51044 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=})</span>
-                <span class="method-start">14854 ms</span>
+                <span class="method-start">52014 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredent...)</span>
-                <span class="method-start">20163 ms</span>
+                <span class="method-start">71455 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Login.TC02_Login_InvalidCredentials(java.util.Map) throws java.io.IOEx...)</span>
-                <span class="method-start">20472 ms</span>
+                <span class="method-start">71874 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Login_InvalidCredentials({ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0})</span>
-                <span class="method-start">21184 ms</span>
+                <span class="method-start">72970 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Login_InvalidCredentials status=SUCCESS method=Login.TC02_Login_InvalidCredent...)</span>
-                <span class="method-start">26477 ms</span>
+                <span class="method-start">87287 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Admin</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Admin.TC07_Admin_CreateWorkShift(java.util.Map) throws java.io.IOExcep...)</span>
-                <span class="method-start">26847 ms</span>
+                <span class="method-start">87996 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC07_Admin_CreateWorkShift({FromTime=08:00 AM, WorkShiftName=Fun Shift, ToTime=05:00 PM})</span>
-                <span class="method-start">27631 ms</span>
+                <span class="method-start">89014 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC07_Admin_CreateWorkShift status=SUCCESS method=Admin.TC07_Admin_CreateWorkShift(j...)</span>
-                <span class="method-start">47641 ms</span>
+                <span class="method-start">124126 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Dashboard</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus(java.util.Map))</span>
-                <span class="method-start">48084 ms</span>
+                <span class="method-start">124805 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_Dashboard_verifyDasboardMainMenus({TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6...)</span>
-                <span class="method-start">48892 ms</span>
+                <span class="method-start">125781 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_Dashboard_verifyDasboardMainMenus status=SUCCESS method=Dashboard.TC01_Dashboa...)</span>
-                <span class="method-start">57040 ms</span>
+                <span class="method-start">146535 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.PIM</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails(java.util.Map) ...)</span>
-                <span class="method-start">57382 ms</span>
+                <span class="method-start">147297 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails({EmployeeLastName=Kapoor})</span>
-                <span class="method-start">58147 ms</span>
+                <span class="method-start">148289 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails status=SUCCESS method=PIM.TC01_P...)</span>
-                <span class="method-start">86139 ms</span>
+                <span class="method-start">189612 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId(java.util.Map) throws java.i...)</span>
-                <span class="method-start">86523 ms</span>
+                <span class="method-start">190181 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_PIM_SearchEmployeeWithEmployeeId({EmployeeLastName=Kapoor})</span>
-                <span class="method-start">87292 ms</span>
+                <span class="method-start">191140 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_PIM_SearchEmployeeWithEmployeeId status=SUCCESS method=PIM.TC02_PIM_SearchEmpl...)</span>
-                <span class="method-start">114740 ms</span>
+                <span class="method-start">226426 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails(java.util.Map) throws java...)</span>
-                <span class="method-start">115116 ms</span>
+                <span class="method-start">227014 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC03_PIM_CreateEmployeeWithLoginDetails({EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==})</span>
-                <span class="method-start">115861 ms</span>
+                <span class="method-start">228056 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC03_PIM_CreateEmployeeWithLoginDetails status=SUCCESS method=PIM.TC03_PIM_CreateEm...)</span>
-                <span class="method-start">160158 ms</span>
+                <span class="method-start">290977 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC04_PIM_DeleteEmployee(java.util.Map) throws java.io.IOException,...)</span>
-                <span class="method-start">160625 ms</span>
+                <span class="method-start">291602 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC04_PIM_DeleteEmployee({EmployeeLastName=Kapoor})</span>
-                <span class="method-start">161379 ms</span>
+                <span class="method-start">292674 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC04_PIM_DeleteEmployee status=SUCCESS method=PIM.TC04_PIM_DeleteEmployee(java.util...)</span>
-                <span class="method-start">205088 ms</span>
+                <span class="method-start">343710 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.PIM.TC05_PIM_EditEmployeeName(java.util.Map) throws java.io.IOExceptio...)</span>
-                <span class="method-start">205494 ms</span>
+                <span class="method-start">344318 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC05_PIM_EditEmployeeName({EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma})</span>
-                <span class="method-start">206229 ms</span>
+                <span class="method-start">345316 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC05_PIM_EditEmployeeName status=SUCCESS method=PIM.TC05_PIM_EditEmployeeName(java....)</span>
-                <span class="method-start">258121 ms</span>
+                <span class="method-start">406900 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Time</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Time.TC01_Time_CreateTimesheet(java.util.Map) throws java.io.IOExcepti...)</span>
-                <span class="method-start">258473 ms</span>
+                <span class="method-start">407456 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01_Time_CreateTimesheet({EmployeeLastName=Sharma, TimesheetStatus=Not Submitted, EmployeeFirstName=Sikha, Project=Apache Sof...)</span>
-                <span class="method-start">259212 ms</span>
+                <span class="method-start">408465 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC01_Time_CreateTimesheet status=SUCCESS method=Time.TC01_Time_CreateTimesheet(java...)</span>
-                <span class="method-start">297838 ms</span>
+                <span class="method-start">455660 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Time.TC02_Time_CreateTimesheetWithMultipleProjects(java.util.Map) thro...)</span>
-                <span class="method-start">298267 ms</span>
+                <span class="method-start">456117 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02_Time_CreateTimesheetWithMultipleProjects({TimesheetStatus=Not Submitted, EmployeeFirstName=Deekshit, FriHours=8:00, Activity1=Bug Fixes, Acti...)</span>
-                <span class="method-start">299049 ms</span>
+                <span class="method-start">457121 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC02_Time_CreateTimesheetWithMultipleProjects status=SUCCESS method=Time.TC02_Time_...)</span>
-                <span class="method-start">343730 ms</span>
+                <span class="method-start">517249 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Time.TC03_Time_SubmitAndApproveTimesheet(java.util.Map) throws java.io...)</span>
-                <span class="method-start">344133 ms</span>
+                <span class="method-start">517944 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC03_Time_SubmitAndApproveTimesheet({EmployeeFirstName=Sitara, FriHours=8:00, ThrsHours=8:00, ApprovalComment=Good.Approved , Activity=B...)</span>
-                <span class="method-start">344928 ms</span>
+                <span class="method-start">518956 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=TC03_Time_SubmitAndApproveTimesheet status=SUCCESS method=Time.TC03_Time_SubmitAndA...)</span>
-                <span class="method-start">389559 ms</span>
+                <span class="method-start">577361 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.Recruitment</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC01_Recruitment_AddVacancy(java.util.Map) throws java.io....)</span>
-                <span class="method-start">389899 ms</span>
+                <span class="method-start">577945 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC01_Recruitment_AddVacancy({EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=...)</span>
-                <span class="method-start">390725 ms</span>
+                <span class="method-start">578939 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC01_Recruitment_AddVacancy status=SUCCESS method=Recruitment.TC01_Recruitment_AddV...)</span>
-                <span class="method-start">432237 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC01_Recruitment_AddVacancy status=FAILURE method=Recruitment.TC01_Recruitment_AddV...)</span>
+                <span class="method-start">630323 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC02_Recruitment_AddCandidate(java.util.Map) throws java.i...)</span>
-                <span class="method-start">432612 ms</span>
+                <span class="method-start">630909 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC02_Recruitment_AddCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)</span>
-                <span class="method-start">433412 ms</span>
+                <span class="method-start">631908 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC02_Recruitment_AddCandidate status=SUCCESS method=Recruitment.TC02_Recruitment_Ad...)</span>
-                <span class="method-start">462485 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC02_Recruitment_AddCandidate status=FAILURE method=Recruitment.TC02_Recruitment_Ad...)</span>
+                <span class="method-start">671508 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC03_Recruitment_ShortlistCandidate(java.util.Map) throws ...)</span>
-                <span class="method-start">462903 ms</span>
+                <span class="method-start">671893 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC03_Recruitment_ShortlistCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Ecl...)</span>
-                <span class="method-start">463728 ms</span>
+                <span class="method-start">672870 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC03_Recruitment_ShortlistCandidate status=SUCCESS method=Recruitment.TC03_Recruitm...)</span>
-                <span class="method-start">502966 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC03_Recruitment_ShortlistCandidate status=FAILURE method=Recruitment.TC03_Recruitm...)</span>
+                <span class="method-start">700353 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC04_Recruitment_ScheduleInterviewForCandidate(java.util.M...)</span>
-                <span class="method-start">503333 ms</span>
+                <span class="method-start">700936 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC04_Recruitment_ScheduleInterviewForCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName...)</span>
-                <span class="method-start">504080 ms</span>
+                <span class="method-start">701930 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC04_Recruitment_ScheduleInterviewForCandidate status=SUCCESS method=Recruitment.TC...)</span>
-                <span class="method-start">547803 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC04_Recruitment_ScheduleInterviewForCandidate status=FAILURE method=Recruitment.TC...)</span>
+                <span class="method-start">729245 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate...)</span>
-                <span class="method-start">548166 ms</span>
+                <span class="method-start">729869 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate({EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleNam...)</span>
-                <span class="method-start">548916 ms</span>
+                <span class="method-start">730851 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate status=SUCCESS method=Re...)</span>
-                <span class="method-start">610419 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate status=FAILURE method=Re...)</span>
+                <span class="method-start">775963 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC07_Recruitment_MarkInterviewFailedAndRejectCandidate(jav...)</span>
-                <span class="method-start">610719 ms</span>
+                <span class="method-start">776331 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC07_Recruitment_MarkInterviewFailedAndRejectCandidate({EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeO...)</span>
-                <span class="method-start">611474 ms</span>
+                <span class="method-start">777259 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC07_Recruitment_MarkInterviewFailedAndRejectCandidate status=SUCCESS method=Recrui...)</span>
-                <span class="method-start">708802 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC07_Recruitment_MarkInterviewFailedAndRejectCandidate status=FAILURE method=Recrui...)</span>
+                <span class="method-start">1027274 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialize(chrome, public void testcases.Recruitment.TC08_Recruitment_RejectCandidateWithoutShortlist(java.util...)</span>
-                <span class="method-start">709149 ms</span>
+                <span class="method-start">1027891 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC08_Recruitment_RejectCandidateWithoutShortlist({EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse...)</span>
-                <span class="method-start">709949 ms</span>
+                <span class="method-start">1028889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC08_Recruitment_RejectCandidateWithoutShortlist status=SUCCESS method=Recruitment....)</span>
-                <span class="method-start">840389 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC08_Recruitment_RejectCandidateWithoutShortlist status=FAILURE method=Recruitment....)</span>
+                <span class="method-start">1075201 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>21/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 20 15:48:13 IST 2024</td>
+<td>Started on:</td><td>Wed Mar 27 18:45:11 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>841 seconds (841172 ms)</td>
+<tr><td>Total time:</td><td>1076 seconds (1076564 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,386 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Recruitment.TC04_Recruitment_ScheduleInterviewForCandidate()'><b>TC04_Recruitment_ScheduleInterviewForCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName=M, CandidateCurrentStatus=Interview Scheduled, TimeOfInterview=02:00 PM, DateOfInterview=2024-18-03, VacancyName=QA Automation, CandidateInitialStatus=Shortlisted}</td>
+<td><div><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Shortlisted] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC04_Recruitment_ScheduleInterviewForCandidate(Recruitment.java:211)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace498365206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace498365206'><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Shortlisted] but found [Job Offered]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC04_Recruitment_ScheduleInterviewForCandidate(Recruitment.java:211)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>27</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+<tr>
+<td title='testcases.Recruitment.TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate()'><b>TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleName=M, CandidateCurrentStatus=Job Offered, CandidateInterviewStatus=Pass, VacancyName=QA Automation, CandidateInitialStatus=Interview Scheduled}</td>
+<td><div><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Interview Scheduled] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate(Recruitment.java:256)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1492087849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1492087849'><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Interview Scheduled] but found [Job Offered]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate(Recruitment.java:256)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>44</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+<tr>
+<td title='testcases.Recruitment.TC03_Recruitment_ShortlistCandidate()'><b>TC03_Recruitment_ShortlistCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateCurrentStatus=Shortlisted, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Application Initiated}</td>
+<td><div><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC03_Recruitment_ShortlistCandidate(Recruitment.java:171)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace224383335", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace224383335'><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Job Offered]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC03_Recruitment_ShortlistCandidate(Recruitment.java:171)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>27</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+<tr>
+<td title='testcases.Recruitment.TC01_Recruitment_AddVacancy()'><b>TC01_Recruitment_AddVacancy</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=Collaborate closely with developers, product managers, and other members of the QA team to design and implement robust automation frameworks and test suites., VacancyStatus=Active, UserRole=Admin, UserPassword=R29vZHdpbGwxMjM0NQ==, VacancyName=QA Automation, NumOfPositions=5, JobTitle=QA Engineer}</td>
+<td><div><pre>java.lang.AssertionError: The HiringManager displayed of the selected user is not as expected expected [Siya Shah] but found [(Deleted)]
+	at pages.RecruitmentPage.verifyVacancyTableRecord(RecruitmentPage.java:115)
+	at testcases.Recruitment.TC01_Recruitment_AddVacancy(Recruitment.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1536814563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1536814563'><pre>java.lang.AssertionError: The HiringManager displayed of the selected user is not as expected expected [Siya Shah] but found [(Deleted)]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at pages.RecruitmentPage.verifyVacancyTableRecord(RecruitmentPage.java:115)
+	at testcases.Recruitment.TC01_Recruitment_AddVacancy(Recruitment.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>51</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+<tr>
+<td title='testcases.Recruitment.TC07_Recruitment_MarkInterviewFailedAndRejectCandidate()'><b>TC07_Recruitment_MarkInterviewFailedAndRejectCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeOfInterview=02:00 PM, EmployeeLastName=Agarwal, CandidateStatus2=Interview Failed, EmployeeMiddleName=M, CandidateCurrentStatus=Rejected, CandidateStatus=Application Initiated, DateOfInterview=2024-18-03, CandidateInterviewStatus=Fail, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Interview Scheduled}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[text()=&apos; Shortlist &apos;]&apos; (tried for 200 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at helper.WebCtrls.buttonClick(WebCtrls.java:119)
+	at pages.RecruitmentPage.shortlistCandidate(RecruitmentPage.java:243)
+	at testcases.Recruitment.TC07_Recruitment_MarkInterviewFailedAndRejectCandidate(Recruitment.java:354)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos; Shortlist &apos;]&quot;}
+  (Session info: chrome=123.0.6312.59)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;192.168.0.100&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.59, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61975}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7273ac354323a5f803c90d245434c40
+*** Element info: {Using=xpath, value=//button[text()=&apos; Shortlist &apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace425301507", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace425301507'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[text()=&apos; Shortlist &apos;]&apos; (tried for 200 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at helper.WebCtrls.buttonClick(WebCtrls.java:119)
+	at pages.RecruitmentPage.shortlistCandidate(RecruitmentPage.java:243)
+	at testcases.Recruitment.TC07_Recruitment_MarkInterviewFailedAndRejectCandidate(Recruitment.java:354)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos; Shortlist &apos;]&quot;}
+  (Session info: chrome=123.0.6312.59)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ST242GUR&apos;, ip: &apos;192.168.0.100&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.59, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\SHARIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61975}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7273ac354323a5f803c90d245434c40
+*** Element info: {Using=xpath, value=//button[text()=&apos; Shortlist &apos;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+</pre></div></td>
+<td>249</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+<tr>
+<td title='testcases.Recruitment.TC02_Recruitment_AddCandidate()'><b>TC02_Recruitment_AddCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateStatus=Application Initiated, VacancyName=QA Automation, Notes=Skilled QA Engineer}</td>
+<td><div><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Job Offered]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC02_Recruitment_AddCandidate(Recruitment.java:140)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1353030155", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353030155'><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Job Offered]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC02_Recruitment_AddCandidate(Recruitment.java:140)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>39</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+<tr>
+<td title='testcases.Recruitment.TC08_Recruitment_RejectCandidateWithoutShortlist()'><b>TC08_Recruitment_RejectCandidateWithoutShortlist</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse, CandidateCurrentStatus=Rejected, VacancyName=QA Automation, Notes=QA Engineer, CandidateInitialStatus=Application Initiated, RejectionNote=Qualifications and experience not enough to meet the requirements.}</td>
+<td><div><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Rejected]
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC08_Recruitment_RejectCandidateWithoutShortlist(Recruitment.java:416)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2061412816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2061412816'><pre>java.lang.AssertionError: The Status displayed of the selected candidate is not as expected expected [Application Initiated] but found [Rejected]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at pages.RecruitmentPage.verifyCandidatesTableRecord(RecruitmentPage.java:208)
+	at testcases.Recruitment.TC08_Recruitment_RejectCandidateWithoutShortlist(Recruitment.java:416)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>46</td>
+<td>testcases.Recruitment@57a3af25</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,110 +455,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Recruitment.TC08_Recruitment_RejectCandidateWithoutShortlist()'><b>TC08_Recruitment_RejectCandidateWithoutShortlist</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Nair, EmployeeFirstName=Kripa, EmployeeMiddleName=N, Keywords=Selenium,SQL,Eclipse, CandidateCurrentStatus=Rejected, VacancyName=QA Automation, Notes=QA Engineer, CandidateInitialStatus=Application Initiated, RejectionNote=Qualifications and experience not enough to meet the requirements.}</td>
-<td></td>
-<td>130</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
-<tr>
-<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}</td>
-<td></td>
-<td>5</td>
-<td>testcases.Login@a514af7</td></tr>
-<tr>
-<td title='testcases.Time.TC03_Time_SubmitAndApproveTimesheet()'><b>TC03_Time_SubmitAndApproveTimesheet</b><br>Test class: testcases.Time<br>Parameters: {EmployeeFirstName=Sitara, FriHours=8:00, ThrsHours=8:00, ApprovalComment=Good.Approved , Activity=Bug Fixes, NumOfRows=1, TueHours=8:00, MonHours=8:00, EmployeeLastName=Kapoor, Project=Apache Software Foundation, WedHours=8:00, EmployeeMiddleName=Krish, TimesheetStatus1=Not Submitted, TimesheetStatus2=Submitted, TimesheetStatus3=Approved}</td>
-<td></td>
-<td>44</td>
-<td>testcases.Time@7f3b84b8</td></tr>
-<tr>
-<td title='testcases.Recruitment.TC02_Recruitment_AddCandidate()'><b>TC02_Recruitment_AddCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateStatus=Application Initiated, VacancyName=QA Automation, Notes=Skilled QA Engineer}</td>
-<td></td>
-<td>28</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
-<tr>
-<td title='testcases.Login.TC01_Login_ValidCredentials()'><b>TC01_Login_ValidCredentials</b><br>Test class: testcases.Login<br>Parameters: {Username=Admin, Password=YWRtaW4xMjM=}</td>
-<td></td>
-<td>5</td>
-<td>testcases.Login@a514af7</td></tr>
-<tr>
 <td title='testcases.Time.TC02_Time_CreateTimesheetWithMultipleProjects()'><b>TC02_Time_CreateTimesheetWithMultipleProjects</b><br>Test class: testcases.Time<br>Parameters: {TimesheetStatus=Not Submitted, EmployeeFirstName=Deekshit, FriHours=8:00, Activity1=Bug Fixes, Activity2=Bug Fixes, ThrsHours=8:00, Project2=The Coca-Cola Company, NumOfRows=2, Project1=Apache Software Foundation, TueHours=8:00, MonHours=8:00, EmployeeLastName=Kapoor, WedHours=8:00, EmployeeMiddleName=Krish}</td>
 <td></td>
-<td>44</td>
+<td>59</td>
 <td>testcases.Time@7f3b84b8</td></tr>
-<tr>
-<td title='testcases.Recruitment.TC03_Recruitment_ShortlistCandidate()'><b>TC03_Recruitment_ShortlistCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, EmployeeMiddleName=M, Keywords=Selenium,JAVA,SQL,Eclipse, CandidateCurrentStatus=Shortlisted, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Application Initiated}</td>
-<td></td>
-<td>39</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
-<tr>
-<td title='testcases.Recruitment.TC07_Recruitment_MarkInterviewFailedAndRejectCandidate()'><b>TC07_Recruitment_MarkInterviewFailedAndRejectCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeFirstName=Renu, InterviewTitle=Automation Tester, Keywords=Selenium,JAVA,SQL,Eclipse, TimeOfInterview=02:00 PM, EmployeeLastName=Agarwal, CandidateStatus2=Interview Failed, EmployeeMiddleName=M, CandidateCurrentStatus=Rejected, CandidateStatus=Application Initiated, DateOfInterview=2024-18-03, CandidateInterviewStatus=Fail, VacancyName=QA Automation, Notes=Skilled QA Engineer, CandidateInitialStatus=Interview Scheduled}</td>
-<td></td>
-<td>97</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
 <tr>
 <td title='testcases.Dashboard.TC01_Dashboard_verifyDasboardMainMenus()'><b>TC01_Dashboard_verifyDasboardMainMenus</b><br>Test class: testcases.Dashboard<br>Parameters: {TabName3=Leave, TabName2=PIM, TabName1=Admin, TabName10=Maintenance, TabName7=Performance, TabName6=My Info, TabName5=Recruitment, TabName4=Time, TabName9=Directory, TabName8=Dashboard, TabName12=Buzz, TabName11=Claim}</td>
 <td></td>
-<td>7</td>
+<td>20</td>
 <td>testcases.Dashboard@158d2680</td></tr>
-<tr>
-<td title='testcases.PIM.TC05_PIM_EditEmployeeName()'><b>TC05_PIM_EditEmployeeName</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma}</td>
-<td></td>
-<td>51</td>
-<td>testcases.PIM@77847718</td></tr>
-<tr>
-<td title='testcases.Recruitment.TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate()'><b>TC05_Recruitment_MarkInterviewPassedAndOfferJobToCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, CandidateStatus2=Interview Passed, EmployeeMiddleName=M, CandidateCurrentStatus=Job Offered, CandidateInterviewStatus=Pass, VacancyName=QA Automation, CandidateInitialStatus=Interview Scheduled}</td>
-<td></td>
-<td>61</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
-<tr>
-<td title='testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails()'><b>TC03_PIM_CreateEmployeeWithLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}</td>
-<td></td>
-<td>44</td>
-<td>testcases.PIM@77847718</td></tr>
 <tr>
 <td title='testcases.Time.TC01_Time_CreateTimesheet()'><b>TC01_Time_CreateTimesheet</b><br>Test class: testcases.Time<br>Parameters: {EmployeeLastName=Sharma, TimesheetStatus=Not Submitted, EmployeeFirstName=Sikha, Project=Apache Software Foundation, WedHours=8:00, FriHours=8:00, EmployeeMiddleName=V, ThrsHours=8:00, Activity=Bug Fixes, NumOfRows=1, TueHours=8:00, MonHours=8:00}</td>
 <td></td>
-<td>38</td>
+<td>46</td>
 <td>testcases.Time@7f3b84b8</td></tr>
-<tr>
-<td title='testcases.Recruitment.TC04_Recruitment_ScheduleInterviewForCandidate()'><b>TC04_Recruitment_ScheduleInterviewForCandidate</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, EmployeeFirstName=Diya, InterviewTitle=Automation Tester, EmployeeMiddleName=M, CandidateCurrentStatus=Interview Scheduled, TimeOfInterview=02:00 PM, DateOfInterview=2024-18-03, VacancyName=QA Automation, CandidateInitialStatus=Shortlisted}</td>
-<td></td>
-<td>43</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
-<tr>
-<td title='testcases.Admin.TC07_Admin_CreateWorkShift()'><b>TC07_Admin_CreateWorkShift</b><br>Test class: testcases.Admin<br>Parameters: {FromTime=08:00 AM, WorkShiftName=Fun Shift, ToTime=05:00 PM}</td>
-<td></td>
-<td>19</td>
-<td>testcases.Admin@131774fe</td></tr>
-<tr>
-<td title='testcases.PIM.TC04_PIM_DeleteEmployee()'><b>TC04_PIM_DeleteEmployee</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
-<td></td>
-<td>43</td>
-<td>testcases.PIM@77847718</td></tr>
-<tr>
-<td title='testcases.Recruitment.TC01_Recruitment_AddVacancy()'><b>TC01_Recruitment_AddVacancy</b><br>Test class: testcases.Recruitment<br>Parameters: {EmployeeLastName=Shah, Status=Enabled, EmployeeFirstName=Siya, EmployeeMiddleName=Raj, Description=Collaborate closely with developers, product managers, and other members of the QA team to design and implement robust automation frameworks and test suites., VacancyStatus=Active, UserRole=Admin, UserPassword=R29vZHdpbGwxMjM0NQ==, VacancyName=QA Automation, NumOfPositions=5, JobTitle=QA Engineer}</td>
-<td></td>
-<td>41</td>
-<td>testcases.Recruitment@57a3af25</td></tr>
-<tr>
-<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0}</td>
-<td></td>
-<td>5</td>
-<td>testcases.Login@a514af7</td></tr>
 <tr>
 <td title='testcases.PIM.TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails()'><b>TC01_PIM_CreateEmployeeWithoutCreatingLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
 <td></td>
-<td>27</td>
+<td>41</td>
 <td>testcases.PIM@77847718</td></tr>
+<tr>
+<td title='testcases.PIM.TC03_PIM_CreateEmployeeWithLoginDetails()'><b>TC03_PIM_CreateEmployeeWithLoginDetails</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, NewEmployeePassword=R29vZHdpbGwxMjM0NQ==}</td>
+<td></td>
+<td>62</td>
+<td>testcases.PIM@77847718</td></tr>
+<tr>
+<td title='testcases.Login.TC01_Login_ValidCredentials()'><b>TC01_Login_ValidCredentials</b><br>Test class: testcases.Login<br>Parameters: {Username=Admin, Password=YWRtaW4xMjM=}</td>
+<td></td>
+<td>19</td>
+<td>testcases.Login@a514af7</td></tr>
+<tr>
+<td title='testcases.Admin.TC07_Admin_CreateWorkShift()'><b>TC07_Admin_CreateWorkShift</b><br>Test class: testcases.Admin<br>Parameters: {FromTime=08:00 AM, WorkShiftName=Fun Shift, ToTime=05:00 PM}</td>
+<td></td>
+<td>34</td>
+<td>testcases.Admin@131774fe</td></tr>
 <tr>
 <td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin, Password=YWRtaW4xMjM0}</td>
 <td></td>
-<td>5</td>
+<td>26</td>
+<td>testcases.Login@a514af7</td></tr>
+<tr>
+<td title='testcases.PIM.TC04_PIM_DeleteEmployee()'><b>TC04_PIM_DeleteEmployee</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
+<td></td>
+<td>50</td>
+<td>testcases.PIM@77847718</td></tr>
+<tr>
+<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM=}</td>
+<td></td>
+<td>19</td>
 <td>testcases.Login@a514af7</td></tr>
 <tr>
 <td title='testcases.PIM.TC02_PIM_SearchEmployeeWithEmployeeId()'><b>TC02_PIM_SearchEmployeeWithEmployeeId</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor}</td>
 <td></td>
-<td>27</td>
+<td>35</td>
 <td>testcases.PIM@77847718</td></tr>
+<tr>
+<td title='testcases.PIM.TC05_PIM_EditEmployeeName()'><b>TC05_PIM_EditEmployeeName</b><br>Test class: testcases.PIM<br>Parameters: {EmployeeLastName=Kapoor, EmployeeNewLastName=Sharma}</td>
+<td></td>
+<td>61</td>
+<td>testcases.PIM@77847718</td></tr>
+<tr>
+<td title='testcases.Time.TC03_Time_SubmitAndApproveTimesheet()'><b>TC03_Time_SubmitAndApproveTimesheet</b><br>Test class: testcases.Time<br>Parameters: {EmployeeFirstName=Sitara, FriHours=8:00, ThrsHours=8:00, ApprovalComment=Good.Approved , Activity=Bug Fixes, NumOfRows=1, TueHours=8:00, MonHours=8:00, EmployeeLastName=Kapoor, Project=Apache Software Foundation, WedHours=8:00, EmployeeMiddleName=Krish, TimesheetStatus1=Not Submitted, TimesheetStatus2=Submitted, TimesheetStatus3=Approved}</td>
+<td></td>
+<td>58</td>
+<td>testcases.Time@7f3b84b8</td></tr>
+<tr>
+<td title='testcases.Login.TC02_Login_InvalidCredentials()'><b>TC02_Login_InvalidCredentials</b><br>Test class: testcases.Login<br>Parameters: {ErrorMessage=Invalid credentials, Username=Admin1, Password=YWRtaW4xMjM0}</td>
+<td></td>
+<td>14</td>
+<td>testcases.Login@a514af7</td></tr>
 </table><p>
 </body>
 </html>
