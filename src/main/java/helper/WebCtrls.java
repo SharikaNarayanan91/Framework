@@ -97,8 +97,7 @@ public class WebCtrls extends BaseTest {
 	 */
 	public boolean isDisplayed(WebElement locator) {
 		boolean status = false;
-		WebDriverWait wait = getWait();
-		wait.until(ExpectedConditions.visibilityOf(locator));
+		wait(3);
 		try {
 			webElement = locator;
 			if (webElement.isDisplayed())
@@ -377,7 +376,12 @@ public class WebCtrls extends BaseTest {
 	public String getCurrentDate(String dateFormat) {		
         Date currentDate = new Date();        
         SimpleDateFormat reqDateformat = new SimpleDateFormat(dateFormat);      
-        String formattedDate = reqDateformat.format(currentDate);      
+        String formattedDate = reqDateformat.format(currentDate);  
+        if(dateFormat.contains("MMM d")) {
+        int dayOfMonth = Integer.parseInt(new SimpleDateFormat("d").format(currentDate));
+        String suffix = getDayOfMonthSuffix(dayOfMonth);
+        formattedDate += suffix;
+        }
         logger.info("Current date obtained : "+formattedDate);
 		addLog("Info","Current date obtained : "+formattedDate);
         return formattedDate;
@@ -392,4 +396,25 @@ public class WebCtrls extends BaseTest {
 		String filePath=System.getProperty("user.dir") + File.separator +"src\\test\\resources\\fileUploads"+File.separator+fileName;
 		locator.sendKeys(filePath);
 	}
+    
+	/**
+	 * To get the suffix for the day of the month
+	 * @param dayOfMonth
+	 * @return
+	 */
+    private static String getDayOfMonthSuffix(int dayOfMonth) {
+        if (dayOfMonth >= 11 && dayOfMonth <= 13) {
+            return "th";
+        }
+        switch (dayOfMonth % 10) {
+            case 1:
+                return "st";
+            case 2:
+                return "nd";
+            case 3:
+                return "rd";
+            default:
+                return "th";
+        }
+}
 }

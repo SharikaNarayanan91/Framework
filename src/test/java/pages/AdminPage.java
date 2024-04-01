@@ -73,6 +73,7 @@ public class AdminPage {
 		}
 			
 		String actualRecord=webCtrls.getText(eleTableRecord(index));
+		webCtrls.scroll();
 		Assert.assertEquals(actualRecord,expectedRecord,
 				"The "+requiredColumnName+" displayed of the selected user is not as expected");
 		logger.info("The "+requiredColumnName+" displayed of the selected user is as expected : " + expectedRecord);
@@ -249,24 +250,28 @@ public class AdminPage {
 	 * @param duration
 	 */
 	public void verifyWorkShift(String shiftName,String fromTime,String toTime,String duration) {
-		webCtrls.wait(3);
+		webCtrls.wait(8);
 		String shiftNameLocator="//div[@role='cell']//div[text()='"+shiftName+"']";
 		WebElement shiftNameElement=webCtrls.Ctrl(By.xpath(shiftNameLocator));
 		Assert.assertTrue(shiftNameElement.isDisplayed(),"Work shift '"+shiftName+"' is not added");
+		logger.info("Work sift '"+shiftName+"' is added");
 		
 		WebElement fromTimeElement=webCtrls.Ctrl(By.xpath("(//div[text()='"+shiftName+"']//parent::div//following-sibling::div[@role='cell'])[1]"));
 		String actualFromTime=webCtrls.getText(fromTimeElement);
 		Assert.assertEquals(actualFromTime,fromTime,"From time against shift '"+shiftName+"' is not added as expected");
+		logger.info("From time against shift '"+shiftName+"' is as expected");
 		
 		WebElement toTimeElement=webCtrls.Ctrl(By.xpath("(//div[text()='"+shiftName+"']//parent::div//following-sibling::div[@role='cell'])[2]"));
 		String actualToTime=webCtrls.getText(toTimeElement);
 		Assert.assertEquals(actualToTime,toTime,"To time against shift '"+shiftName+"' is not added as expected");
-		
+		logger.info("To time against shift '"+shiftName+"' is as expected");
+
 		WebElement durationElement=webCtrls.Ctrl(By.xpath("(//div[text()='"+shiftName+"']//parent::div//following-sibling::div[@role='cell'])[3]"));
 		String actualDuration=webCtrls.getText(durationElement);
 		Assert.assertEquals(actualDuration,duration,"Duration against shift '"+shiftName+"' is not added as expected");
-		
-		logger.info("Work sift '"+shiftName+"' is added with From Time : '"+fromTime+"', To time : '"+toTime+"' and Duration : '"+duration+"'");
+		logger.info("Duration against shift '"+shiftName+"' is as expected");
+
+		//logger.info("Work sift '"+shiftName+"' is added with From Time : '"+fromTime+"', To time : '"+toTime+"' and Duration : '"+duration+"'");
 		webCtrls.addLog("Pass","Work sift '"+shiftName+"' is added with From Time : '"+fromTime+"', To time : '"+toTime+"' and Duration : '"+duration+"'");
 	}	
 	/**

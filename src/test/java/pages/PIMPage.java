@@ -77,6 +77,7 @@ public class PIMPage {
 		}
 			
 		String actualRecord=webCtrls.getText(eleTableRecord(index));
+		webCtrls.scroll();
 		Assert.assertEquals(actualRecord,expectedRecord,
 				"The "+requiredColumnName+" displayed for the selected user is not as expected");
 		logger.info("The "+requiredColumnName+" displayed for the selected user is as expected : " + expectedRecord);
@@ -96,6 +97,12 @@ public class PIMPage {
 		webCtrls.setData(txtLastName, lastName);
 		String empId=txtEmpId.getAttribute("value");
 		webCtrls.buttonClick(submit);
+		if(webCtrls.isDisplayed(txtEmpIdErrorMessage)) {
+			int newEmpId=(Integer.parseInt(empId)+5);
+			empId=Integer.toString(newEmpId);
+			webCtrls.setData(txtEmpId, empId);
+			webCtrls.buttonClick(submit);
+		}
 		return empId;
 	}
 
@@ -119,6 +126,13 @@ public class PIMPage {
 		webCtrls.setEncryptedData(txtConfirmPassword, password);
 		String empId=txtEmpId.getAttribute("value");
 		webCtrls.javaScriptClick(submit);
+		if(webCtrls.isDisplayed(txtEmpIdErrorMessage)) {
+			int newEmpId=(Integer.parseInt(empId)+5);
+			empId=Integer.toString(newEmpId);
+			webCtrls.scrollToElement(txtEmpId);
+			webCtrls.setData(txtEmpId, empId);
+			webCtrls.buttonClick(submit);
+		}
 		webCtrls.wait(10);
 		return empId;
 	}
@@ -194,6 +208,8 @@ public class PIMPage {
 	WebElement txtPassword;
 	@FindBy(xpath="//label[text()='Confirm Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtConfirmPassword;
+	@FindBy(xpath="//span[contains(@class,'oxd-text oxd-text--span oxd-input-field-error-message')]")
+	WebElement txtEmpIdErrorMessage;
 	@FindBy(css = "[type=checkbox]")
 	WebElement chkboxCreateLogin;
 	@FindBy(xpath="//i[@class='oxd-icon bi-trash']")

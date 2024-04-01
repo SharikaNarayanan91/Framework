@@ -149,7 +149,7 @@ public class PIM extends BaseTest{
 		String newUserName=employeeFirstName+employeeMiddleName;
 		String newEmployeePassword=webCtrls.decryptString((String)map.get("NewEmployeePassword"));
 		
-		//Create Employee without Login details
+		//Create Employee with Login details
 		String employeeId=pimPage.createEmployeeWithLoginDetails((String) map.get("EmployeeFirstName"), (String) map.get("EmployeeMiddleName"), (String) map.get("EmployeeLastName"),newUserName, newEmployeePassword);
 		map.put("EmployeeId",employeeId);
 		

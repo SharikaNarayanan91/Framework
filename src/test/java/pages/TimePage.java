@@ -162,6 +162,74 @@ public class TimePage {
 		webCtrls.buttonClick(btnApprove);
 		webCtrls.wait(2);
 	}
+	
+	/**
+	 * Punnch In
+	 * @param date
+	 * @param time
+	 * @param note
+	 */
+	public String punchIn(String note) {
+		webCtrls.wait(3);
+		String time=txtTime.getAttribute("value");
+		if(note.length()!=0) {
+			webCtrls.setData(txtNote, note);
+		}
+		webCtrls.javaScriptClick(btnIn);
+		webCtrls.wait(3);
+		return time;	
+	}
+	/**
+	 * Punnch Out
+	 * @param date
+	 * @param time
+	 * @param note
+	 */
+	public String punchOut(String note) {
+		webCtrls.wait(3);
+		String time=txtTime.getAttribute("value");
+		if(note.length()!=0) {
+			webCtrls.setData(txtNote, note);
+		}
+		webCtrls.javaScriptClick(btnOut);
+		webCtrls.wait(3);
+		return time;	
+	}
+	/**
+	 * Verify Punch In Time
+	 * @param expPunchInTime
+	 */
+	public void verifyPunchInTime(String expPunchInTime) {
+		webCtrls.wait(3);
+		String actFullPunchInTime=webCtrls.getText(txtPunchedInTime);
+		String actPunchInTime=actFullPunchInTime.split("\\(")[0].trim();
+		Assert.assertEquals(actPunchInTime, expPunchInTime,"The Punch In Time displayed on Atttendence page is not as expected");
+		logger.info("The Punch In Time displayed on Atttendence page is as expected : "+expPunchInTime);
+		webCtrls.addLog("Pass", "The Punch In Time displayed on Atttendence page is as expected : "+expPunchInTime);
+	}
+	/**
+	 * Verify Punch Out Time
+	 * @param expPunchOutTime
+	 */
+	public void verifyPunchOutTime(String expPunchOutTime) {
+		webCtrls.wait(3);
+		String actFullPunchOutTime=webCtrls.getText(txtPunchedOutTime);
+		String actPunchOutTime=actFullPunchOutTime.split("\\(")[0].trim();
+		Assert.assertEquals(actPunchOutTime, expPunchOutTime,"The Punch In Time displayed on Atttendence page is not as expected");
+		logger.info("The Punch In Time displayed on Atttendence page is as expected : "+expPunchOutTime);
+		webCtrls.addLog("Pass", "The Punch In Time displayed on Atttendence page is as expected : "+expPunchOutTime);
+	}
+	
+	/**
+	 * Verify the Attendance Page is displayed
+	 */
+	public void verifyAttendancePageIsDisplayed() {
+		webCtrls.wait(3);
+		Assert.assertTrue(txtTitle.getText().contains("Attendance"), "The Attendance page is not displayed");
+		logger.info("The Attendance page is displayed");
+		webCtrls.addLog("Pass", "The Attendance page is displayed");
+	}
+	
 	// buttons
 	@FindBy(xpath = "//button[text()=' Create Timesheet ']")
 	WebElement btnCreateTimesheet;
@@ -183,5 +251,22 @@ public class TimePage {
 	WebElement btnApprove;
 	@FindBy(xpath="//textarea[contains(@class,'oxd-textarea oxd-textarea')]")
 	WebElement txtComment;
+	@FindBy(xpath="//div[@class='oxd-date-input']//input")
+	WebElement txtDate;
+	@FindBy(xpath="//div[@class='oxd-time-input']//input")
+	WebElement txtTime;
+	@FindBy(xpath="//textarea[contains(@class,'oxd-textarea')]")
+	WebElement txtNote;
+	@FindBy(xpath="//button[text()=' In ']")
+	WebElement btnIn;
+	@FindBy(xpath="//button[text()=' Out ']")
+	WebElement btnOut;
+	@FindBy(xpath="//label[text()='Punched in time']//parent::div//following-sibling::div//p")
+	WebElement txtPunchedInTime;
+	@FindBy(xpath="//label[text()='Punched out time']//parent::div//following-sibling::div//p")
+	WebElement txtPunchedOutTime;
+	@FindBy(xpath="//div[@class='oxd-topbar-header-title']")
+	WebElement txtTitle;
+	
 	
 }

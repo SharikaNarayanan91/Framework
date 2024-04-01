@@ -277,7 +277,7 @@ public class Recruitment extends BaseTest {
 	}
 	
 	@ExcelDataSourceInfo(TestName = "TC06_Recruitment_HireCandidate")
-	@Test(enabled = false, priority = 6, dataProvider = "Recruitment")
+	@Test(enabled = true, priority = 6, dataProvider = "Recruitment")
 	public void TC06_Recruitment_HireCandidate(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();

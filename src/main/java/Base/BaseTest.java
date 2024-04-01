@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -25,15 +26,23 @@ public class BaseTest {
 
 	//Initialze the driver
 	@BeforeMethod
-	@Parameters("browser")
-	public void initialize(String browser, Method testMethod) {
+	@Parameters({"browser","headless"})
+	public void initialize(String browser, boolean headless,Method testMethod) {
 		extent = new ExtentReports();
 		logger = extent.createTest(testMethod.getName());
 		try {
 			if (browser.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
-				System.out.println("Chrome driver is launched");
+				ChromeOptions options = new ChromeOptions();
+			    if (headless) {
+	                options.addArguments("--headless"); // Set Chrome to run in headless mode
+	            }
+			    driver = new ChromeDriver(options);
+			    if (headless) {
+	                System.out.println("Chrome driver is launched in headless mode");
+	            } else {
+	                System.out.println("Chrome driver is launched");
+	            }
 			} else if (browser.equalsIgnoreCase("edge")) {
 				WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();

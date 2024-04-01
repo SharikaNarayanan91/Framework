@@ -94,7 +94,40 @@ public class DashboardPage {
 		webCtrls.addLog("Pass", "User with UserName : " + userName + " is created");
 	}
 	
+	/**
+	 * Click the Attendance Action Icon under the Time at work section
+	 */
+	public void clickAttendanceActionIcon() {
+		webCtrls.javaScriptClick(btnAttendanceCardAction);
+	}
+	/**
+	 * Verify attendance state and details
+	 * @param expAttendanceState
+	 * @param expAttendanceDetails
+	 */
+	public void verifyAttendanceStateAndDetails(String expAttendanceState,String expAttendanceDetails) {
+		webCtrls.wait(3);
+		String actAttendanceState=webCtrls.getText(txtAttendanceCardState);
+		Assert.assertEquals(actAttendanceState, expAttendanceState,"The attendence state displayed on Dashboard is not as expected");
+		logger.info("The attendance state displayed on Dashboard is as expected : "+expAttendanceState);
+		webCtrls.addLog("Pass", "The attendance state displayed on Dashboard is as expected : "+expAttendanceState);
 	
+		String actFullAttendanceDetails=webCtrls.getText(txtAttendanceCardDetails);
+		String actAttendanceDetails=actFullAttendanceDetails.split("\\(")[0].trim();
+		Assert.assertEquals(actAttendanceDetails, expAttendanceDetails,"The attendence details displayed on Dashboard is not as expected");
+		logger.info("The attendance details displayed on Dashboard is as expected : "+actAttendanceDetails);
+		webCtrls.addLog("Pass", "The attendance details displayed on Dashboard is as expected : "+actAttendanceDetails);		
+	}
+	/**
+	 * Verify the Page title
+	 */
+	public void verifyPageTitle(String expTitle) {
+		webCtrls.wait(3);
+		String actualTitle=webCtrls.getText(txtTitle);
+		Assert.assertTrue(actualTitle.contains("expTitle"), "The "+expTitle+" page is not displayed");
+		logger.info("The "+actualTitle+"  page is displayed");
+		webCtrls.addLog("Pass", "The "+actualTitle+"  page is displayed");
+	}
 	@FindBy(className = "oxd-input oxd-input")
 	WebElement txtSearch;
 	@FindBy(xpath = "//span[text()='Admin']")
@@ -131,4 +164,12 @@ public class DashboardPage {
 	WebElement userDropdownTab;
 	@FindBy(xpath="//a[text()='Logout']")
 	WebElement userLogOut;
+	@FindBy(xpath="//p[contains(@class,'attendance-card-state')]")
+	WebElement txtAttendanceCardState;
+	@FindBy(xpath="//p[contains(@class,'attendance-card-details')]")
+	WebElement txtAttendanceCardDetails;
+	@FindBy(xpath="//button[contains(@class,'attendance-card-action')]")
+	WebElement btnAttendanceCardAction;	
+	@FindBy(xpath="//div[@class='oxd-topbar-header-title']")
+	WebElement txtTitle;
 }
