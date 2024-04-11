@@ -5,13 +5,20 @@
     <parameter name="headless" value="false"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.Dashboard">
+      <class name="testcases.Time">
         <methods>
-          <include name="TC02_Dashboard_PunchInAndPunchOutFromDasboard" invocation-numbers="0"/>
+          <include name="initialize"/>
+          <include name="TC01_Time_CreateTimesheet" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testcases.Time -->
+      <class name="testcases.Recruitment">
+        <methods>
+          <include name="TC08_Recruitment_RejectCandidateWithoutShortlist" invocation-numbers="0"/>
           <include name="initialize"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- testcases.Dashboard -->
+      </class> <!-- testcases.Recruitment -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

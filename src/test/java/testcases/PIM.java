@@ -277,6 +277,7 @@ public class PIM extends BaseTest{
 		
 		dashboardPage.clickPIM();
 
+		//Search the Employee
 		pimPage.searchEmployeeWithEmployeeName(FirstAndMiddleName);
 		
 		//Verify the Employee last name of the listed employee

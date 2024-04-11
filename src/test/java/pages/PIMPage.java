@@ -103,6 +103,7 @@ public class PIMPage {
 			webCtrls.setData(txtEmpId, empId);
 			webCtrls.buttonClick(submit);
 		}
+		webCtrls.wait(10);
 		return empId;
 	}
 
