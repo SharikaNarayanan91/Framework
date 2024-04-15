@@ -27,11 +27,11 @@ public class LoginPage {
 	/**
 	 * Login to the site
 	 * 
-	 * @param username
+	 * @param userName
 	 * @param password
 	 */
-	public void login(String username, String password) {
-		webCtrls.setData(txtUsername, username);
+	public void login(String userName, String password) {
+		webCtrls.setData(txtUsername, userName);
 		webCtrls.setEncryptedData(txtPassword, password);
 		webCtrls.buttonClick(btnLogin);
 	}
@@ -47,7 +47,6 @@ public class LoginPage {
 
 	/**
 	 * Verify the Error message
-	 * 
 	 * @param expectedErrorMessage
 	 */	
 	public void verifyErrorMessage(String expectedErrorMessage) {
@@ -57,13 +56,17 @@ public class LoginPage {
 		webCtrls.addLog("Pass","Error message displayed as expected : " + ActualErrorMessage);
 	}
 	
+	//inputs
 	@FindBy(name="username")
 	WebElement txtUsername;
 	@FindBy(name="password")
 	WebElement txtPassword;
+	
 	// buttons
 	@FindBy(css="[type=submit]")
 	WebElement btnLogin;
+	
+	//elements
 	@FindBy(xpath = "//p[contains(@class,'alert-content-text')]")
 	WebElement eleInvalidCredentialsError;
 	@FindBy(xpath = "//h6[text()='Dashboard']")

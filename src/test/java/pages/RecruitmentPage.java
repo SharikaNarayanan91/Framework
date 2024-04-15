@@ -51,7 +51,6 @@ public class RecruitmentPage {
 
 	/**
 	 * Search a vacancy
-	 * 
 	 * @param jobTitle
 	 * @param vacancy
 	 * @param hiringManager
@@ -120,7 +119,7 @@ public class RecruitmentPage {
 	}
 
 	/**
-	 * Delete vacancy
+	 * Delete a vacancy
 	 * 
 	 * @param vacancy
 	 */
@@ -130,7 +129,7 @@ public class RecruitmentPage {
 				+ "']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteVacancyElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 
 	/**
@@ -213,7 +212,7 @@ public class RecruitmentPage {
 	}
 
 	/**
-	 * Delete candidate
+	 * Delete a candidate
 	 * 
 	 * @param candidateName
 	 */
@@ -222,10 +221,10 @@ public class RecruitmentPage {
 				+ "']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteCandidateElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 	/**
-	 * View candidate
+	 * View a candidate
 	 * 
 	 * @param candidateName
 	 */
@@ -236,7 +235,7 @@ public class RecruitmentPage {
 		webCtrls.buttonClick(viewCandidateElement);
 	}
 	/**
-	 * Shortlist a candidate
+	 * Short-list a candidate
 	 */
 	public void shortlistCandidate() {
 		webCtrls.wait(1);
@@ -350,7 +349,7 @@ public class RecruitmentPage {
 		webCtrls.buttonClick(btnSave);
 	}
 	/**
-	 * Hire the candidated
+	 * Hire the candidate
 	 * @param notes
 	 */
 	public void hireCandidate(String notes) {
@@ -381,20 +380,12 @@ public class RecruitmentPage {
 	// inputs
 	@FindBy(xpath = "//label[text()='Vacancy Name']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtVacancyName;
-	@FindBy(xpath = "//label[text()='Job Title']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlJobTitle;
 	@FindBy(xpath = "//textarea[contains(@class,'oxd-textarea oxd-textarea')]")
 	WebElement txtDescription;
 	@FindBy(xpath = "//label[text()='Hiring Manager']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
 	WebElement txtHiringManager;
 	@FindBy(xpath = "//label[text()='Number of Positions']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtNumOfPositions;
-	@FindBy(xpath = "//label[text()='Vacancy']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlVacancy;
-	@FindBy(xpath = "//label[text()='Hiring Manager']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlHiringManager;
-	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlStatus;
 	@FindBy(name = "firstName")
 	WebElement txtFirstName;
 	@FindBy(name = "middleName")
@@ -409,12 +400,8 @@ public class RecruitmentPage {
 	WebElement txtKeywords;
 	@FindBy(xpath = "//label[text()='Notes']//parent::div//following-sibling::div//textarea[contains(@class,'oxd-textarea')]")
 	WebElement txtNotes;
-	@FindBy(xpath = "//label[text()='Candidate Name']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
-	WebElement ddlCandidateName;
 	@FindBy(xpath = "//label[text()='Date of Application']//parent::div//following-sibling::div//input")
 	WebElement txtDateOfApplication;
-	@FindBy(xpath = "//p[contains(@class,'oxd-text oxd-text--p oxd-text--subtitle')]")
-	WebElement eleStatus;
 	@FindBy(xpath = "//label[text()='Interview Title']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtInterviewTitle;
 	@FindBy(xpath = "//label[text()='Interviewer']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
@@ -425,7 +412,20 @@ public class RecruitmentPage {
 	WebElement txtTimeOfInterview;
 	@FindBy(xpath="//input[@type='file']")
 	WebElement txtResume;
-	// buttons
+	
+	//drop downs
+	@FindBy(xpath = "//label[text()='Job Title']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlJobTitle;
+	@FindBy(xpath = "//label[text()='Vacancy']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlVacancy;
+	@FindBy(xpath = "//label[text()='Hiring Manager']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlHiringManager;
+	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlStatus;
+	@FindBy(xpath = "//label[text()='Candidate Name']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
+	WebElement ddlCandidateName;
+	
+	// buttons & tabs
 	@FindBy(xpath = "//button[text()=' Search ']")
 	WebElement btnSearch;
 	@FindBy(xpath = "//a[text()='Vacancies']")
@@ -437,7 +437,7 @@ public class RecruitmentPage {
 	@FindBy(xpath = "//button[text()=' Save ']")
 	WebElement btnSave;
 	@FindBy(xpath = "//div[contains(@class,'dialog-popup')]//button[contains(.,'Yes')]")
-	WebElement dlgBoxYesButton;
+	WebElement btnDlgBoxYes;
 	@FindBy(xpath = "//button[text()=' Shortlist ']")
 	WebElement btnShortlist;
 	@FindBy(xpath = "//button[text()=' Schedule Interview ']")
@@ -453,6 +453,9 @@ public class RecruitmentPage {
 	@FindBy(xpath = "//button[text()=' Reject ']")
 	WebElement btnReject;
 
+	//elements
+	@FindBy(xpath = "//p[contains(@class,'oxd-text oxd-text--p oxd-text--subtitle')]")
+	WebElement eleStatus;
 	public By eleTableRecord(int index) {
 		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)[" + index + "]");
 	}

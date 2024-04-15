@@ -4553,3 +4553,130 @@
 [INFO ] 2024-04-04 11:14:30.491 [main] Recruitment - The Status displayed of the selected candidate is as expected : Rejected
 [INFO ] 2024-04-04 11:14:42.900 [main] Login - HRM login successfull
 [INFO ] 2024-04-04 11:15:08.111 [main] Recruitment - The Status displayed of the selected candidate is as expected : Application Initiated
+[INFO ] 2024-04-15 11:12:00.673 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:12:07.851 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-04-15 11:12:14.851 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-04-15 11:12:22.998 [main] Login - Error message displayed as expected : Invalid credentials
+[INFO ] 2024-04-15 11:12:33.798 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:12:52.438 [main] Admin - Work sift 'Fun Shift' is added
+[INFO ] 2024-04-15 11:12:52.536 [main] Admin - From time against shift 'Fun Shift' is as expected
+[INFO ] 2024-04-15 11:12:52.623 [main] Admin - To time against shift 'Fun Shift' is as expected
+[INFO ] 2024-04-15 11:12:52.701 [main] Admin - Duration against shift 'Fun Shift' is as expected
+[INFO ] 2024-04-15 11:13:07.726 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:13:08.015 [main] Dashboard - Tab Admin is present
+[INFO ] 2024-04-15 11:13:08.271 [main] Dashboard - Tab PIM is present
+[INFO ] 2024-04-15 11:13:08.525 [main] Dashboard - Tab Leave is present
+[INFO ] 2024-04-15 11:13:08.800 [main] Dashboard - Tab Time is present
+[INFO ] 2024-04-15 11:13:09.052 [main] Dashboard - Tab Recruitment is present
+[INFO ] 2024-04-15 11:13:09.327 [main] Dashboard - Tab My Info is present
+[INFO ] 2024-04-15 11:13:09.566 [main] Dashboard - Tab Performance is present
+[INFO ] 2024-04-15 11:13:09.838 [main] Dashboard - Tab Dashboard is present
+[INFO ] 2024-04-15 11:13:10.129 [main] Dashboard - Tab Directory is present
+[INFO ] 2024-04-15 11:13:10.404 [main] Dashboard - Tab Maintenance is present
+[INFO ] 2024-04-15 11:13:10.667 [main] Dashboard - Tab Claim is present
+[INFO ] 2024-04-15 11:13:21.884 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:13:59.300 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:13:59.602 [main] Dashboard - User with UserName : Zsvanc Kapoor is created
+[INFO ] 2024-04-15 11:14:11.734 [main] Time - The Punch In Time displayed on Atttendence page is as expected : 2024-15-04 - 11:14 AM
+[INFO ] 2024-04-15 11:14:16.131 [main] Dashboard - The attendance state displayed on Dashboard is as expected : Punched In
+[INFO ] 2024-04-15 11:14:16.438 [main] Dashboard - The attendance details displayed on Dashboard is as expected : Punched In: Today at 11:14 AM
+[INFO ] 2024-04-15 11:14:29.432 [main] Dashboard - The attendance state displayed on Dashboard is as expected : Punched Out
+[INFO ] 2024-04-15 11:14:29.746 [main] Dashboard - The attendance details displayed on Dashboard is as expected : Punched Out: Today at 11:14 AM
+[INFO ] 2024-04-15 11:14:42.601 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:15:20.027 [main] PIM - The FirstAndMiddleName displayed for the selected user is as expected : Ktsgmw Rjvuqc
+[INFO ] 2024-04-15 11:15:20.381 [main] PIM - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-04-15 11:15:20.748 [main] PIM - The Id displayed for the selected user is as expected : 0391
+[INFO ] 2024-04-15 11:15:32.547 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:16:08.750 [main] PIM - The FirstAndMiddleName displayed for the selected user is as expected : Sykmdy Zrbgsl
+[INFO ] 2024-04-15 11:16:09.007 [main] PIM - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-04-15 11:16:09.238 [main] PIM - The Id displayed for the selected user is as expected : 0392
+[INFO ] 2024-04-15 11:16:37.758 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:17:16.800 [main] PIM - The FirstAndMiddleName displayed for the selected user is as expected : Odidqm Srphvp
+[INFO ] 2024-04-15 11:17:17.085 [main] PIM - The LastName displayed for the selected user is as expected : Kapoor
+[INFO ] 2024-04-15 11:17:17.352 [main] PIM - The Id displayed for the selected user is as expected : 0393
+[INFO ] 2024-04-15 11:17:25.226 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:17:25.464 [main] Dashboard - User with UserName : Odidqm Kapoor is created
+[INFO ] 2024-04-15 11:17:37.800 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:18:15.430 [main] PIM - The FirstAndMiddleName displayed for the selected user is as expected : Fgyzva Xaqjcq
+[INFO ] 2024-04-15 11:18:35.188 [main] PIM - 'No Records Found' displayed for the selected user
+[INFO ] 2024-04-15 11:19:03.303 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:19:40.489 [main] PIM - The FirstAndMiddleName displayed for the selected user is as expected : Zzqnmz Prillg
+[INFO ] 2024-04-15 11:20:06.481 [main] PIM - The LastName displayed for the selected user is as expected : Sharma
+[INFO ] 2024-04-15 11:20:18.440 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:21:09.404 [main] Time - Project Added to timesheet is displayed as expected : Apache Software Foundation
+[INFO ] 2024-04-15 11:21:12.722 [main] Time - Activity Added against the project : Apache Software Foundation is displayed as expected : Bug Fixes
+[INFO ] 2024-04-15 11:21:13.012 [main] Time - Status of timesheet displayed is as expected : Not Submitted
+[INFO ] 2024-04-15 11:21:27.173 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:22:28.905 [main] Time - Project Added to timesheet is displayed as expected : Apache Software Foundation
+[INFO ] 2024-04-15 11:22:32.206 [main] Time - Activity Added against the project : Apache Software Foundation is displayed as expected : Bug Fixes
+[INFO ] 2024-04-15 11:22:35.525 [main] Time - Project Added to timesheet is displayed as expected : The Coca-Cola Company
+[INFO ] 2024-04-15 11:22:38.828 [main] Time - Activity Added against the project : The Coca-Cola Company is displayed as expected : Bug Fixes
+[INFO ] 2024-04-15 11:22:39.189 [main] Time - Status of timesheet displayed is as expected : Not Submitted
+[INFO ] 2024-04-15 11:22:53.024 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:23:47.264 [main] Time - Project Added to timesheet is displayed as expected : Apache Software Foundation
+[INFO ] 2024-04-15 11:23:50.575 [main] Time - Activity Added against the project : Apache Software Foundation is displayed as expected : Bug Fixes
+[INFO ] 2024-04-15 11:23:50.911 [main] Time - Status of timesheet displayed is as expected : Not Submitted
+[INFO ] 2024-04-15 11:23:53.874 [main] Time - Status of timesheet displayed is as expected : Submitted
+[INFO ] 2024-04-15 11:23:57.723 [main] Time - Status of timesheet displayed is as expected : Approved
+[INFO ] 2024-04-15 11:24:12.616 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:25:09.166 [main] Recruitment - The Vacancy displayed of the selected user is as expected : QA Automation
+[INFO ] 2024-04-15 11:25:09.491 [main] Recruitment - The JobTitle displayed of the selected user is as expected : QA Engineer
+[INFO ] 2024-04-15 11:25:09.792 [main] Recruitment - The HiringManager displayed of the selected user is as expected : Siya Shah
+[INFO ] 2024-04-15 11:25:10.089 [main] Recruitment - The Status displayed of the selected user is as expected : Active
+[INFO ] 2024-04-15 11:25:21.995 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:25:49.583 [main] Recruitment - The Vacancy displayed of the selected candidate is as expected : QA Automation
+[INFO ] 2024-04-15 11:25:49.900 [main] Recruitment - The Candidate displayed of the selected candidate is as expected : Diya M Shah
+[INFO ] 2024-04-15 11:25:50.277 [main] Recruitment - The Status displayed of the selected candidate is as expected : Application Initiated
+[INFO ] 2024-04-15 11:26:01.877 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:26:13.558 [main] Recruitment - The Status displayed of the selected candidate is as expected : Application Initiated
+[INFO ] 2024-04-15 11:26:27.561 [main] Recruitment - Status of Candidate displayed is as expected : Shortlisted
+[INFO ] 2024-04-15 11:26:37.728 [main] Recruitment - The Status displayed of the selected candidate is as expected : Shortlisted
+[INFO ] 2024-04-15 11:26:49.628 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:27:01.118 [main] Recruitment - The Status displayed of the selected candidate is as expected : Shortlisted
+[INFO ] 2024-04-15 11:27:01.476 [main] Recruitment - The HiringManager of the selected candidate is : Siya Raj Shah
+[INFO ] 2024-04-15 11:27:21.756 [main] Recruitment - Status of Candidate displayed is as expected : Interview Scheduled
+[INFO ] 2024-04-15 11:27:32.025 [main] Recruitment - The Status displayed of the selected candidate is as expected : Interview Scheduled
+[INFO ] 2024-04-15 11:27:43.591 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:27:55.035 [main] Recruitment - The Status displayed of the selected candidate is as expected : Interview Scheduled
+[INFO ] 2024-04-15 11:28:08.881 [main] Recruitment - Status of Candidate displayed is as expected : Interview Passed
+[INFO ] 2024-04-15 11:28:18.907 [main] Recruitment - The Status displayed of the selected candidate is as expected : Interview Passed
+[INFO ] 2024-04-15 11:28:33.288 [main] Recruitment - Status of Candidate displayed is as expected : Job Offered
+[INFO ] 2024-04-15 11:28:43.322 [main] Recruitment - The Status displayed of the selected candidate is as expected : Job Offered
+[INFO ] 2024-04-15 11:28:55.272 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:29:06.903 [main] Recruitment - The Status displayed of the selected candidate is as expected : Job Offered
+[INFO ] 2024-04-15 11:29:22.217 [main] Recruitment - Status of Candidate displayed is as expected : Hired
+[INFO ] 2024-04-15 11:29:32.452 [main] Recruitment - The Status displayed of the selected candidate is as expected : Hired
+[INFO ] 2024-04-15 11:29:43.686 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:30:07.217 [main] Recruitment - The HiringManager of the selected candidate is : Siya Raj Shah
+[INFO ] 2024-04-15 11:30:38.564 [main] Recruitment - The Status displayed of the selected candidate is as expected : Interview Scheduled
+[INFO ] 2024-04-15 11:30:52.568 [main] Recruitment - Status of Candidate displayed is as expected : Interview Failed
+[INFO ] 2024-04-15 11:31:02.889 [main] Recruitment - The Status displayed of the selected candidate is as expected : Interview Failed
+[INFO ] 2024-04-15 11:31:17.789 [main] Recruitment - Status of Candidate displayed is as expected : Rejected
+[INFO ] 2024-04-15 11:31:28.054 [main] Recruitment - The Status displayed of the selected candidate is as expected : Rejected
+[INFO ] 2024-04-15 11:31:39.760 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:32:03.021 [main] Recruitment - The Status displayed of the selected candidate is as expected : Application Initiated
+[INFO ] 2024-04-15 11:32:18.625 [main] Recruitment - Status of Candidate displayed is as expected : Rejected
+[INFO ] 2024-04-15 11:32:28.881 [main] Recruitment - The Status displayed of the selected candidate is as expected : Rejected
+[INFO ] 2024-04-15 11:38:30.716 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:38:46.353 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:39:25.502 [main] Admin - The EmployeeName displayed of the selected user is as expected : Priya Sharma
+[INFO ] 2024-04-15 11:39:25.882 [main] Admin - The UserName displayed of the selected user is as expected : PriyaMiTytm
+[INFO ] 2024-04-15 11:39:26.257 [main] Admin - The UserRole displayed of the selected user is as expected : Admin
+[INFO ] 2024-04-15 11:39:26.625 [main] Admin - The Status displayed of the selected user is as expected : Enabled
+[INFO ] 2024-04-15 11:39:39.003 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:40:23.566 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:40:23.917 [main] Dashboard - User with UserName : Nidhi Sharma is created
+[INFO ] 2024-04-15 11:40:35.941 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:40:49.016 [main] Admin - Job title 'AssociateQA' is added
+[INFO ] 2024-04-15 11:40:49.333 [main] Admin - Job Description 'Software Testing' is added for job title AssociateQA
+[INFO ] 2024-04-15 11:41:04.296 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:41:15.696 [main] Admin - Employment status 'Full-Time Internship' is added
+[INFO ] 2024-04-15 11:41:30.215 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:41:41.990 [main] Admin - Job Category 'Search And Online Marketing' is added
+[INFO ] 2024-04-15 11:41:57.061 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:42:14.431 [main] Admin - Work sift 'Fun Shift' is added
+[INFO ] 2024-04-15 11:42:14.494 [main] Admin - From time against shift 'Fun Shift' is as expected
+[INFO ] 2024-04-15 11:42:14.525 [main] Admin - To time against shift 'Fun Shift' is as expected
+[INFO ] 2024-04-15 11:42:14.576 [main] Admin - Duration against shift 'Fun Shift' is as expected
+[INFO ] 2024-04-15 11:42:28.761 [main] Login - HRM login successfull
+[INFO ] 2024-04-15 11:42:45.306 [main] Admin - Currency added against the pay grade 'Grade 10' is as expected : Euro

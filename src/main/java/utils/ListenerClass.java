@@ -96,7 +96,7 @@ public class ListenerClass implements ITestListener  {
 		extent.flush();
 	}
 
-	//To if a folder exists
+	//To check if a folder exists
 	public static boolean checkIfFolderExists(String folderName) {
 		boolean found = false;
 

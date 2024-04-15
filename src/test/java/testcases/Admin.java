@@ -30,7 +30,7 @@ public class Admin extends BaseTest {
 	}
 
 	@ExcelDataSourceInfo(TestName = "TC01_Admin_SearchUserByNameAndRole")
-	@Test(enabled = false, priority = 1, dataProvider = "Admin")
+	@Test(enabled = true, priority = 1, dataProvider = "Admin")
 	public void TC01_Admin_SearchUserByNameAndRole(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -62,7 +62,7 @@ public class Admin extends BaseTest {
 	}
 
 	@ExcelDataSourceInfo(TestName = "TC02_Admin_CreateSystemUser")
-	@Test(enabled = false, priority = 2, dataProvider = "Admin")
+	@Test(enabled = true, priority = 2, dataProvider = "Admin")
 	public void TC02_Admin_CreateSystemUser(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -114,7 +114,7 @@ public class Admin extends BaseTest {
 	}
 
 	@ExcelDataSourceInfo(TestName = "TC03_Admin_LoginWithNewSystemUser")
-	@Test(enabled = false, priority = 3, dataProvider = "Admin")
+	@Test(enabled = true, priority = 3, dataProvider = "Admin")
 	public void TC03_Admin_LoginWithNewSystemUser(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -166,7 +166,7 @@ public class Admin extends BaseTest {
 
 	}
 	@ExcelDataSourceInfo(TestName = "TC04_Admin_CreateJobTitle")
-	@Test(enabled = false, priority = 4, dataProvider = "Admin")
+	@Test(enabled = true, priority = 4, dataProvider = "Admin")
 	public void TC04_Admin_CreateJobTitle(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -202,7 +202,7 @@ public class Admin extends BaseTest {
 		adminPage.deleteJobTitle((String) map.get("JobTitle"));
 	}
 	@ExcelDataSourceInfo(TestName = "TC05_Admin_CreateEmploymentStatus")
-	@Test(enabled = false, priority = 5, dataProvider = "Admin")
+	@Test(enabled = true, priority = 5, dataProvider = "Admin")
 	public void TC05_Admin_CreateEmploymentStatus(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -235,7 +235,7 @@ public class Admin extends BaseTest {
 		adminPage.deleteEmploymentStatus((String) map.get("EmploymentStatus"));
 	}
 	@ExcelDataSourceInfo(TestName = "TC06_Admin_CreateJobCategory")
-	@Test(enabled = false, priority = 6, dataProvider = "Admin")
+	@Test(enabled = true, priority = 6, dataProvider = "Admin")
 	public void TC06_Admin_CreateJobCategory(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();
@@ -301,7 +301,7 @@ public class Admin extends BaseTest {
 		adminPage.deleteWorkShift((String) map.get("WorkShiftName"));
 	}
 	@ExcelDataSourceInfo(TestName = "TC08_Admin_CreatePayGrade")
-	@Test(enabled = false, priority = 8, dataProvider = "Admin")
+	@Test(enabled = true, priority = 8, dataProvider = "Admin")
 	public void TC08_Admin_CreatePayGrade(Map<Object, Object> map) throws IOException {
 
 		ReadConfig readConfig = new ReadConfig();

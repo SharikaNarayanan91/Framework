@@ -19,7 +19,6 @@ import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
 public class ExcelHelper {
-
 	
 	public static Object[][] getMapArray( String sheetName, String tableName) throws IOException{
 		FileInputStream fileInputStream = new FileInputStream(

@@ -85,15 +85,15 @@ public class AdminPage {
 	 * @param userRole
 	 * @param employeeName
 	 * @param status
-	 * @param username
+	 * @param userName
 	 * @param password
 	 */
-	public void createSystemUser(String userRole,String employeeName,String status,String username,String password) {
+	public void createSystemUser(String userRole,String employeeName,String status,String userName,String password) {
 		webCtrls.buttonClick(btnAdd);
 		webCtrls.selectFromDropdown(ddlUserRole, userRole);
 		webCtrls.selectFromAutosuggestiveDropdown(txtEmployeeName, employeeName);
 		webCtrls.selectFromDropdown(ddlStatus, status);
-		webCtrls.setData(txtUsername, username);
+		webCtrls.setData(txtUsername, userName);
 		webCtrls.setEncryptedData(txtPassword, password);
 		webCtrls.setEncryptedData(txtConfirmPassword, password);
 		webCtrls.buttonClick(btnSave);
@@ -104,7 +104,7 @@ public class AdminPage {
 	 * @param option -Pass the name of the screen/option
 	 */
 	public void selectOptionFromJobMenu(String menuItem) {
-		webCtrls.selectFromChevronDropdown(topBarJob, menuItem);	
+		webCtrls.selectFromChevronDropdown(ddlTopBarJob, menuItem);	
 	}
 	
 	/**
@@ -154,7 +154,7 @@ public class AdminPage {
 		WebElement deleteJobTitleElement=webCtrls.Ctrl(By.xpath("//div[text()='"+jobTitle+"']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteJobTitleElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 	
 	/**
@@ -188,7 +188,7 @@ public class AdminPage {
 		WebElement deleteEmploymentStatusElement=webCtrls.Ctrl(By.xpath("//div[text()='"+employmentStatus+"']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteEmploymentStatusElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 	/**
 	 * Create a Job Category
@@ -221,7 +221,7 @@ public class AdminPage {
 		WebElement deleteJobCategoryElement=webCtrls.Ctrl(By.xpath("//div[text()='"+jobCategory+"']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteJobCategoryElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 	
 	/**
@@ -282,7 +282,7 @@ public class AdminPage {
 		WebElement deleteWorkShiftElement=webCtrls.Ctrl(By.xpath("//div[text()='"+shiftName+"']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteWorkShiftElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 	
 	/**
@@ -298,7 +298,7 @@ public class AdminPage {
 		webCtrls.buttonClick(btnSave);
 		webCtrls.wait(2);
 		webCtrls.buttonClick(btnAdd);
-		webCtrls.selectFromDropdown(drpdwnCurrency, currency);
+		webCtrls.selectFromDropdown(ddlCurrency, currency);
 		webCtrls.setData(txtMinSalary, minSalary);
 		webCtrls.setData(txtMaxSalary, maxSalary);
 		webCtrls.scrollToElement(btnSaveCurrency);
@@ -328,48 +328,30 @@ public class AdminPage {
 	}	
 
 	/**
-	 * Delet Pay grade
-	 * 
+	 * Delete Pay grade
 	 * @param payGrade
 	 */
 	public void deletePayGrade(String payGrade) {
 		WebElement deletePayGradeElement=webCtrls.Ctrl(By.xpath("//div[text()='"+payGrade+"']//parent::div//following-sibling::div[@role='cell']//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deletePayGradeElement);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 	}
 	
 	
 	// inputs
 	@FindBy(xpath="//label[text()='Username']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtUsername;
-	@FindBy(xpath = "//label[text()='User Role']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlUserRole;
-	@FindBy(xpath = "//div[@role='listbox']//span")
-	WebElement ddlGeneralList;
-	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement ddlStatus;
 	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
 	WebElement txtEmployeeName;
 	@FindBy(xpath="//label[text()='Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtPassword;
 	@FindBy(xpath="//label[text()='Confirm Password']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtConfirmPassword;
-	// buttons
-	@FindBy(xpath = "//button[text()=' Search ']")
-	WebElement btnSearch;
-	@FindBy(xpath="//button[text()=' Add ']")
-	WebElement btnAdd;
-	@FindBy(xpath="//button[text()=' Save ']")
-	WebElement btnSave;
-	@FindBy(xpath="//span[contains(text(),'Job')]")
-	WebElement topBarJob;
 	@FindBy(xpath="//label[text()='Job Title']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtJobTitle;
 	@FindBy(xpath="//label[text()='Job Description']//parent::div//following-sibling::div//textarea[contains(@class,'oxd-textarea')]")
 	WebElement txtJobDescription;
-	@FindBy(xpath = "//div[contains(@class,'dialog-popup')]//button[contains(.,'Yes')]")
-	WebElement dlgBoxYesButton;	
 	@FindBy(xpath="//label[text()='Name']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtName;
 	@FindBy(xpath="//label[text()='Shift Name']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
@@ -377,20 +359,41 @@ public class AdminPage {
 	@FindBy(xpath="//label[text()='From']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtFromTime;
 	@FindBy(xpath="//label[text()='To']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
-	WebElement txtToTime;
-	@FindBy(xpath="//label[text()='Duration Per Day']//parent::div//following-sibling::div//p")
-	WebElement eleWorkDuration;
-	@FindBy(xpath="//label[text()='Currency']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
-	WebElement drpdwnCurrency;
+	WebElement txtToTime;	
 	@FindBy(xpath="//label[text()='Minimum Salary']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
 	WebElement txtMinSalary;
 	@FindBy(xpath="//label[text()='Maximum Salary']//parent::div//following-sibling::div//input[contains(@class,'oxd-input oxd-input')]")
-	WebElement txtMaxSalary;
+	WebElement txtMaxSalary;	
+	
+	//drop downs
+	@FindBy(xpath = "//label[text()='User Role']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlUserRole;
+	@FindBy(xpath = "//div[@role='listbox']//span")
+	WebElement ddlGeneralList;
+	@FindBy(xpath = "//label[text()='Status']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlStatus;
+	@FindBy(xpath="//span[contains(text(),'Job')]")
+	WebElement ddlTopBarJob;
+	@FindBy(xpath="//label[text()='Currency']//parent::div//following-sibling::div//div[@class='oxd-select-text-input']")
+	WebElement ddlCurrency;
+		
+	// buttons
+	@FindBy(xpath = "//button[text()=' Search ']")
+	WebElement btnSearch;
+	@FindBy(xpath="//button[text()=' Add ']")
+	WebElement btnAdd;
+	@FindBy(xpath="//button[text()=' Save ']")
+	WebElement btnSave;
+	@FindBy(xpath = "//div[contains(@class,'dialog-popup')]//button[contains(.,'Yes')]")
+	WebElement btnDlgBoxYes;	
 	@FindBy(xpath="//button[text()=' Cancel ']")
 	WebElement btnCancel;
 	@FindBy(xpath="//h6[text()='Add Currency']//parent::div//button[text()=' Save ']")
 	WebElement btnSaveCurrency;
 	
+	//elements
+	@FindBy(xpath="//label[text()='Duration Per Day']//parent::div//following-sibling::div//p")
+	WebElement eleWorkDuration;
 	
 	public By eleRecordsFound(String count) {
 		return By.xpath("//span[text()='(" + count + ") Record Found']");
@@ -398,5 +401,4 @@ public class AdminPage {
 	public By eleTableRecord(int index) {
 		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
 	}
-
 }

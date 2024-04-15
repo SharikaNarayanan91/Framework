@@ -67,7 +67,8 @@ public class WebCtrls extends BaseTest {
 		addLog("Info","Entered "+locatorName+" as " + value);	
 	}
 	
-	/** * Set data for encrypted value(e.g.Password)
+	/**
+	 * Set data for encrypted value(e.g.Password)
 	 * @param locator
 	 * @param value
 	 */
@@ -135,7 +136,7 @@ public class WebCtrls extends BaseTest {
 	}
 
 	/**
-	 * To select element from dropdwon
+	 * To select an element from dropdown
 	 * @param WebElement locator
 	 * @param value
 	 */
@@ -194,9 +195,9 @@ public class WebCtrls extends BaseTest {
 	}
 	
 	/**
-	 * Log info and screenshot to report
+	 * Log info and screenshot to the report
 	 * @param String status :(Pass 'Info'-log status INFO and 'Pass'-log status PASS)
-	 * @param Strng title
+	 * @param String title
 	 */
 	public void addLog(String status, String title) {
 		String Base64Code = ScreenshotHelper.CaptureScreenShotBase64();
@@ -244,7 +245,7 @@ public class WebCtrls extends BaseTest {
 	}
 	
 	/**
-	 * To wait for a duration
+	 * To wait for a specific duration
 	 * @param duration
 	 */
 	public void wait(int duration) {
@@ -262,7 +263,6 @@ public class WebCtrls extends BaseTest {
 	 */
 	public void scrollToElement(WebElement element) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		// Execute JavaScript to scroll to the element
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 	
@@ -326,9 +326,9 @@ public class WebCtrls extends BaseTest {
 	}
 
 	/**
-	 * To select element from autosuggestive dropdown
+	 * To select element from auto suggestive dropdown
 	 * 
-	 * @param WebElement inputLocator
+	 * @param inputLocator
 	 * @param value
 	 */
 	public void selectFromAutosuggestiveDropdown(WebElement inputLocator, String value) {
@@ -349,7 +349,7 @@ public class WebCtrls extends BaseTest {
 	}
 	
 	/**
-	 * To select value from chevron dropdwon
+	 * To select value from chevron dropdown
 	 * @param WebElement locator
 	 * @param value
 	 */
@@ -369,9 +369,9 @@ public class WebCtrls extends BaseTest {
 	}
 	
 	/**
-	 * Get currnt date in specific format
+	 * Get current date in specific format
 	 * @param dateFormat
-	 * @return
+	 * @return formatedDate
 	 */
 	public String getCurrentDate(String dateFormat) {		
         Date currentDate = new Date();        

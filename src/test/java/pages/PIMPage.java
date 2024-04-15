@@ -27,13 +27,12 @@ public class PIMPage {
 	
 	/**
 	 * Search employee with Employee Name
-	 * 
 	 * @param employeeName
 	 */
 	public void searchEmployeeWithEmployeeName(String employeeName) {
 		webCtrls.wait(10);
 		webCtrls.setData(txtEmployeeName, employeeName);
-		webCtrls.buttonClick(submit);
+		webCtrls.buttonClick(btnSubmit);
 	}
 	/**
 	 * Search employee with Employee Id
@@ -42,7 +41,7 @@ public class PIMPage {
 	public void searchEmployeeWithEmployeeId(String employeeId)  {
 		webCtrls.wait(10);
 		webCtrls.setData(txtEmpId, employeeId);
-		webCtrls.buttonClick(submit);	
+		webCtrls.buttonClick(btnSubmit);	
 }
 	/**
 	 * Verify the records in the table
@@ -91,17 +90,17 @@ public class PIMPage {
 	 */
 	public String createEmployee(String firstName,String middleName,String lastName) {
 		webCtrls.wait(5);
-		addButton.click();
+		btnAdd.click();
 		webCtrls.setData(txtFirstName, firstName);
 		webCtrls.setData(txtMiddleName, middleName);
 		webCtrls.setData(txtLastName, lastName);
 		String empId=txtEmpId.getAttribute("value");
-		webCtrls.buttonClick(submit);
+		webCtrls.buttonClick(btnSubmit);
 		if(webCtrls.isDisplayed(txtEmpIdErrorMessage)) {
 			int newEmpId=(Integer.parseInt(empId)+5);
 			empId=Integer.toString(newEmpId);
 			webCtrls.setData(txtEmpId, empId);
-			webCtrls.buttonClick(submit);
+			webCtrls.buttonClick(btnSubmit);
 		}
 		webCtrls.wait(10);
 		return empId;
@@ -117,7 +116,7 @@ public class PIMPage {
 	 */
 	public String createEmployeeWithLoginDetails(String firstName,String middleName,String lastName,String userName,String password) {
 		webCtrls.wait(5);
-		addButton.click();
+		btnAdd.click();
 		webCtrls.setData(txtFirstName, firstName);
 		webCtrls.setData(txtMiddleName, middleName);
 		webCtrls.setData(txtLastName, lastName);
@@ -126,13 +125,13 @@ public class PIMPage {
 		webCtrls.setEncryptedData(txtPassword, password);
 		webCtrls.setEncryptedData(txtConfirmPassword, password);
 		String empId=txtEmpId.getAttribute("value");
-		webCtrls.javaScriptClick(submit);
+		webCtrls.javaScriptClick(btnSubmit);
 		if(webCtrls.isDisplayed(txtEmpIdErrorMessage)) {
 			int newEmpId=(Integer.parseInt(empId)+5);
 			empId=Integer.toString(newEmpId);
 			webCtrls.scrollToElement(txtEmpId);
 			webCtrls.setData(txtEmpId, empId);
-			webCtrls.buttonClick(submit);
+			webCtrls.buttonClick(btnSubmit);
 		}
 		webCtrls.wait(10);
 		return empId;
@@ -145,7 +144,7 @@ public class PIMPage {
 		WebElement deleteIcon=webCtrls.Ctrl(By.xpath("//div[text()='"+employeeName+"']//parent::div//following-sibling::div//i[@class='oxd-icon bi-trash']"));
 		webCtrls.buttonClick(deleteIcon);
 		webCtrls.wait(2);
-		webCtrls.buttonClick(dlgBoxYesButton);
+		webCtrls.buttonClick(btnDlgBoxYes);
 		webCtrls.wait(2);
 	}
 	/**
@@ -173,8 +172,8 @@ public class PIMPage {
 	 * Click Save button on edit details section
 	 * */
 	public void clickSaveOnEditDetails() {
-		webCtrls.scrollToElement(submit);
-		webCtrls.javaScriptClick(submit);
+		webCtrls.scrollToElement(btnSubmit);
+		webCtrls.javaScriptClick(btnSubmit);
 		webCtrls.wait(3);
 	}
 	/**
@@ -186,15 +185,10 @@ public class PIMPage {
 		logger.info("'No Records Found' displayed for the selected user");
 		webCtrls.addLog("Pass","'No Records Found' displayed for the selected user");
 	}
-
+	
+	//inputs
 	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input")
  	WebElement txtEmployeeName;
-	@FindBy(css = "[type=submit]")
-	WebElement submit;
-	@FindBy(css = "[type=reset]")
-	WebElement reset;
-	@FindBy(xpath="//button[text()=' Add ']")
-	WebElement addButton;
 	@FindBy(name="firstName")
 	WebElement txtFirstName;
 	@FindBy(name="middleName")
@@ -211,14 +205,26 @@ public class PIMPage {
 	WebElement txtConfirmPassword;
 	@FindBy(xpath="//span[contains(@class,'oxd-text oxd-text--span oxd-input-field-error-message')]")
 	WebElement txtEmpIdErrorMessage;
-	@FindBy(css = "[type=checkbox]")
-	WebElement chkboxCreateLogin;
-	@FindBy(xpath="//i[@class='oxd-icon bi-trash']")
-	WebElement iconDelete;
-	@FindBy(xpath = "//div[contains(@class,'dialog-popup')]//button[contains(.,'Yes')]")
-	WebElement dlgBoxYesButton;
 	@FindBy(xpath = "//span[text()='No Records Found']")
 	WebElement txtNoRecordsFound;
+	
+	//buttons
+	@FindBy(css = "[type=submit]")
+	WebElement btnSubmit;
+	@FindBy(css = "[type=reset]")
+	WebElement btnReset;
+	@FindBy(xpath="//button[text()=' Add ']")
+	WebElement btnAdd;
+	@FindBy(xpath="//i[@class='oxd-icon bi-trash']")
+	WebElement btnDeleteIcon;
+	@FindBy(xpath = "//div[contains(@class,'dialog-popup')]//button[contains(.,'Yes')]")
+	WebElement btnDlgBoxYes;
+	
+	//check box
+	@FindBy(css = "[type=checkbox]")
+	WebElement chkboxCreateLogin;
+
+	//elements
 	public By eleTableRecord(int index) {
 		return By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell' and @role='cell']//div)["+index+"]");
 	}

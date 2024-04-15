@@ -164,7 +164,7 @@ public class TimePage {
 	}
 	
 	/**
-	 * Punnch In
+	 * Punch In
 	 * @param date
 	 * @param time
 	 * @param note
@@ -180,7 +180,7 @@ public class TimePage {
 		return time;	
 	}
 	/**
-	 * Punnch Out
+	 * Punch Out
 	 * @param date
 	 * @param time
 	 * @param note
@@ -233,14 +233,10 @@ public class TimePage {
 	// buttons
 	@FindBy(xpath = "//button[text()=' Create Timesheet ']")
 	WebElement btnCreateTimesheet;
-	@FindBy(xpath = "//p[contains(@class,'oxd-text oxd-text--p oxd-text--subtitle')]")
-	WebElement eleStatus;
 	@FindBy(xpath = "//button[text()=' Edit ']")
 	WebElement btnEdit;
 	@FindBy(xpath="//button[text()=' Save ']")
 	WebElement btnSave;
-	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
-	WebElement txtEmployeeName;
 	@FindBy(xpath="//button[text()=' View ']")
 	WebElement btnView;
 	@FindBy(xpath="//p[text()='Add Row']//preceding-sibling::button")
@@ -249,6 +245,14 @@ public class TimePage {
 	WebElement btnSubmit;
 	@FindBy(xpath="//button[text()=' Approve ']")
 	WebElement btnApprove;
+	@FindBy(xpath="//button[text()=' In ']")
+	WebElement btnIn;
+	@FindBy(xpath="//button[text()=' Out ']")
+	WebElement btnOut;
+	
+	//inputs
+	@FindBy(xpath="//label[text()='Employee Name']//parent::div//following-sibling::div//input[contains(@placeholder,'Type for hints...')]")
+	WebElement txtEmployeeName;
 	@FindBy(xpath="//textarea[contains(@class,'oxd-textarea oxd-textarea')]")
 	WebElement txtComment;
 	@FindBy(xpath="//div[@class='oxd-date-input']//input")
@@ -257,10 +261,6 @@ public class TimePage {
 	WebElement txtTime;
 	@FindBy(xpath="//textarea[contains(@class,'oxd-textarea')]")
 	WebElement txtNote;
-	@FindBy(xpath="//button[text()=' In ']")
-	WebElement btnIn;
-	@FindBy(xpath="//button[text()=' Out ']")
-	WebElement btnOut;
 	@FindBy(xpath="//label[text()='Punched in time']//parent::div//following-sibling::div//p")
 	WebElement txtPunchedInTime;
 	@FindBy(xpath="//label[text()='Punched out time']//parent::div//following-sibling::div//p")
@@ -268,5 +268,8 @@ public class TimePage {
 	@FindBy(xpath="//div[@class='oxd-topbar-header-title']")
 	WebElement txtTitle;
 	
+	//elements
+	@FindBy(xpath = "//p[contains(@class,'oxd-text oxd-text--p oxd-text--subtitle')]")
+	WebElement eleStatus;
 	
 }

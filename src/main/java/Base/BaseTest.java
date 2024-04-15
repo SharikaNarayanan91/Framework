@@ -24,7 +24,7 @@ public class BaseTest {
 	static ExtentReports extent;
 	public ExtentTest logger;
 
-	//Initialze the driver
+	//Initialize the driver
 	@BeforeMethod
 	@Parameters({"browser","headless"})
 	public void initialize(String browser, boolean headless,Method testMethod) {

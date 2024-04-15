@@ -63,8 +63,8 @@ public class DashboardPage {
 	 * Logout from the user
 	 */
 	public void logOut() {
-		webCtrls.buttonClick(userDropdownTab);
-		webCtrls.buttonClick(userLogOut);
+		webCtrls.buttonClick(btnUserDropdownTab);
+		webCtrls.buttonClick(btnUserLogOut);
 	}
 	
 	
@@ -84,11 +84,11 @@ public class DashboardPage {
 	}
 	
 	/**
-	 * Verify the User Dropdwon name in the Dashboard page
+	 * Verify the User Dropdown name in the Dashboard page
 	 * @param userName
 	 */
 	public void verifyUserDropdownName(String userName) {
-		String actualUserName = webCtrls.getText(userDropdownName);
+		String actualUserName = webCtrls.getText(eleUserDropdownName);
 		Assert.assertEquals(actualUserName, userName, "User with UserName : " + userName + " is not created");
 		logger.info("User with UserName : " + userName + " is created");
 		webCtrls.addLog("Pass", "User with UserName : " + userName + " is created");
@@ -120,6 +120,7 @@ public class DashboardPage {
 	}
 	/**
 	 * Verify the Page title
+	 * @param expTitle
 	 */
 	public void verifyPageTitle(String expTitle) {
 		webCtrls.wait(3);
@@ -128,8 +129,18 @@ public class DashboardPage {
 		logger.info("The "+actualTitle+"  page is displayed");
 		webCtrls.addLog("Pass", "The "+actualTitle+"  page is displayed");
 	}
+		
+	//inputs
 	@FindBy(className = "oxd-input oxd-input")
 	WebElement txtSearch;
+	@FindBy(xpath="//div[@class='oxd-topbar-header-title']")
+	WebElement txtTitle;
+	@FindBy(xpath="//p[contains(@class,'attendance-card-state')]")
+	WebElement txtAttendanceCardState;
+	@FindBy(xpath="//p[contains(@class,'attendance-card-details')]")
+	WebElement txtAttendanceCardDetails;
+	
+	//tabs
 	@FindBy(xpath = "//span[text()='Admin']")
 	WebElement tabAdmin;
 	@FindBy(xpath = "//span[text()='PIM']")
@@ -154,22 +165,21 @@ public class DashboardPage {
 	WebElement tabClaim;
 	@FindBy(xpath = "//span[text()='Buzz']")
 	WebElement tabBuzz;
-	@FindBy(xpath = "//h6[text()='Dashboard']")
-	WebElement eleDashboardTitle;
-	@FindBy(xpath="//a[contains(@class,'oxd-main-menu-item')]//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name']")
-	public List<WebElement> lstMainMenu;
-	@FindBy(className="oxd-userdropdown-name")
-	WebElement userDropdownName;
-	@FindBy(className="oxd-userdropdown-tab")
-	WebElement userDropdownTab;
-	@FindBy(xpath="//a[text()='Logout']")
-	WebElement userLogOut;
-	@FindBy(xpath="//p[contains(@class,'attendance-card-state')]")
-	WebElement txtAttendanceCardState;
-	@FindBy(xpath="//p[contains(@class,'attendance-card-details')]")
-	WebElement txtAttendanceCardDetails;
+	
+	//buttons
 	@FindBy(xpath="//button[contains(@class,'attendance-card-action')]")
 	WebElement btnAttendanceCardAction;	
-	@FindBy(xpath="//div[@class='oxd-topbar-header-title']")
-	WebElement txtTitle;
+	@FindBy(className="oxd-userdropdown-tab")
+	WebElement btnUserDropdownTab;
+	@FindBy(xpath="//a[text()='Logout']")
+	WebElement btnUserLogOut;
+	
+	// elements
+	@FindBy(xpath = "//h6[text()='Dashboard']")
+	WebElement eleDashboardTitle;
+	@FindBy(className = "oxd-userdropdown-name")
+	WebElement eleUserDropdownName;
+	
+	@FindBy(xpath="//a[contains(@class,'oxd-main-menu-item')]//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name']")
+	public List<WebElement> lstMainMenu;		
 }

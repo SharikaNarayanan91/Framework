@@ -13,8 +13,7 @@ public class GenerateRandomHelper {
 		StringBuilder sb = new StringBuilder(length);
 
 		for (int i = 0; i < length; i++) {
-			// generate a random number between
-			// 0 to AlphaNumericString variable length
+			// generate a random number between 0 to AlphaNumericString variable length
 			int index = (int) (AlphaNumericString.length() * Math.random());
 
 			sb.append(AlphaNumericString.charAt(index));
@@ -51,7 +50,7 @@ public class GenerateRandomHelper {
         return randomWithSpecificLength;
 	}
 
-	//Generate random only alpha string
+	//Generate random alpha string
 	public static String GenerateRandomAlphaString(int length) {
 		// chose a Character random from this String
 		String AlphaString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvxyz";
@@ -60,9 +59,6 @@ public class GenerateRandomHelper {
 		StringBuilder sb = new StringBuilder(length);
 
 		for (int i = 0; i < length; i++) {
-
-			// generate a random number between
-			// 0 to AlphaNumericString variable length
 			int index = (int) (AlphaString.length() * Math.random());
 
 			// add Character one by one in end of sb

@@ -18,6 +18,7 @@ public class ReadConfig {
 			System.out.println("Exception is "+e.getMessage());
 		}
 	}
+	
 	//Read the key-value pair from property file
 	public String readPropertyFile(String key) {
 		String value=pro.getProperty(key);
